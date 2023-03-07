@@ -59,8 +59,9 @@ func _physics_process(delta):
 	
 	# Se houver uma colisão a cena reinicia
 	if collision:
-		get_tree().reload_current_scene()
-		print(collision.collider.name)
+		if collision.collider.name != "Barreira":
+			get_tree().reload_current_scene()
+			print(collision.collider.name)
 
 # Se o objeto toca a casa ele vence a fase 
 func _on_casa_body_entered(body):
