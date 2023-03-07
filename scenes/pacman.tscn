@@ -2833,7 +2833,7 @@ __meta__ = {
 [node name="controls" type="Node" parent="."]
 
 [node name="Cima" type="TouchScreenButton" parent="controls"]
-position = Vector2( 151, 456 )
+position = Vector2( 151, 464 )
 scale = Vector2( 1.8125, 2.25 )
 normal = ExtResource( 13 )
 
@@ -3053,7 +3053,7 @@ frames = SubResource( 49 )
 animation = "run"
 
 [node name="firework4" type="AnimatedSprite" parent="win"]
-position = Vector2( 122, 489 )
+position = Vector2( 82, 466 )
 scale = Vector2( 0.770833, 0.78125 )
 frames = SubResource( 49 )
 animation = "run"

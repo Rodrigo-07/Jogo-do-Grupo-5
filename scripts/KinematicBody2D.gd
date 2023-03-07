@@ -5,7 +5,32 @@ var speed = 5000
 var bateu
 
 var keyCard = [0]
-	
+
+var cima = false
+var baixo = false
+var esquerda = false
+var direita = false
+
+func _on_Esquerda_pressed():
+	esquerda = true
+func _on_Esquerda_released():
+	esquerda = false
+
+func _on_Direita_pressed():
+	direita = true
+func _on_Direita_released():
+	direita = false
+
+func _on_Baixo_pressed():
+	baixo = true
+func _on_Baixo_released():
+	baixo = false
+
+func _on_Cima_pressed():
+	cima = true
+func _on_Cima_released():
+	cima = false
+
 func _process(delta):
 	# A cada keycard pega em um posição ela muda
 	if keyCard == [1]:
@@ -19,14 +44,18 @@ func _process(delta):
 
 func _physics_process(delta):
 	
-	if Input.is_action_pressed("ui_up"):
+	if Input.is_action_pressed("ui_up") or cima:
 		move.y = - speed * delta
-	elif Input.is_action_pressed("ui_down"):
+
+	elif Input.is_action_pressed("ui_down") or baixo:
 		move.y = speed * delta
-	elif Input.is_action_pressed("ui_right"):
+
+	elif Input.is_action_pressed("ui_right") or direita:
 		move.x = speed * delta
-	elif Input.is_action_pressed("ui_left"):
+
+	elif Input.is_action_pressed("ui_left") or esquerda:
 		move.x = - speed * delta
+
 	else:
 		move.x = 0
 		move.y = 0
@@ -63,3 +92,7 @@ func _on_Compliance_body_shape_entered(body_rid, body, body_shape_index, local_s
 # Quando o jogador vai para o lugar errado
 func _on_Area2D_body_shape_entered(body_rid, body, body_shape_index, local_shape_index):
 	print("ruinzão")
+
+
+
+

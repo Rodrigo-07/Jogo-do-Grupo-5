@@ -63,39 +63,41 @@ frames = SubResource( 7 )
 stream = ExtResource( 3 )
 
 [node name="TextureButton" type="TextureButton" parent="."]
-margin_left = 14.5851
-margin_top = 93.0533
-margin_right = 206.585
-margin_bottom = 285.053
+margin_left = 16.008
+margin_top = 123.91
+margin_right = 208.008
+margin_bottom = 315.91
 rect_scale = Vector2( 0.181918, 0.512521 )
 texture_normal = ExtResource( 2 )
 
 [node name="Label" type="Label" parent="TextureButton"]
-margin_left = 22.245
-margin_top = 77.1185
-margin_right = 173.245
-margin_bottom = 110.119
+margin_left = 25.4208
+margin_top = 16.9331
+margin_right = 176.421
+margin_bottom = 49.9336
 custom_colors/font_color = Color( 0.32549, 0.345098, 0.352941, 1 )
 custom_fonts/font = SubResource( 8 )
 text = "Começar"
 
 [node name="TextureButton3" type="TextureButton" parent="."]
-margin_left = 15.3557
-margin_top = 143.196
-margin_right = 207.474
-margin_bottom = 335.196
+margin_left = 16.1859
+margin_top = 171.16
+margin_right = 208.304
+margin_bottom = 363.16
 rect_scale = Vector2( 0.182, 0.513 )
 texture_normal = ExtResource( 2 )
 
 [node name="Label" type="Label" parent="TextureButton3"]
-margin_left = 34.7048
-margin_top = 77.0
-margin_right = 158.705
-margin_bottom = 146.0
+margin_left = 30.296
+margin_top = 17.8571
+margin_right = 154.296
+margin_bottom = 86.8571
 custom_colors/font_color = Color( 0.32549, 0.345098, 0.352941, 1 )
 custom_fonts/font = SubResource( 8 )
 text = "Ajuste
 "
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 
 [connection signal="pressed" from="TextureButton" to="." method="_on_TextureButton_pressed"]
 [connection signal="pressed" from="TextureButton3" to="." method="_on_TextureButton3_pressed"]
