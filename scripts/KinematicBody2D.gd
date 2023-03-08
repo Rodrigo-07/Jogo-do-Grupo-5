@@ -73,7 +73,7 @@ func _physics_process(delta):
 			print(keyCard)
 
 		elif !(bateu in checkCollision):
-			get_tree().reload_current_scene()
+			
 			print(bateu)
 	
 

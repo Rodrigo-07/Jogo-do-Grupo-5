@@ -69,7 +69,6 @@ func _physics_process(delta):
 		andar.y = 0
 		esquerda = false
 		rotation = deg2rad(-180)
-		
 	
 	# Detectar colisões com os inimigos e paredes
 	var collision = move_and_collide(andar * delta)
@@ -83,7 +82,9 @@ func _physics_process(delta):
 		for i in len(checkCollision):
 			if bateu == str(checkCollision[i]):
 				print("morreu")
-				get_node("../Person").position = Vector2(145, 294)
+				get_node("../Person").position = Vector2(181, 338)
+				andar.x = 0
+				andar.y = 0
 				vida -= 1
 
 
