@@ -124,7 +124,6 @@ __meta__ = {
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/parede4"]
 position = Vector2( 8.32357, 68.9999 )
-scale = Vector2( 1, 1 )
 shape = SubResource( 5 )
 
 [node name="parede8" type="StaticBody2D" parent="Walls"]
@@ -304,6 +303,14 @@ normal = ExtResource( 4 )
 position = Vector2( 118, 541 )
 scale = Vector2( 2.1875, 1.84375 )
 normal = ExtResource( 6 )
+
+[node name="Label" type="Label" parent="."]
+margin_left = 77.0
+margin_top = 13.0
+margin_right = 296.0
+margin_bottom = 45.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Pegue os blocos amarelos(chaves)"
 
 [connection signal="body_shape_entered" from="areas/Compliance" to="KinematicBody2D" method="_on_Compliance_body_shape_entered"]
 [connection signal="body_shape_entered" from="areas/Area2D" to="KinematicBody2D" method="_on_Area2D_body_shape_entered"]
