@@ -172,4 +172,4 @@ __meta__ = {
 "_edit_use_anchors_": true
 }
 
-[connection signal="pressed" from="Botões/Resposta3" to="." method="_on_RESPOSTA3_pressed"]
+[connection signal="pressed" from="Botões/Resposta3" to="." method="_on_Resposta3_pressed"]

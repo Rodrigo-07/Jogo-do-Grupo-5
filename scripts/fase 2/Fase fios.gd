@@ -168,7 +168,7 @@ func _process(delta):
 		get_node("Fundo/Fire3").play("run")
 		get_node("Fundo/Fire3").visible = true
 		yield(get_tree().create_timer(5), 'timeout')
-		get_tree().change_scene("res://scenes/fase 2/pergunta2_2.tscn")
+		get_tree().change_scene("res://scenes/fase 2/Perguntas/pergunta1.tscn")
 		
 		if Points.fios == false:
 			Points.addpoint()
