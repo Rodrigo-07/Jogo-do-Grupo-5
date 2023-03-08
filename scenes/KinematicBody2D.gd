@@ -30,10 +30,12 @@ func _process(delta):
 	if coletaveis[0] == 4:
 		get_node("../texto final").visible = true
 		yield(get_tree().create_timer(5), 'timeout')
-		get_tree().change_scene("res://scenes/menu/main_interface.tscn")
+		
 		if Points.pacMan == false:
 			Points.addpoint()
-			Points.pacMan == true
+		Points.pacMan == true
+		
+		get_tree().change_scene("res://scenes/menu/main_interface.tscn")
 
 	# Código que configura a vida do player
 	if vida == 3:
