@@ -32,6 +32,9 @@ extents = Vector2( 42.75, 33.75 )
 [sub_resource type="RectangleShape2D" id=13]
 extents = Vector2( 45, 35 )
 
+[sub_resource type="RectangleShape2D" id=15]
+extents = Vector2( 10, 30.5 )
+
 [sub_resource type="RectangleShape2D" id=14]
 extents = Vector2( 14, 47.25 )
 
@@ -46,9 +49,6 @@ extents = Vector2( 26.5, 28 )
 
 [sub_resource type="RectangleShape2D" id=12]
 extents = Vector2( 24, 17.5 )
-
-[sub_resource type="RectangleShape2D" id=15]
-extents = Vector2( 10, 30.5 )
 
 [node name="WHG" type="Node2D"]
 script = ExtResource( 2 )
@@ -211,6 +211,10 @@ shape = SubResource( 4 )
 position = Vector2( 208, 486 )
 shape = SubResource( 13 )
 
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Walls/parede12"]
+position = Vector2( 245, 89.5 )
+shape = SubResource( 15 )
+
 [node name="parede13" type="StaticBody2D" parent="Walls"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/parede13"]
@@ -227,7 +231,7 @@ margin_left = 89.0
 margin_top = 536.0
 margin_right = 108.0
 margin_bottom = 555.0
-color = Color( 1, 0, 0, 1 )
+color = Color( 0.443137, 0.92549, 0, 1 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="KinematicBody2D"]
 position = Vector2( 98.5, 545.5 )
@@ -241,7 +245,7 @@ margin_left = 302.0
 margin_top = 18.0
 margin_right = 325.0
 margin_bottom = 41.0
-color = Color( 0.921569, 1, 0, 1 )
+color = Color( 1, 0.584314, 0, 1 )
 
 [node name="key" type="StaticBody2D" parent="key"]
 position = Vector2( 261, 499 )
@@ -254,7 +258,7 @@ margin_left = -5.0
 margin_top = -4.0
 margin_right = 8.0
 margin_bottom = 8.0
-color = Color( 0.921569, 1, 0, 1 )
+color = Color( 1, 0.537255, 0, 1 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="key/key"]
 position = Vector2( 1.5, 2 )
@@ -314,11 +318,7 @@ margin_top = 13.0
 margin_right = 296.0
 margin_bottom = 45.0
 custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "Pegue os blocos amarelos(chaves)"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 245, 89.5 )
-shape = SubResource( 15 )
+text = "Pegue os blocos laranjas(chaves)"
 
 [connection signal="body_shape_entered" from="areas/Compliance" to="KinematicBody2D" method="_on_Compliance_body_shape_entered"]
 [connection signal="body_shape_entered" from="areas/Area2D" to="KinematicBody2D" method="_on_Area2D_body_shape_entered"]
