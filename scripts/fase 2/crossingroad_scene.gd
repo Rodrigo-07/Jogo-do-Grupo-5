@@ -10,11 +10,7 @@ var car2
 var carScene3 = preload("res://scenes/fase 2/carro3.tscn")
 var car3
 
-var carScene4 = preload("res://scenes/fase 2/carro4.tscn")
-var car4
 
-var carScene5 = preload("res://scenes/fase 2/carro5.tscn")
-var car5
 
 # Limite do timer
 var timer_limit = 1000
@@ -23,15 +19,13 @@ var timer_limit = 1000
 var random1 = 1
 var random2 = 1
 var random3 = 2
-var random4 = 2
-var random5 = 2
+
 
 # Variáveis para criação a node do de timer para cada carro
 var timer = Timer.new()
 var timer2 = Timer.new()
 var timer3 = Timer.new()
-var timer4 = Timer.new()
-var timer5 = Timer.new()
+
 
 func _ready():
 	
@@ -39,16 +33,13 @@ func _ready():
 	timer.set_one_shot(false)
 	timer2.set_one_shot(false)
 	timer3.set_one_shot(false)
-	timer4.set_one_shot(false)
-	timer5.set_one_shot(false)
 
 	# Conecte seu o de timeout à função que deseja repetir
 	# Quando o tempo determinado acabar (timeout) a função reinicia
 	timer.connect("timeout", self, "car_spaw_1")
 	timer2.connect("timeout", self, "car_spaw_2")
 	timer3.connect("timeout", self, "car_spaw_3")
-	timer4.connect("timeout", self, "car_spaw_4")
-	timer5.connect("timeout", self, "car_spaw_5")
+
 	
 	# Adicionar à árvore como filho do nó atual
 	add_child(timer)
@@ -60,8 +51,6 @@ func _ready():
 	add_child(timer3)
 	timer3.start()
 	
-	add_child(timer4)
-	timer4.start()
 
 # Faz a instancia (adiciona) da cena do carro 1 nessa cena
 func car_spaw_1():
@@ -94,21 +83,12 @@ func car_spaw_3():
 	# Set timer interval
 	timer3.set_wait_time(random3)
 
-# Faz a instancia (adiciona) da cena do carro 4 nessa cena
-func car_spaw_4():
-	car4 = carScene4.instance()
-	add_child(car4)
-	
-	random4 = rand_range(3, 5)
-	
-	# Set timer interval
-	timer4.set_wait_time(random4)
-
 
 func _process(delta):
 	# Bloqueia o movimento do personagem além dos limites da tela
 	if $mapa/Personagem.position.x > 360 or $mapa/Personagem.position.x == 0 or $mapa/Personagem.position.y == 0 or $mapa/Personagem.position.y == 640:
 		 $mapa/Personagem.set_position(Vector2(180, 610))
+		
 
 
 

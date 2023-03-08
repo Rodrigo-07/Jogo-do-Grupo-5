@@ -1,7 +1,7 @@
 extends KinematicBody2D
 
 var move = Vector2()
-var speed = 30
+var speed = 15
 
 func _ready():
 	set_position(Vector2(62,290))
