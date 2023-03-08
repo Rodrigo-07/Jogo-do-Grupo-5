@@ -227,14 +227,14 @@ collision_mask = 11
 script = ExtResource( 3 )
 
 [node name="Icon" type="ColorRect" parent="KinematicBody2D"]
-margin_left = 89.0
-margin_top = 536.0
-margin_right = 108.0
-margin_bottom = 555.0
+margin_left = 71.0
+margin_top = 543.0
+margin_right = 90.0
+margin_bottom = 562.0
 color = Color( 0.443137, 0.92549, 0, 1 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="KinematicBody2D"]
-position = Vector2( 98.5, 545.5 )
+position = Vector2( 80.5, 552.5 )
 shape = SubResource( 9 )
 
 [node name="key" type="Node" parent="."]
