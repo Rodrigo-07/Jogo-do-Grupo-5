@@ -2853,23 +2853,18 @@ scale = Vector2( 2.1875, 1.84375 )
 normal = ExtResource( 12 )
 
 [node name="Person" type="KinematicBody2D" parent="."]
-position = Vector2( 145, 294 )
+position = Vector2( 181, 338 )
 scale = Vector2( 0.2, 0.2 )
 script = ExtResource( 3 )
-__meta__ = {
-"_edit_group_": true
-}
 
 [node name="Sprite" type="Sprite" parent="Person"]
-position = Vector2( 176, 213 )
+position = Vector2( 1.00006, -1.99988 )
 scale = Vector2( 0.239683, 0.239683 )
 texture = ExtResource( 2 )
-__meta__ = {
-"_edit_group_": true
-}
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Person"]
-position = Vector2( 175, 215 )
+position = Vector2( 6.10352e-05, 0.00012207 )
+scale = Vector2( 1, 1 )
 shape = SubResource( 50 )
 
 [node name="enemies" type="Node" parent="."]
@@ -3041,8 +3036,8 @@ frames = SubResource( 49 )
 animation = "run"
 
 [node name="firework2" type="AnimatedSprite" parent="win"]
-position = Vector2( 174, 288 )
-scale = Vector2( 0.770833, 0.78125 )
+position = Vector2( 180, 337 )
+scale = Vector2( 0.145833, 0.145833 )
 frames = SubResource( 49 )
 animation = "run"
 
