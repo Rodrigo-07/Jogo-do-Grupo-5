@@ -317,7 +317,7 @@ margin_top = 135.0
 margin_right = 411.0
 margin_bottom = 234.0
 custom_fonts/font = SubResource( 55 )
-text = "Você é foda!!!!"
+text = "Você é incrivel!!!!"
 
 [node name="walls" type="Node" parent="."]
 
@@ -2875,7 +2875,7 @@ shape = SubResource( 50 )
 [node name="enemies" type="Node" parent="."]
 
 [node name="spriteCerveja" type="KinematicBody2D" parent="enemies" groups=["inimigos"]]
-position = Vector2( 155, 250 )
+position = Vector2( 325, 89 )
 script = ExtResource( 14 )
 __meta__ = {
 "_edit_group_": true
@@ -2920,7 +2920,7 @@ __meta__ = {
 }
 
 [node name="spriteCerveja3" type="KinematicBody2D" parent="enemies" groups=["inimigos"]]
-position = Vector2( 248, 153 )
+position = Vector2( 24, 413 )
 collision_layer = 4
 script = ExtResource( 14 )
 __meta__ = {
@@ -3041,13 +3041,13 @@ frames = SubResource( 49 )
 animation = "run"
 
 [node name="firework2" type="AnimatedSprite" parent="win"]
-position = Vector2( 174, 288 )
+position = Vector2( 270, 219 )
 scale = Vector2( 0.770833, 0.78125 )
 frames = SubResource( 49 )
 animation = "run"
 
 [node name="firework3" type="AnimatedSprite" parent="win"]
-position = Vector2( 268, 169 )
+position = Vector2( 350, 153 )
 scale = Vector2( 0.770833, 0.78125 )
 frames = SubResource( 49 )
 animation = "run"

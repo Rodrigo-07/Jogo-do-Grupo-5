@@ -80,7 +80,7 @@ func _physics_process(delta):
 				print("morreu")
 				get_node("../Person").position = Vector2(145, 294)
 				vida -= 1
-				print(vida)
+
 
 # Funções para detectar quando o player coletam um item bom
 func _on_Capacete2_body_shape_entered(body_rid, body, body_shape_index, local_shape_index):
