@@ -97,7 +97,5 @@ custom_fonts/font = SubResource( 8 )
 text = "Ajuste
 "
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-
 [connection signal="pressed" from="TextureButton" to="." method="_on_TextureButton_pressed"]
 [connection signal="pressed" from="TextureButton3" to="." method="_on_TextureButton3_pressed"]
