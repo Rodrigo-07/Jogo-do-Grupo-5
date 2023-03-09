@@ -317,7 +317,7 @@ margin_top = 135.0
 margin_right = 411.0
 margin_bottom = 234.0
 custom_fonts/font = SubResource( 55 )
-text = "Você é foda!!!!"
+text = "Você é incrivel!!!"
 
 [node name="walls" type="Node" parent="."]
 
