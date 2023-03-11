@@ -1,5 +1,6 @@
 extends KinematicBody2D
 
+# Código para controlar o movimento do obstáculo
 var move = Vector2()
 var speed = 15
 
@@ -9,7 +10,7 @@ func _ready():
 	
 
 func _physics_process(delta):
-	
+	# Movimento do obstáculo
 	if position.x == 276:
 		move.x = speed
 	if position.x == 276 + 14:

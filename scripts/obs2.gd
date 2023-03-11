@@ -1,5 +1,6 @@
 extends KinematicBody2D
 
+# Código para controlar o movimento do obstáculo
 var move = Vector2()
 var speed = 15
 

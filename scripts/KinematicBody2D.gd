@@ -6,6 +6,7 @@ var bateu
 
 var keyCard = [0]
 
+# Variáveis e funções para o funcionamento touch do jogo no mobile
 var cima = false
 var baixo = false
 var esquerda = false
@@ -43,7 +44,7 @@ func _process(delta):
 		get_node("../key/key").position = Vector2(560, 381)
 
 func _physics_process(delta):
-	
+	# Movimentação do personagem
 	if Input.is_action_pressed("ui_up") or cima:
 		move.y = - speed * delta
 
@@ -65,6 +66,7 @@ func _physics_process(delta):
 	var collision = move_and_collide(move * delta)
 	var checkCollision = ['parede1','parede2','parede3','parede4','parede5','parede6','parede7','parede8','parede9','parede10', 'parede11','parede12','parede13','parede14','key']
 	
+	# Dependendo do que o personagem colidir acontece algo diferente
 	if collision:
 		bateu = collision.collider.name
 		if bateu == 'key':

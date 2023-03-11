@@ -16,7 +16,7 @@ func _physics_process(delta):
 	#var collision = move_and_collide(andar * delta)
 	move_and_slide(andar)
 
-		
+	# Movimento que quando colidir com algo vai ser decidido uma direção aleatória para seguir
 	random.randomize()
 	var collision = move_and_collide(andar * delta)
 	if collision:
