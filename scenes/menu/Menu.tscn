@@ -63,39 +63,58 @@ frames = SubResource( 7 )
 stream = ExtResource( 3 )
 
 [node name="TextureButton" type="TextureButton" parent="."]
-margin_left = 16.008
-margin_top = 123.91
-margin_right = 208.008
-margin_bottom = 315.91
+margin_left = 16.0
+margin_top = 124.0
+margin_right = 208.0
+margin_bottom = 195.0
 rect_scale = Vector2( 0.181918, 0.512521 )
 texture_normal = ExtResource( 2 )
 
 [node name="Label" type="Label" parent="TextureButton"]
-margin_left = 25.4208
-margin_top = 16.9331
+margin_left = 25.421
+margin_top = 15.993
 margin_right = 176.421
-margin_bottom = 49.9336
+margin_bottom = 48.9935
 custom_colors/font_color = Color( 0.32549, 0.345098, 0.352941, 1 )
 custom_fonts/font = SubResource( 8 )
 text = "Começar"
 
 [node name="TextureButton3" type="TextureButton" parent="."]
-margin_left = 16.1859
-margin_top = 171.16
-margin_right = 208.304
-margin_bottom = 363.16
+margin_left = 16.0
+margin_top = 171.0
+margin_right = 208.0
+margin_bottom = 241.0
 rect_scale = Vector2( 0.182, 0.513 )
 texture_normal = ExtResource( 2 )
 
 [node name="Label" type="Label" parent="TextureButton3"]
-margin_left = 30.296
-margin_top = 17.8571
-margin_right = 154.296
-margin_bottom = 86.8571
+margin_left = 30.0
+margin_top = 15.0
+margin_right = 154.0
+margin_bottom = 84.0
 custom_colors/font_color = Color( 0.32549, 0.345098, 0.352941, 1 )
 custom_fonts/font = SubResource( 8 )
 text = "Ajuste
 "
 
+[node name="TextureButton4" type="TextureButton" parent="."]
+margin_left = 16.0
+margin_top = 219.0
+margin_right = 208.0
+margin_bottom = 287.0
+rect_scale = Vector2( 0.182, 0.513 )
+texture_normal = ExtResource( 2 )
+
+[node name="Label" type="Label" parent="TextureButton4"]
+margin_left = 30.296
+margin_top = 16.9172
+margin_right = 158.296
+margin_bottom = 85.9172
+custom_colors/font_color = Color( 0.32549, 0.345098, 0.352941, 1 )
+custom_fonts/font = SubResource( 8 )
+text = "premio
+"
+
 [connection signal="pressed" from="TextureButton" to="." method="_on_TextureButton_pressed"]
 [connection signal="pressed" from="TextureButton3" to="." method="_on_TextureButton3_pressed"]
+[connection signal="pressed" from="TextureButton4" to="." method="_on_TextureButton4_pressed"]

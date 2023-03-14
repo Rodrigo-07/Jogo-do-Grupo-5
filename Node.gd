@@ -1,5 +1,7 @@
 extends Node
 
+var ip_adress :String
+
 #checagem fase1
 var whg = false
 var pergunta11 = false
@@ -22,3 +24,9 @@ var points = 0
 
 func addpoint():
 	points += 1
+	
+func _ready():
+	
+	ip_adress = IP.resolve_hostname((str(OS.get_environment("COMPUTERNAME"))), 1)
+	print(ip_adress)
+
