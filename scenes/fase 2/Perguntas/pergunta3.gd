@@ -7,4 +7,5 @@ func _on_Resposta2_pressed():
 		Points.addpoint()
 		
 	Points.pergunta23 = true
+	print(Points.points)
 	get_tree().change_scene("res://scenes/fase 2/Perguntas/pergunta4.tscn")

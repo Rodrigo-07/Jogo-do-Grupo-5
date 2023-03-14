@@ -23,6 +23,7 @@ func _ready():
 	# O botão para continuar depois do diálogo só aparece depois que acabar todo diálogo
 	$Button.visible = false
 
+
 var touch
 func _on_touch_pressed():
 	touch = true

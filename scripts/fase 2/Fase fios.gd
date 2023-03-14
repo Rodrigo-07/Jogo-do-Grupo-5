@@ -46,12 +46,14 @@ func _ready():
 	
 func _process(delta):
 	
-	print(errosCheck)
+	print(Points.points)
+	
+
 	#Soma da lista connected para causar a conexão dos fios
 	check = sum(connected)
 	
 	#usando apenas para verificar 
-	print(check)
+	
 		
 	#Conexão do fio vermelho
 	if check == 40:
@@ -180,28 +182,27 @@ func _process(delta):
 	if connected.size() == 2:
 		connected.clear()
 	
-	print(on)
+
 #Determina as conexões do fio vermelho
 func _on_Red_pressed():
 	redWire = 19
 	connected.append(redWire)
-	print(connected)
+
 
 func _on_100_pressed():
 	redConnection = 21
 	connected.append(redConnection)
-	print(connected)
 
 #Determina as conexões do fio amarelo
 func _on_Yellow_pressed():
 	yellowWire = 3
 	connected.append(yellowWire)
-	print(connected)
+
 
 func _on_400_pressed():
 	yellowConnection = 4
 	connected.append(yellowConnection)
-	print(connected)
+
 
 #Determina as conexões do fio azul
 func _on_Blue_pressed():

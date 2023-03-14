@@ -1,6 +1,6 @@
 extends KinematicBody2D
 
-var move = Vector2()
+var move = Vector2().normalized()
 var speed = 5000
 var bateu
 

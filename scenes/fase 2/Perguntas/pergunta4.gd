@@ -6,4 +6,5 @@ func _on_Resposta2_pressed():
 	if Points.pergunta24 == false:
 		Points.addpoint()
 	Points.pergunta24 = true
+	print(Points.points)
 	get_tree().change_scene("res://scenes/menu/main_interface.tscn")
