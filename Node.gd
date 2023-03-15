@@ -24,9 +24,4 @@ var points = 0
 
 func addpoint():
 	points += 1
-	
-func _ready():
-	
-	ip_adress = IP.get_local_addresses()
-	print(ip_adress)
 

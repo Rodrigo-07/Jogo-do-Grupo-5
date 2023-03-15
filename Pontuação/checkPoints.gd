@@ -1,9 +1,11 @@
 extends Node
 
+var ipAdress: Array
 var premio = str(Points.points)
 var url = "https://chart.googleapis.com/chart?chs=150x150&cht=qr&chl=Parabens%20voce%20fez%20"+premio+"%20pontos"
 
 func _ready():
+
 	# Create an HTTP request node and connect its completion signal.
 	var http_request = HTTPRequest.new()
 	add_child(http_request)
