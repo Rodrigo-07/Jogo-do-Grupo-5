@@ -1,6 +1,6 @@
 extends Node
 
-var ip_adress :String
+var ip_adress :Array
 
 #checagem fase1
 var whg = false
@@ -27,6 +27,6 @@ func addpoint():
 	
 func _ready():
 	
-	ip_adress = IP.resolve_hostname((str(OS.get_environment("COMPUTERNAME"))), 1)
+	ip_adress = IP.get_local_addresses()
 	print(ip_adress)
 
