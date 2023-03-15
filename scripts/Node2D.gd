@@ -13,3 +13,7 @@ func _ready():
 	obstacle()
 	pass
 	
+
+
+func _on_Button_pressed():
+	Points.pause()
