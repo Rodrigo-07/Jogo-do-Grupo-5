@@ -1,5 +1,8 @@
 extends Node2D
 
+var pausar = preload("res://scenes/menuOpcoes.tscn")
+var pause
+
 # Código para adicionar o obstáculo na fase 1
 var obstaculoScene = preload("res://scenes/Obstaculo.tscn")
 var obs
@@ -16,4 +19,9 @@ func _ready():
 
 
 func _on_Button_pressed():
-	Points.pause()
+	parar()
+	
+func parar():
+	pause = pausar.instance()
+	add_child(pause)
+

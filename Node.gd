@@ -26,9 +26,6 @@ func addpoint():
 	points += 1
 
 #variavel da cena atual (usada para o menu de opcoes)
-var cena
+
 #funcao pause
-func pause():
-	Points.cena = get_tree().current_scene.filename
-	get_tree().paused = false
-	get_tree().change_scene("res://scenes/menuOpcoes.tscn")
+
