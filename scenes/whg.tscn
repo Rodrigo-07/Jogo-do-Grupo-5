@@ -244,6 +244,9 @@ margin_top = 543.0
 margin_right = 90.0
 margin_bottom = 562.0
 color = Color( 0.443137, 0.92549, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": true
+}
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="KinematicBody2D"]
 position = Vector2( 80.5, 552.5 )
@@ -287,6 +290,9 @@ margin_top = -71.0
 margin_right = 93.0
 margin_bottom = -15.0
 color = Color( 0.12549, 1, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": true
+}
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="areas/Compliance"]
 position = Vector2( 63.5, -43 )
@@ -335,6 +341,9 @@ margin_right = 296.0
 margin_bottom = 45.0
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Pegue os blocos laranjas(chaves)"
+__meta__ = {
+"_edit_use_anchors_": true
+}
 
 [node name="Button" type="Button" parent="."]
 margin_left = 15.0
@@ -342,6 +351,9 @@ margin_top = 20.0
 margin_right = 51.0
 margin_bottom = 58.0
 text = "pause"
+__meta__ = {
+"_edit_use_anchors_": true
+}
 
 [connection signal="body_shape_entered" from="areas/Compliance" to="KinematicBody2D" method="_on_Compliance_body_shape_entered"]
 [connection signal="body_shape_entered" from="areas/Area2D" to="KinematicBody2D" method="_on_Area2D_body_shape_entered"]
