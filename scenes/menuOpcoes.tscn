@@ -1,10 +1,22 @@
 [gd_scene load_steps=2 format=2]
 
-[ext_resource path="res://scenes/menuOpcoes.gd" type="Script" id=1]
+[sub_resource type="GDScript" id=1]
+script/source = "xtends Node2D
+
+var stop = get_node(\".\").visible
+
+func _ready():
+	set_z_index(2)
+	print(\"si\")
+	stop = true
+	
+func _on_Button_pressed():
+	stop = false
+"
 
 [node name="Node2D" type="Node2D"]
 visible = false
-script = ExtResource( 1 )
+script = SubResource( 1 )
 
 [node name="Button" type="Button" parent="."]
 margin_left = 98.0

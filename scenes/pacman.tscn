@@ -3084,11 +3084,11 @@ text = "pausar"
 
 [node name="FundoPause" type="Sprite" parent="."]
 pause_mode = 2
-visible = false
 z_index = 1
 script = ExtResource( 19 )
 
 [node name="ColorRect" type="ColorRect" parent="FundoPause"]
+visible = false
 margin_left = -1.0
 margin_top = -3.0
 margin_right = 387.0
@@ -3101,6 +3101,20 @@ margin_right = 247.0
 margin_bottom = 191.0
 text = "voltar"
 
+[node name="HSlider" type="HSlider" parent="FundoPause"]
+margin_left = 77.0
+margin_top = 241.0
+margin_right = 317.0
+margin_bottom = 270.0
+
+[node name="Label" type="Label" parent="FundoPause"]
+modulate = Color( 0, 0, 0, 1 )
+self_modulate = Color( 0, 0, 0, 1 )
+margin_left = 142.0
+margin_top = 61.0
+margin_right = 228.0
+margin_bottom = 75.0
+
 [connection signal="pressed" from="controls/Cima" to="Person" method="_on_Cima_pressed"]
 [connection signal="pressed" from="controls/Baixo" to="Person" method="_on_Baixo_pressed"]
 [connection signal="pressed" from="controls/Direita" to="Person" method="_on_Direita_pressed"]
@@ -3111,3 +3125,4 @@ text = "voltar"
 [connection signal="body_shape_entered" from="good/Capacete4" to="Person" method="_on_Capacete4_body_shape_entered"]
 [connection signal="pressed" from="Pausar" to="." method="_on_Pausar_pressed"]
 [connection signal="pressed" from="FundoPause/Button2" to="." method="_on_Button2_pressed"]
+[connection signal="value_changed" from="FundoPause/HSlider" to="." method="_on_HSlider_value_changed"]

@@ -27,5 +27,4 @@ func _on_Button3_pressed():
 
 
 
-func _on_Button5_pressed():
-	Points.pause()
+
