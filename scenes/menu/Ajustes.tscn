@@ -39,7 +39,30 @@ margin_left = 159.0
 margin_top = 191.0
 margin_right = 270.0
 margin_bottom = 238.0
+rect_pivot_offset = Vector2( 31, 11 )
 text = "VOLUME"
+
+[node name="Label2" type="Label" parent="."]
+margin_left = 129.0
+margin_top = 358.0
+margin_right = 240.0
+margin_bottom = 405.0
+rect_pivot_offset = Vector2( 31, 11 )
+text = "Código de jogo"
+
+[node name="LineEdit" type="LineEdit" parent="."]
+margin_left = 73.0
+margin_top = 387.0
+margin_right = 284.0
+margin_bottom = 437.0
+
+[node name="SaveCodeButton" type="Button" parent="."]
+margin_left = 286.0
+margin_top = 395.0
+margin_right = 337.0
+margin_bottom = 434.0
+text = "OK"
 
 [connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
 [connection signal="value_changed" from="HSlider" to="." method="_on_HSlider_value_changed"]
+[connection signal="pressed" from="SaveCodeButton" to="." method="_on_SaveCodeButton_pressed"]
