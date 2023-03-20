@@ -1,4 +1,4 @@
-[gd_scene load_steps=75 format=2]
+[gd_scene load_steps=79 format=2]
 
 [ext_resource path="res://scenes/pacman.gd" type="Script" id=1]
 [ext_resource path="res://sprites/Black-Pacman-PNG.png" type="Texture" id=2]
@@ -19,6 +19,10 @@
 [ext_resource path="res://sprites/hearts.png" type="Texture" id=17]
 [ext_resource path="res://Fonte/upheaval/upheavtt.ttf" type="DynamicFontData" id=18]
 [ext_resource path="res://scenes/Sprite.gd" type="Script" id=19]
+[ext_resource path="res://sprites/pausar .png" type="Texture" id=20]
+[ext_resource path="res://sprites/button play.png" type="Texture" id=21]
+[ext_resource path="res://sprites/button casinha .png" type="Texture" id=22]
+[ext_resource path="res://sprites/whgggg.png" type="Texture" id=23]
 
 [sub_resource type="SegmentShape2D" id=1]
 a = Vector2( 828, 10 )
@@ -3076,11 +3080,13 @@ anims/Lifes3 = SubResource( 53 )
 anims/RESET = SubResource( 54 )
 
 [node name="Pausar" type="Button" parent="."]
-margin_left = 279.0
-margin_top = 10.0
-margin_right = 333.0
-margin_bottom = 42.0
+margin_left = 299.0
+margin_top = 11.0
+margin_right = 7267.0
+margin_bottom = 6929.0
+rect_scale = Vector2( 0.00596626, 0.00596626 )
 text = "pausar"
+icon = ExtResource( 20 )
 
 [node name="FundoPause" type="Sprite" parent="."]
 pause_mode = 2
@@ -3093,13 +3099,36 @@ margin_left = -1.0
 margin_top = -3.0
 margin_right = 387.0
 margin_bottom = 659.0
+color = Color( 0.611765, 0.67451, 0.705882, 1 )
+
+[node name="Button3" type="Button" parent="FundoPause"]
+margin_left = 219.0
+margin_top = 98.0
+margin_right = 7143.0
+margin_bottom = 7016.0
+rect_scale = Vector2( 0.0126425, 0.0126425 )
+icon = ExtResource( 22 )
+
+[node name="Whgggg" type="Sprite" parent="FundoPause/Button3"]
+position = Vector2( -8938.09, 25706.9 )
+texture = ExtResource( 23 )
+
+[node name="Whgggg2" type="Sprite" parent="FundoPause/Button3"]
+position = Vector2( -36622.5, 21435.6 )
+texture = ExtResource( 23 )
+
+[node name="Whgggg3" type="Sprite" parent="FundoPause/Button3"]
+position = Vector2( -61063.8, 38758.1 )
+texture = ExtResource( 23 )
 
 [node name="Button2" type="Button" parent="FundoPause"]
-margin_left = 136.0
-margin_top = 136.0
-margin_right = 247.0
-margin_bottom = 191.0
+margin_left = 78.0
+margin_top = 100.0
+margin_right = 7040.0
+margin_bottom = 7018.0
+rect_scale = Vector2( 0.0124347, 0.0124347 )
 text = "voltar"
+icon = ExtResource( 21 )
 
 [node name="HSlider" type="HSlider" parent="FundoPause"]
 margin_left = 77.0
@@ -3110,10 +3139,10 @@ margin_bottom = 270.0
 [node name="Label" type="Label" parent="FundoPause"]
 modulate = Color( 0, 0, 0, 1 )
 self_modulate = Color( 0, 0, 0, 1 )
-margin_left = 142.0
-margin_top = 61.0
-margin_right = 228.0
-margin_bottom = 75.0
+margin_left = 136.0
+margin_top = 295.0
+margin_right = 222.0
+margin_bottom = 309.0
 
 [connection signal="pressed" from="controls/Cima" to="Person" method="_on_Cima_pressed"]
 [connection signal="pressed" from="controls/Baixo" to="Person" method="_on_Baixo_pressed"]
@@ -3124,5 +3153,6 @@ margin_bottom = 75.0
 [connection signal="body_shape_entered" from="good/Capacete3" to="Person" method="_on_Capacete3_body_shape_entered"]
 [connection signal="body_shape_entered" from="good/Capacete4" to="Person" method="_on_Capacete4_body_shape_entered"]
 [connection signal="pressed" from="Pausar" to="." method="_on_Pausar_pressed"]
+[connection signal="pressed" from="FundoPause/Button3" to="." method="_on_Button3_pressed"]
 [connection signal="pressed" from="FundoPause/Button2" to="." method="_on_Button2_pressed"]
 [connection signal="value_changed" from="FundoPause/HSlider" to="." method="_on_HSlider_value_changed"]

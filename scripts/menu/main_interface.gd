@@ -23,7 +23,7 @@ func _on_Button4_pressed():
 
 # Botão para ir para a fase 3
 func _on_Button3_pressed():
-	get_tree().change_scene("res://scenes/pacman.tscn")
+	get_tree().change_scene("res://scenes/menu/main_interface.tscn")
 
 
 
