@@ -132,5 +132,5 @@ align = 1
 valign = 1
 autowrap = true
 
-[connection signal="pressed" from="Botões/Resposta3" to="." method="_on_Resposta3_pressed"]
 [connection signal="pressed" from="Botões/Resposta3" to="." method="_on_RESPOSTA3_pressed"]
+[connection signal="pressed" from="Botões/Resposta3" to="." method="_on_Resposta3_pressed"]

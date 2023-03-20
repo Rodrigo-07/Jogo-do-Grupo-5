@@ -4,7 +4,6 @@ extends Node2D
 func _ready():
 	$AudioStreamPlayer2D.play(true)
 	Points.currentSaveCode()
-	print(Points.currentCode)
 
 # Botão de start para começar o jogo
 func _on_TextureButton_pressed():
@@ -18,5 +17,3 @@ func _on_TextureButton3_pressed():
 func _on_TextureButton4_pressed():
 	get_tree().change_scene("res://Pontuação/checkPoints.tscn")
 	
-func _process(delta):
-	print(Points.currentCode)

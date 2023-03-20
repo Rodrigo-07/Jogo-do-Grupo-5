@@ -50,6 +50,14 @@ margin_bottom = 405.0
 rect_pivot_offset = Vector2( 31, 11 )
 text = "Código de jogo"
 
+[node name="Atual" type="Label" parent="."]
+margin_left = 81.0
+margin_top = 463.0
+margin_right = 278.0
+margin_bottom = 510.0
+rect_pivot_offset = Vector2( 31, 11 )
+text = "Seu código atual é:"
+
 [node name="LineEdit" type="LineEdit" parent="."]
 margin_left = 73.0
 margin_top = 387.0

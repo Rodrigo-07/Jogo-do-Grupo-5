@@ -45,16 +45,8 @@ func _ready():
 	pass
 	
 func _process(delta):
-	
-	print(Points.points)
-	
-
 	#Soma da lista connected para causar a conexão dos fios
 	check = sum(connected)
-	
-	#usando apenas para verificar 
-	
-		
 	#Conexão do fio vermelho
 	if check == 40:
 		$Fundo/Connecteds/ConnectRed.visible = true

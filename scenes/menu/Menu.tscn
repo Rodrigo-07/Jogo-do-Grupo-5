@@ -112,7 +112,7 @@ margin_right = 158.296
 margin_bottom = 85.9172
 custom_colors/font_color = Color( 0.32549, 0.345098, 0.352941, 1 )
 custom_fonts/font = SubResource( 8 )
-text = "premio
+text = "prêmio
 "
 
 [connection signal="pressed" from="TextureButton" to="." method="_on_TextureButton_pressed"]
