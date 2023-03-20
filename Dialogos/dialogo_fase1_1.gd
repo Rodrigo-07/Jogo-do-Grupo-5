@@ -104,7 +104,7 @@ func nextPhrase() -> void:
 
 # Quando o diálogo for finalizado o botão leva para a fase o minigame da fase 1
 func _on_Button_pressed():
-	get_tree().change_scene("res://scenes/whg.tscn")
+	get_tree().change_scene("res://scenes/fase 1/Peguntas/pergunta1.tscn")
 
 
 
