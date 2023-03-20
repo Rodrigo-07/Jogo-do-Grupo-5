@@ -2,7 +2,7 @@ extends Node
 
 var ipAdress: Array
 var premio = str(Points.points)
-var url = "https://chart.googleapis.com/chart?chs=150x150&cht=qr&chl=Parabens%20voce%20fez%20"+premio+"%20pontos"
+var url = "https://chart.googleapis.com/chart?chs=150x150&cht=qr&chl=Parabens%20voce%20fez%20"+premio+"%20pontos%20"+Points.currentCode+"%20é%20seu%20código"
 
 func _ready():
 
