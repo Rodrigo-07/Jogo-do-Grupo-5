@@ -1,11 +1,12 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://scenes/fase 2/Perguntas/pergunta4.gd" type="Script" id=1]
-[ext_resource path="res://Fonte/Lucon.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://Fonte/Concert_One/ConcertOne-Regular.ttf" type="DynamicFontData" id=2]
 [ext_resource path="res://sprites/Tela perguntas.png" type="Texture" id=3]
 [ext_resource path="res://sprites/Button.png" type="Texture" id=4]
 [ext_resource path="res://sprites/Buttonmuitoescuro.png" type="Texture" id=5]
 [ext_resource path="res://sprites/Buttonescuro.png" type="Texture" id=6]
+[ext_resource path="res://Fonte/Lato-Bold.ttf" type="DynamicFontData" id=7]
 
 [sub_resource type="TileSet" id=1]
 0/name = "Tela perguntas.png 0"
@@ -52,16 +53,17 @@
 2/z_index = 0
 
 [sub_resource type="DynamicFont" id=2]
-font_data = ExtResource( 2 )
+font_data = ExtResource( 7 )
 
 [sub_resource type="DynamicFont" id=3]
-font_data = ExtResource( 2 )
+font_data = ExtResource( 7 )
 
 [sub_resource type="DynamicFont" id=4]
 outline_color = Color( 0, 0, 0, 1 )
-font_data = ExtResource( 2 )
+font_data = ExtResource( 7 )
 
 [sub_resource type="DynamicFont" id=5]
+size = 18
 outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 2 )
 
@@ -88,13 +90,14 @@ texture_hover = ExtResource( 6 )
 
 [node name="Label" type="Label" parent="TextureButton"]
 margin_left = 19.0
-margin_top = 22.0
+margin_top = 17.0
 margin_right = 328.0
-margin_bottom = 119.0
+margin_bottom = 114.0
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_fonts/font = SubResource( 2 )
 text = "Como R$100 não faz nenhuma diferença para a empresa, você pode aceitar a proposta do cliente e mantê-la em sigilo."
 align = 1
+valign = 1
 autowrap = true
 
 [node name="TextureButton2" type="TextureButton" parent="."]
@@ -108,9 +111,9 @@ texture_hover = ExtResource( 6 )
 
 [node name="Label" type="Label" parent="TextureButton2"]
 margin_left = 15.0
-margin_top = 18.0
+margin_top = 29.0
 margin_right = 335.0
-margin_bottom = 135.0
+margin_bottom = 95.0
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_fonts/font = SubResource( 3 )
 text = "Ao presenciar essa situação, você deve negar a proposta dizendo que ela está em desacordo com as regras da empresa"
@@ -127,14 +130,13 @@ texture_pressed = ExtResource( 5 )
 texture_hover = ExtResource( 6 )
 
 [node name="Label" type="Label" parent="TextureButton3"]
-margin_left = 28.0
-margin_top = 17.0
-margin_right = 328.0
-margin_bottom = 134.0
+margin_left = 41.0
+margin_top = 15.0
+margin_right = 317.0
+margin_bottom = 112.0
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_fonts/font = SubResource( 4 )
-text = "Você deve negar a proposta e mantê-la em sigilo, protegendo a privacidade do cliente.
-"
+text = "Você deve negar a proposta e mantê-la em sigilo, protegendo a privacidade do cliente."
 align = 1
 valign = 1
 autowrap = true
@@ -152,10 +154,10 @@ margin_right = 299.0
 margin_bottom = 33.0
 
 [node name="Label" type="Label" parent="."]
-margin_left = 15.0
-margin_top = 54.0
-margin_right = 347.0
-margin_bottom = 206.0
+margin_left = 33.0
+margin_top = 48.0
+margin_right = 333.0
+margin_bottom = 200.0
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_fonts/font = SubResource( 5 )
 text = "Você está prestando um serviço em uma residência e o cliente lhe oferece R$100 para você fazer um “gatonet”. Nessa situação, qual deve ser sua atitude?"
