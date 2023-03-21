@@ -6,6 +6,8 @@ var url = "https://chart.googleapis.com/chart?chs=150x150&cht=qr&chl=Parabens%20
 
 func _ready():
 
+	$Atual.text = "Seu código atual é:"+Points.currentCode
+	
 	# Create an HTTP request node and connect its completion signal.
 	var http_request = HTTPRequest.new()
 	add_child(http_request)
@@ -32,3 +34,17 @@ func _http_request_completed(result, response_code, headers, body):
 	add_child(texture_rect)
 	texture_rect.texture = texture
 	texture_rect.set_position(Vector2(100, 200))
+	
+#Colocar save code no jogo
+func _on_SaveCodeButton_pressed():
+	Points.currentCode = ($LineEdit.text)
+	Points.currentCodeArray.clear()
+	
+	for i in range(Points.currentCode.length()):
+		Points.currentCodeArray.append(int(Points.currentCode[i]))
+		
+	Points.addSaveCode()
+	Points.currentSaveCode()
+	
+	get_tree().reload_current_scene()
+

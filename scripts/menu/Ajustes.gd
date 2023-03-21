@@ -26,16 +26,3 @@ func _on_HSlider_value_changed(value):
 		AudioServer.set_bus_mute(audio,true)
 	else:
 		AudioServer.set_bus_mute(audio,false)
-	
-#Colocar save code no jogo
-func _on_SaveCodeButton_pressed():
-	Points.currentCode = ($LineEdit.text)
-	Points.currentCodeArray.clear()
-	
-	for i in range(Points.currentCode.length()):
-		Points.currentCodeArray.append(int(Points.currentCode[i]))
-		
-	Points.addSaveCode()
-	Points.currentSaveCode()
-	
-	$Atual.text = "Seu código atual é:"+Points.currentCode
