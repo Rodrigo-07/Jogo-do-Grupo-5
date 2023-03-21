@@ -1,15 +1,15 @@
 [gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://scenes/fase 2/Dialogos fase 3/dialogo_fase2.gd" type="Script" id=1]
-[ext_resource path="res://sprites/trutinha_vtal_1.png" type="Texture" id=2]
-[ext_resource path="res://sprites/balão (2).png" type="Texture" id=3]
-[ext_resource path="res://sprites/personagem_sprite_2.png" type="Texture" id=4]
-[ext_resource path="res://sprites/personagem.png" type="Texture" id=5]
-[ext_resource path="res://sprites/invisivel.png" type="Texture" id=6]
+[ext_resource path="res://Fonte/rainyhearts/rainyhearts.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://Fonte/upheaval/upheavtt.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://sprites/personagem.png" type="Texture" id=4]
+[ext_resource path="res://sprites/invisivel.png" type="Texture" id=5]
+[ext_resource path="res://sprites/balão (2).png" type="Texture" id=6]
 [ext_resource path="res://sprites/trutinha_vtal_2.png" type="Texture" id=7]
-[ext_resource path="res://Fonte/upheaval/upheavtt.ttf" type="DynamicFontData" id=8]
-[ext_resource path="res://Fonte/rainyhearts/rainyhearts.ttf" type="DynamicFontData" id=9]
-[ext_resource path="res://sprites/gray_empty_button.png" type="Texture" id=10]
+[ext_resource path="res://sprites/personagem_sprite_2.png" type="Texture" id=8]
+[ext_resource path="res://sprites/gray_empty_button.png" type="Texture" id=9]
+[ext_resource path="res://sprites/trutinha_vtal_1.png" type="Texture" id=10]
 
 [sub_resource type="StreamTexture" id=5]
 flags = 4
@@ -29,7 +29,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0, 0.3 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ ExtResource( 5 ), ExtResource( 4 ) ]
+"values": [ ExtResource( 4 ), ExtResource( 8 ) ]
 }
 
 [sub_resource type="Animation" id=1]
@@ -46,21 +46,21 @@ tracks/0/keys = {
 "times": PoolRealArray( 0, 0.3 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ ExtResource( 2 ), ExtResource( 7 ) ]
+"values": [ ExtResource( 10 ), ExtResource( 7 ) ]
 }
 
 [sub_resource type="DynamicFont" id=7]
 size = 60
 outline_size = 3
 outline_color = Color( 0, 0, 0, 1 )
-font_data = ExtResource( 8 )
+font_data = ExtResource( 3 )
 
 [sub_resource type="DynamicFont" id=3]
-font_data = ExtResource( 8 )
+font_data = ExtResource( 3 )
 
 [sub_resource type="DynamicFont" id=4]
 size = 22
-font_data = ExtResource( 9 )
+font_data = ExtResource( 2 )
 
 [node name="Control" type="Control"]
 margin_right = 40.0
@@ -73,7 +73,7 @@ __meta__ = {
 [node name="touch" type="TouchScreenButton" parent="."]
 position = Vector2( -83, -113 )
 scale = Vector2( 0.453333, 0.895833 )
-normal = ExtResource( 6 )
+normal = ExtResource( 5 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -98,7 +98,7 @@ dialogPath = "res://scenes/fase 2/Dialogos fase 3/dialogo_fase2.json"
 [node name="Alex" type="Sprite" parent="ColorRect"]
 position = Vector2( 62, 393 )
 scale = Vector2( 1.33693, 1.24986 )
-texture = ExtResource( 5 )
+texture = ExtResource( 4 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="ColorRect/Alex"]
 anims/alex_falando = SubResource( 6 )
@@ -106,7 +106,7 @@ anims/alex_falando = SubResource( 6 )
 [node name="PersonagemVtal" type="Sprite" parent="ColorRect"]
 position = Vector2( -144, 321 )
 scale = Vector2( 0.195182, 0.236553 )
-texture = ExtResource( 2 )
+texture = ExtResource( 10 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="ColorRect/PersonagemVtal"]
 anims/trutinha_vtal_falando = SubResource( 1 )
@@ -116,14 +116,14 @@ position = Vector2( -27.457, 68.6655 )
 rotation = 3.14159
 scale = Vector2( 1.06581, -0.952662 )
 z_index = -1
-texture = ExtResource( 3 )
+texture = ExtResource( 6 )
 
 [node name="balaodefalaAlex" type="Sprite" parent="ColorRect"]
 position = Vector2( -7, 62 )
 rotation = 0.0008383
 scale = Vector2( 1.08055, 0.949234 )
 z_index = -1
-texture = ExtResource( 3 )
+texture = ExtResource( 6 )
 
 [node name="Button" type="Button" parent="ColorRect"]
 margin_left = -69.0
@@ -131,7 +131,7 @@ margin_top = 284.0
 margin_right = 343.0
 margin_bottom = 690.0
 rect_scale = Vector2( 0.535027, 0.662074 )
-icon = ExtResource( 10 )
+icon = ExtResource( 9 )
 flat = true
 
 [node name="Label" type="Label" parent="ColorRect/Button"]
