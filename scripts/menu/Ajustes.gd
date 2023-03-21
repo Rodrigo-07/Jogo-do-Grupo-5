@@ -1,8 +1,16 @@
 extends Node2D
 
+onready var transition = get_node("Transition/fill")
+onready var animation = get_node("Transition/fill/AnimationPlayer")
+
+export (int, "Pixels", "Spot Player", "Spot Centro", "Corte Vertical", "Corte Horizontal") var transition_type
+export (float, 2.0) var duration = 1.0
+
 var audio = AudioServer.get_bus_index("Master")
 
 func _ready():
+	transition.material.set_shader_param("type", transition_type)
+	animation.playback_speed = duration
 	$AudioStreamPlayer2D.play(true)
 	$Atual.text = "Seu código atual é:"+Points.currentCode
 
