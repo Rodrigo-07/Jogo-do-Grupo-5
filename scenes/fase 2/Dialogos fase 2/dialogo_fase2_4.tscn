@@ -1,6 +1,6 @@
 [gd_scene load_steps=17 format=2]
 
-[ext_resource path="res://scenes/fase 2/Dialogos fase 2/dialogo_fase2_2.gd" type="Script" id=1]
+[ext_resource path="res://scenes/fase 2/Dialogos fase 2/dialogo_fase2_4.gd" type="Script" id=1]
 [ext_resource path="res://sprites/trutinha_vtal_1.png" type="Texture" id=2]
 [ext_resource path="res://sprites/balão (2).png" type="Texture" id=3]
 [ext_resource path="res://sprites/cenario das falas.png" type="Texture" id=4]
@@ -85,7 +85,7 @@ margin_top = 164.0
 margin_right = 224.0
 margin_bottom = 164.0
 script = ExtResource( 1 )
-dialogPath = "res://scenes/fase 2/Dialogos fase 2/dialogo_fase2_2.json"
+dialogPath = "res://scenes/fase 2/Dialogos fase 2/dialogo_fase2_4.json"
 
 [node name="Alex" type="Sprite" parent="ColorRect"]
 position = Vector2( 60.5, 419.012 )
@@ -104,14 +104,14 @@ texture = ExtResource( 2 )
 anims/trutinha_vtal_falando = SubResource( 2 )
 
 [node name="balaodefalaAlex" type="Sprite" parent="ColorRect"]
-position = Vector2( -19, 69 )
-scale = Vector2( 1.28438, 0.90625 )
+position = Vector2( -19, 21.5 )
+scale = Vector2( 1.28438, 1.20313 )
 z_index = -1
 texture = ExtResource( 3 )
 
 [node name="balaodefalaVtal" type="Sprite" parent="ColorRect"]
-position = Vector2( -44, 63.5 )
-scale = Vector2( -1.25135, 0.913185 )
+position = Vector2( -44, 15.885 )
+scale = Vector2( -1.25135, 1.21078 )
 z_index = -1
 texture = ExtResource( 3 )
 
@@ -138,19 +138,19 @@ text = "Começar"
 [node name="Name" type="RichTextLabel" parent="ColorRect"]
 modulate = Color( 0, 0, 0, 1 )
 self_modulate = Color( 0, 0, 0, 1 )
-margin_left = -146.0
-margin_top = -3.0
-margin_right = 44.0
-margin_bottom = 35.0
+margin_left = -145.0
+margin_top = -74.0
+margin_right = 45.0
+margin_bottom = -36.0
 custom_fonts/normal_font = SubResource( 3 )
 
 [node name="Text" type="RichTextLabel" parent="ColorRect"]
 modulate = Color( 0, 0, 0, 1 )
 self_modulate = Color( 0, 0, 0, 1 )
-margin_left = -148.0
-margin_top = 37.0
-margin_right = 85.0
-margin_bottom = 140.0
+margin_left = -149.0
+margin_top = -38.0
+margin_right = 84.0
+margin_bottom = 124.0
 custom_fonts/normal_font = SubResource( 4 )
 
 [node name="Timer" type="Timer" parent="ColorRect"]

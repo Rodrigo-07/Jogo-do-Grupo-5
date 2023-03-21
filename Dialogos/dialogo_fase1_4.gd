@@ -27,7 +27,6 @@ func _ready():
 var touch
 func _on_touch_pressed():
 	touch = true
-
 func _process(delta):
 	# Se for precisonado enter o texto avança e vai para a próxima frase
 	if Input.is_action_just_pressed("ui_accept") or touch:
@@ -45,7 +44,7 @@ func _process(delta):
 func getDialog() -> Array:
 	# Verifica se o arquivo do diálogo existe
 	var f = File.new()
-	# Se não encontrar retorna essa mensagem
+	# se a condição for falso retorna essa mensagem
 	assert(f.file_exists(dialogPath), "File path does not exist")
 	
 	# Abre o arquivo
@@ -91,7 +90,6 @@ func nextPhrase() -> void:
 		$PersonagemVtal.visible = 1
 		$balaodefalaVtal.visible = 1
 	
-	# Enquanto tiver texto o código vai mostrando mais um carácter
 	while $Text.visible_characters < len($Text.text):
 		$Text.visible_characters += 1
 		
@@ -102,8 +100,9 @@ func nextPhrase() -> void:
 	phraseNum += 1
 	return
 
-# Quando o diálogo for finalizado o botão leva para a fase 2
+# Quando o diálogo for finalizado o botão leva para o menu principal
 func _on_Button_pressed():
-	get_tree().change_scene("res://scenes/fase 2/Perguntas/pergunta1.tscn")
+	get_tree().change_scene("res://scenes/menu/main_interface.tscn")
+
 
 

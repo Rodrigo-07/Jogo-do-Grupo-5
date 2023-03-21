@@ -96,5 +96,3 @@ func _on_Area2D_body_shape_entered(body_rid, body, body_shape_index, local_shape
 	print("ruinzão")
 
 
-
-
