@@ -103,7 +103,7 @@ func nextPhrase() -> void:
 	phraseNum += 1
 	return
 
-# Quando o diálogo for finalizado o botão leva para a fase 2
+# Quando o diálogo for finalizado o botão leva para o menu
 func _on_Button_pressed():
 	get_tree().change_scene("res://scenes/menu/main_interface.tscn")
 

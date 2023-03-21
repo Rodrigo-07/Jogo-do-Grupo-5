@@ -1,15 +1,15 @@
 [gd_scene load_steps=12 format=2]
 
-[ext_resource path="res://scenes/fase 2/Perguntas/pergunta1.gd" type="Script" id=1]
-[ext_resource path="res://sprites/Buttonmuitoescuro.png" type="Texture" id=2]
-[ext_resource path="res://sprites/Tela perguntas.png" type="Texture" id=3]
-[ext_resource path="res://sprites/Button.png" type="Texture" id=4]
-[ext_resource path="res://sprites/Buttonescuro.png" type="Texture" id=5]
-[ext_resource path="res://Fonte/Lucon.ttf" type="DynamicFontData" id=6]
+[ext_resource path="res://Fonte/Lucon.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://sprites/Button.png" type="Texture" id=2]
+[ext_resource path="res://sprites/Buttonescuro.png" type="Texture" id=3]
+[ext_resource path="res://sprites/Tela perguntas.png" type="Texture" id=4]
+[ext_resource path="res://sprites/Buttonmuitoescuro.png" type="Texture" id=5]
+[ext_resource path="res://scenes/fase 3/Perguntas/Pergunta_fase3_1.gd" type="Script" id=6]
 
 [sub_resource type="TileSet" id=1]
 0/name = "Tela perguntas.png 0"
-0/texture = ExtResource( 3 )
+0/texture = ExtResource( 4 )
 0/tex_offset = Vector2( 0, 0 )
 0/modulate = Color( 1, 1, 1, 1 )
 0/region = Rect2( 0, -1, 364, 643 )
@@ -23,7 +23,7 @@
 0/shapes = [  ]
 0/z_index = 0
 1/name = "Tela perguntas.png 1"
-1/texture = ExtResource( 3 )
+1/texture = ExtResource( 4 )
 1/tex_offset = Vector2( 0, 0 )
 1/modulate = Color( 1, 1, 1, 1 )
 1/region = Rect2( 721, 1, 360, 47 )
@@ -37,7 +37,7 @@
 1/shapes = [  ]
 1/z_index = 0
 2/name = "Tela perguntas.png 2"
-2/texture = ExtResource( 3 )
+2/texture = ExtResource( 4 )
 2/tex_offset = Vector2( 0, 0 )
 2/modulate = Color( 1, 1, 1, 1 )
 2/region = Rect2( 1083, 54, 357, 147 )
@@ -52,24 +52,21 @@
 2/z_index = 0
 
 [sub_resource type="DynamicFont" id=2]
-font_data = ExtResource( 6 )
+font_data = ExtResource( 1 )
 
 [sub_resource type="DynamicFont" id=3]
-font_data = ExtResource( 6 )
+font_data = ExtResource( 1 )
 
 [sub_resource type="DynamicFont" id=4]
 outline_color = Color( 0, 0, 0, 1 )
-font_data = ExtResource( 6 )
+font_data = ExtResource( 1 )
 
 [sub_resource type="DynamicFont" id=5]
 outline_color = Color( 0, 0, 0, 1 )
-font_data = ExtResource( 6 )
+font_data = ExtResource( 1 )
 
-[node name="pergunta1" type="Node2D"]
-script = ExtResource( 1 )
-__meta__ = {
-"_edit_vertical_guides_": [ 30.0, 339.0, 43.0, 328.0 ]
-}
+[node name="Pergunta1" type="Node2D"]
+script = ExtResource( 6 )
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource( 1 )
@@ -82,9 +79,9 @@ margin_left = 5.0
 margin_top = 224.0
 margin_right = 355.0
 margin_bottom = 349.0
-texture_normal = ExtResource( 4 )
-texture_pressed = ExtResource( 2 )
-texture_hover = ExtResource( 5 )
+texture_normal = ExtResource( 2 )
+texture_pressed = ExtResource( 5 )
+texture_hover = ExtResource( 3 )
 
 [node name="Label" type="Label" parent="TextureButton"]
 margin_left = 24.0
@@ -93,53 +90,53 @@ margin_right = 333.0
 margin_bottom = 114.0
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_fonts/font = SubResource( 2 )
-text = "Ato de subornar."
+text = "Apenas funcionários recém contratados precisam fazer isso, já que não possuem muita experiência na área."
 align = 1
 valign = 1
+autowrap = true
 
 [node name="TextureButton2" type="TextureButton" parent="."]
 margin_left = 5.0
 margin_top = 360.0
 margin_right = 355.0
 margin_bottom = 485.0
-texture_normal = ExtResource( 4 )
-texture_pressed = ExtResource( 2 )
-texture_hover = ExtResource( 5 )
+texture_normal = ExtResource( 2 )
+texture_pressed = ExtResource( 5 )
+texture_hover = ExtResource( 3 )
 
 [node name="Label" type="Label" parent="TextureButton2"]
-margin_left = 19.0
-margin_top = 9.0
-margin_right = 339.0
-margin_bottom = 117.0
+margin_left = 27.0
+margin_top = 17.0
+margin_right = 320.0
+margin_bottom = 125.0
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_fonts/font = SubResource( 3 )
-text = "Prática de atos ilícitos com a
-finalidade de obter
-ganhos pessoais."
+text = "Funcionários recém contratados precisam fazer isso, uma vez que não possuem experiência na área.
+"
 align = 1
 valign = 1
+autowrap = true
 
 [node name="TextureButton3" type="TextureButton" parent="."]
 margin_left = 5.0
 margin_top = 496.0
 margin_right = 355.0
 margin_bottom = 621.0
-texture_normal = ExtResource( 4 )
-texture_pressed = ExtResource( 2 )
-texture_hover = ExtResource( 5 )
+texture_normal = ExtResource( 2 )
+texture_pressed = ExtResource( 5 )
+texture_hover = ExtResource( 3 )
 
 [node name="Label" type="Label" parent="TextureButton3"]
 margin_left = 19.0
-margin_top = 23.0
+margin_top = 18.0
 margin_right = 333.0
-margin_bottom = 111.0
+margin_bottom = 115.0
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_fonts/font = SubResource( 4 )
-text = "Falta de ética que resulta em
-uma reputação ruim
-para a corporação."
+text = "Independente do cargo e tempo de experiência, todos os funcionários devem estar atualizados com os treinamentos e em condições adequadas."
 align = 1
 valign = 1
+autowrap = true
 
 [node name="ColorRect" type="ColorRect" parent="."]
 margin_top = 212.0
@@ -155,14 +152,17 @@ margin_bottom = 33.0
 
 [node name="Label" type="Label" parent="."]
 margin_left = 5.0
-margin_top = 66.0
+margin_top = 70.0
 margin_right = 355.0
-margin_bottom = 183.0
+margin_bottom = 187.0
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_fonts/font = SubResource( 5 )
-text = " O que melhor define a corrupção?"
+text = "Dos perfis a seguir, quais precisam realizar treinamentos de segurança, utilizar equipamentos corretos e estar em boas 
+condições físicas e mentais?
+"
 align = 1
 valign = 1
+autowrap = true
 
 [connection signal="button_up" from="TextureButton" to="." method="_on_TextureButton_button_up"]
 [connection signal="button_up" from="TextureButton2" to="." method="_on_TextureButton2_button_up"]
