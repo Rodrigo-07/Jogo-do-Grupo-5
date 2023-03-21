@@ -69,4 +69,4 @@ func _on_casa_body_entered(body):
 	if Points.crossingroad == false:
 		Points.addpoint()
 	Points.crossingroad = true
-	get_tree().change_scene("res://scenes/fase 2/Dialogos fase 3/dialogo_fase2_2.tscn")
+	get_tree().change_scene("res://scenes/fase 2/Perguntas/pergunta4.tscn")

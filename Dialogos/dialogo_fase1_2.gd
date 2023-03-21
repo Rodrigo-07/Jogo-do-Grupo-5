@@ -102,7 +102,7 @@ func nextPhrase() -> void:
 
 # Quando o diálogo for finalizado o botão leva para o menu principal
 func _on_Button_pressed():
-	get_tree().change_scene("res://scenes/fase 1/Peguntas/pergunta1.tscn")
+	get_tree().change_scene("res://scenes/whg.tscn")
 
 
 

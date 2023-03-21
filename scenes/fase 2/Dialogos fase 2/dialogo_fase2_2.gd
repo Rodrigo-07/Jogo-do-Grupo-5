@@ -10,20 +10,20 @@ var phraseNum = 0
 var finished = false
 var botao = false
 
+# Called when the node enters the scene tree for the first time.
 func _ready():
 	# Inciar a animação de fala dos personagens
 	$PersonagemVtal/AnimationPlayer.play("trutinha_vtal_falando")
 	$Alex/AnimationPlayer.play("alex_falando")
 	# Determina velocidaede que o texto aparece na tela
 	$Timer.wait_time = textSpeed
-	dialog = getDialog()
 	# Se o diálogo não for encontrado retrona essa mensagem
+	dialog = getDialog()
 	assert(dialog, "Dialog not found")
 	nextPhrase()
 	
-	# O botão para continuar depois do diálogo só aparece depois que acabar todo diálogo
 	$Button.visible = false
-
+	
 var touch
 func _on_touch_pressed():
 	touch = true
@@ -38,14 +38,15 @@ func _process(delta):
 			$Text.visible_characters = len($Text.text)
 			touch = false
 	
+	# O botão para continuar depois do diálogo só aparece depois que acabar todo diálogo
 	if botao == true:
 		$Button.visible = true
 	
 
 func getDialog() -> Array:
-	# Verifica se o arquivo do diálogo existe
+	# Check if the file of the dialogue exist
 	var f = File.new()
-	# Se não encontrar retorna essa mensagem
+	# se a condição for falso retorna essa mensagem
 	assert(f.file_exists(dialogPath), "File path does not exist")
 	
 	# Abre o arquivo
@@ -71,7 +72,7 @@ func nextPhrase() -> void:
 	# Mostra se o dialogo acabou
 	finished = false
 	
-	# Determinar o nome e texto em si que irá ser mostrado na tela
+	# Determinar o nome e texto em si do dialogo
 	$Name.bbcode_text = dialog[phraseNum]["Name"]
 	$Text.bbcode_text = dialog[phraseNum]["Text"]
 	
@@ -104,6 +105,6 @@ func nextPhrase() -> void:
 
 # Quando o diálogo for finalizado o botão leva para a fase 2
 func _on_Button_pressed():
-	get_tree().change_scene("res://scenes/fase 2/crossingroad.tscn")
+	get_tree().change_scene("res://scenes/fase 2/Perguntas/pergunta3.tscn")
 
 

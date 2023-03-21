@@ -9,6 +9,8 @@ code = "	shader_type canvas_item;
 	uniform float screen_height = 1080;
 	uniform vec2 center = vec2(0.5);
 	uniform vec2 player = vec2(0.5);
+	uniform float cutoff : hint_range(0.0, 1.0);
+	uniform sampler2D mask : hint_albedo;
 
 	uniform float progress : hint_range(0,1);
 	uniform float pixel_size = 15.0;
@@ -64,14 +66,14 @@ shader_param/screen_width = 1920.0
 shader_param/screen_height = 1080.0
 shader_param/center = Vector2( 0.5, 0.5 )
 shader_param/player = Vector2( 0.5, 0.5 )
+shader_param/cutoff = null
 shader_param/progress = 0.0
 shader_param/pixel_size = 15.0
 shader_param/circle_size = 1.5
 shader_param/curtains = 1.0
-shader_param/type = 0
+shader_param/type = 1
 
 [sub_resource type="Animation" id=3]
-length = 0.001
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:material:shader_param/progress")
 tracks/0/interp = 1
@@ -79,7 +81,7 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0 ),
+"times": PoolRealArray( -0.4 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
 "values": [ 0.0 ]

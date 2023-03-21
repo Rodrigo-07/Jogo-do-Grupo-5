@@ -165,7 +165,7 @@ func _process(delta):
 		if Points.fios == false:
 			Points.addpoint()
 		Points.fios == true
-		get_tree().change_scene("res://scenes/fase 2/Perguntas/pergunta1.tscn")
+		get_tree().change_scene("res://scenes/fase 2/Dialogos fase 2/dialogo_fase2_4.tscn")
 		
 		
 		

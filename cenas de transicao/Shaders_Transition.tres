@@ -5,15 +5,17 @@ code = "	shader_type canvas_item;
 
 	uniform float screen_width = 1920;
 	uniform float screen_height = 1080;
-	uniform vec2 center = vec2(0.5f);
-	uniform vec2 player = vec2(0.5f);
+	uniform vec2 center = vec2(0.5);
+	uniform vec2 player = vec2(0.5);
+	uniform float cutoff : hint_range(0.0, 1.0);
+	uniform sampler2D mask : hint_albedo;
 
 	uniform float progress : hint_range(0,1);
-	uniform float pixel_size = 15f;
-	uniform float circle_size : hint_range(0,2) = 1.5f;
-	uniform float curtains : hint_range(0,1) = 1f;
+	uniform float pixel_size = 15.0;
+	uniform float circle_size : hint_range(0,2) = 1.5;
+	uniform float curtains : hint_range(0,1) = 1.0;
 
-	uniform int type : hint_range(0,4) = 0;
+	uniform int type : hint_range(0,5) = 0;
 
 	void fragment() {
 		//Tipo Diamante Pixel
@@ -24,7 +26,7 @@ code = "	shader_type canvas_item;
 			float xDistance = abs(xFraction - 0.5);
 			float yDistance = abs(yFraction - 0.5);
 
-			if (xDistance + yDistance + UV.x + UV.y > progress * 4f) {
+			if (xDistance + yDistance + UV.x + UV.y > progress * 4.0) {
 				discard;
 			}
 		}
@@ -32,26 +34,35 @@ code = "	shader_type canvas_item;
 		else if (type == 1) {
 			float ratio = screen_width / screen_height;
 			if (distance(player, vec2(mix(player.x, UV.x, ratio), UV.y)) < circle_size * (1.0 - progress)) {
-				COLOR.a = 0f;
+				COLOR.a = 0.0;
 			}
 		}
 		//Tipo Circulo no Centro
 		else if (type == 2) {
 			float ratio = screen_width / screen_height;
 			if (distance(center, vec2(mix(center.x, UV.x, ratio), UV.y)) < circle_size * (1.0 - progress)) {
-				COLOR.a = 0f;
+				COLOR.a = 0.0;
 			}
 		}
 		//Tipo Corte Vertical
 		else if (type == 3) {
 			if (distance(vec2(0.5, 0.5), vec2(UV.x, UV.x)) < curtains * (1.0 - progress)) {
-				COLOR.a = 0f;
+				COLOR.a = 0.0;
 			}
 		}
 		//Tipo Corte Horizontal
 		else if (type == 4) {
 			if (distance(vec2(0.5, 0.5), vec2(UV.y, UV.y)) < curtains * (1.0 - progress)) {
-				COLOR.a = 0f;
+				COLOR.a = 0.0;
 			}
 		}
-	}"
+		else if (type == 4) {
+			float value = texture(mask, UV).r;
+			if (value < cutoff) {
+				COLOR = vec4(COLOR.rgb, 0.0);
+			}
+			else {
+				COLOR = vec4(COLOR.rgb, 1.0);
+			}
+	}
+}"

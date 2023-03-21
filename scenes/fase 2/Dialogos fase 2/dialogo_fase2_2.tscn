@@ -1,6 +1,6 @@
 [gd_scene load_steps=17 format=2]
 
-[ext_resource path="res://scenes/fase 2/Dialogos fase 3/dialogo_fase2_2.gd" type="Script" id=1]
+[ext_resource path="res://scenes/fase 2/Dialogos fase 2/dialogo_fase2_2.gd" type="Script" id=1]
 [ext_resource path="res://sprites/trutinha_vtal_1.png" type="Texture" id=2]
 [ext_resource path="res://sprites/balão (2).png" type="Texture" id=3]
 [ext_resource path="res://sprites/cenario das falas.png" type="Texture" id=4]
@@ -85,7 +85,7 @@ margin_top = 164.0
 margin_right = 224.0
 margin_bottom = 164.0
 script = ExtResource( 1 )
-dialogPath = "res://scenes/fase 2/Dialogos fase 3/dialogo_fase2_2.json"
+dialogPath = "res://scenes/fase 2/Dialogos fase 2/dialogo_fase2_2.json"
 
 [node name="Alex" type="Sprite" parent="ColorRect"]
 position = Vector2( 60.5, 419.012 )
