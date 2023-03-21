@@ -87,7 +87,7 @@ func _on_Compliance_body_shape_entered(body_rid, body, body_shape_index, local_s
 		if Points.whg == false:
 			Points.addpoint()
 		Points.whg = true
-		get_tree().change_scene("res://scenes/fase 1/Peguntas/pergunta2.tscn")
+		get_tree().change_scene("res://scenes/fase 1/Peguntas/pergunta4.tscn")
 	else: 
 		print("Folgado, vai pegar a key")
 
