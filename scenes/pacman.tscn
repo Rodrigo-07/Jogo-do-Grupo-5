@@ -1,4 +1,4 @@
-[gd_scene load_steps=79 format=2]
+[gd_scene load_steps=78 format=2]
 
 [ext_resource path="res://scenes/pacman.gd" type="Script" id=1]
 [ext_resource path="res://sprites/Black-Pacman-PNG.png" type="Texture" id=2]
@@ -22,7 +22,6 @@
 [ext_resource path="res://sprites/pausar .png" type="Texture" id=20]
 [ext_resource path="res://sprites/button play.png" type="Texture" id=21]
 [ext_resource path="res://sprites/button casinha .png" type="Texture" id=22]
-[ext_resource path="res://sprites/whgggg.png" type="Texture" id=23]
 
 [sub_resource type="SegmentShape2D" id=1]
 a = Vector2( 828, 10 )
@@ -3108,18 +3107,6 @@ margin_right = 7143.0
 margin_bottom = 7016.0
 rect_scale = Vector2( 0.0126425, 0.0126425 )
 icon = ExtResource( 22 )
-
-[node name="Whgggg" type="Sprite" parent="FundoPause/Button3"]
-position = Vector2( -8938.09, 25706.9 )
-texture = ExtResource( 23 )
-
-[node name="Whgggg2" type="Sprite" parent="FundoPause/Button3"]
-position = Vector2( -36622.5, 21435.6 )
-texture = ExtResource( 23 )
-
-[node name="Whgggg3" type="Sprite" parent="FundoPause/Button3"]
-position = Vector2( -61063.8, 38758.1 )
-texture = ExtResource( 23 )
 
 [node name="Button2" type="Button" parent="FundoPause"]
 margin_left = 78.0

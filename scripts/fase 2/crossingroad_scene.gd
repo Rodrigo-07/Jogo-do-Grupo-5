@@ -89,7 +89,25 @@ func _process(delta):
 	if $mapa/Personagem.position.x > 360 or $mapa/Personagem.position.x == 0 or $mapa/Personagem.position.y == 0 or $mapa/Personagem.position.y == 640:
 		 $mapa/Personagem.set_position(Vector2(180, 610))
 		
+func _on_Pausar_pressed():
+	get_tree().paused = true
+	$FundoPause.show()
 
+func _on_Button2_pressed():
+	get_tree().paused = false
+	$FundoPause.hide()
+var audio = AudioServer.get_bus_index("Master")
+var pontos = "Você tem " + str(Points.points) + " pontos"
+func _on_HSlider_value_changed(value):
+	AudioServer.set_bus_volume_db(audio, value)
+	if value == -30:
+		AudioServer.set_bus_mute(audio,true)
+	else:
+		AudioServer.set_bus_mute(audio,false)
+#
+	pass
+func _on_Button3_pressed():
+	get_tree().change_scene("res://scenes/menu/main_interface.tscn")
 
 
 	

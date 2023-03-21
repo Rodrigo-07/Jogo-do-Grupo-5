@@ -232,17 +232,17 @@ collision_mask = 11
 script = ExtResource( 3 )
 
 [node name="Icon" type="ColorRect" parent="KinematicBody2D"]
-margin_left = 71.0
-margin_top = 543.0
-margin_right = 90.0
-margin_bottom = 562.0
+margin_left = 48.0
+margin_top = 563.0
+margin_right = 67.0
+margin_bottom = 582.0
 color = Color( 0.443137, 0.92549, 0, 1 )
 __meta__ = {
 "_edit_use_anchors_": true
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="KinematicBody2D"]
-position = Vector2( 80.5, 552.5 )
+position = Vector2( 57.5, 572.5 )
 shape = SubResource( 9 )
 
 [node name="key" type="Node" parent="."]
@@ -353,8 +353,10 @@ format = 1
 tile_data = PoolIntArray( 0, 0, 0 )
 
 [node name="Pausar" type="Button" parent="."]
-margin_right = 67.0
-margin_bottom = 47.0
+margin_left = 24.0
+margin_top = -8.0
+margin_right = 91.0
+margin_bottom = 39.0
 text = "pause"
 
 [connection signal="pressed" from="Controles/Cima" to="KinematicBody2D" method="_on_Cima_pressed"]
@@ -365,7 +367,7 @@ text = "pause"
 [connection signal="released" from="Controles/Direita" to="KinematicBody2D" method="_on_Direita_released"]
 [connection signal="pressed" from="Controles/Esquerda" to="KinematicBody2D" method="_on_Esquerda_pressed"]
 [connection signal="released" from="Controles/Esquerda" to="KinematicBody2D" method="_on_Esquerda_released"]
-[connection signal="pressed" from="FundoPause/Button2" to="." method="_on_Button_pressed"]
 [connection signal="pressed" from="FundoPause/Button2" to="." method="_on_Button2_pressed"]
+[connection signal="pressed" from="FundoPause/Button2" to="." method="_on_Button_pressed"]
 [connection signal="value_changed" from="FundoPause/HSlider" to="." method="_on_HSlider_value_changed"]
 [connection signal="pressed" from="Pausar" to="." method="_on_Pausar_pressed"]
