@@ -10,15 +10,12 @@ func obstacle():
 	# Instância essa cena na cena da fase 1
 	obs = obstaculoScene.instance()
 	add_child(obs)
-var pontos = "Você tem " + str(Points.points) + " pontos"
-func _ready():
-	obstacle()
-	$FundoPause/Label.text = pontos
 	
-#pause:
 var audio = AudioServer.get_bus_index("Master")
-
-func _on_Pausar_pressed():
+func _ready():
+	$FundoPause/Label.text = pontos
+	$FundoPause/Label2.text = "Seu código atual é:"+Points.currentCode
+func _on_Pausar2_pressed():
 	get_tree().paused = true
 	$FundoPause.show()
 
@@ -26,7 +23,7 @@ func _on_Button2_pressed():
 	get_tree().paused = false
 	$FundoPause.hide()
 	
-
+var pontos = "Você tem " + str(Points.points) + " pontos"
 func _on_HSlider_value_changed(value):
 	AudioServer.set_bus_volume_db(audio, value)
 	if value == -30:
@@ -34,3 +31,9 @@ func _on_HSlider_value_changed(value):
 	else:
 		AudioServer.set_bus_mute(audio,false)
 	
+
+
+func _on_Button3_pressed():
+	get_tree().change_scene("res://scenes/menu/main_interface.tscn")
+
+

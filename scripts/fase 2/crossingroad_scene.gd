@@ -50,7 +50,8 @@ func _ready():
 	
 	add_child(timer3)
 	timer3.start()
-	
+	$FundoPause/Label.text = pontos
+	$FundoPause/Label2.text = "Seu código atual é:"+ Points.currentCode
 
 # Faz a instancia (adiciona) da cena do carro 1 nessa cena
 func car_spaw_1():
