@@ -3131,6 +3131,14 @@ margin_top = 295.0
 margin_right = 222.0
 margin_bottom = 309.0
 
+[node name="Label2" type="Label" parent="FundoPause"]
+modulate = Color( 0, 0, 0, 1 )
+self_modulate = Color( 0, 0, 0, 1 )
+margin_left = 77.0
+margin_top = 360.0
+margin_right = 323.0
+margin_bottom = 397.0
+
 [connection signal="pressed" from="controls/Cima" to="Person" method="_on_Cima_pressed"]
 [connection signal="pressed" from="controls/Baixo" to="Person" method="_on_Baixo_pressed"]
 [connection signal="pressed" from="controls/Direita" to="Person" method="_on_Direita_pressed"]
