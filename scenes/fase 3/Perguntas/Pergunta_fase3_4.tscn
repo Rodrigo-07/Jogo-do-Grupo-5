@@ -1,11 +1,12 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=13 format=2]
 
-[ext_resource path="res://Fonte/Lucon.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://Fonte/Lato-Bold.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://sprites/Button.png" type="Texture" id=2]
 [ext_resource path="res://sprites/Buttonescuro.png" type="Texture" id=3]
 [ext_resource path="res://sprites/Tela perguntas.png" type="Texture" id=4]
 [ext_resource path="res://sprites/Buttonmuitoescuro.png" type="Texture" id=5]
 [ext_resource path="res://scenes/fase 3/Perguntas/Pergunta_fase3_4.gd" type="Script" id=6]
+[ext_resource path="res://Fonte/Concert_One/ConcertOne-Regular.ttf" type="DynamicFontData" id=7]
 
 [sub_resource type="TileSet" id=1]
 0/name = "Tela perguntas.png 0"
@@ -62,8 +63,9 @@ outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 1 )
 
 [sub_resource type="DynamicFont" id=5]
+size = 18
 outline_color = Color( 0, 0, 0, 1 )
-font_data = ExtResource( 1 )
+font_data = ExtResource( 7 )
 
 [node name="Pergunta4" type="Node2D"]
 script = ExtResource( 6 )
@@ -85,9 +87,9 @@ texture_hover = ExtResource( 3 )
 
 [node name="Label" type="Label" parent="TextureButton"]
 margin_left = 11.0
-margin_top = 8.0
+margin_top = 4.0
 margin_right = 343.0
-margin_bottom = 125.0
+margin_bottom = 121.0
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_fonts/font = SubResource( 2 )
 text = "Você vai na festa e bebe sem muitos limites, uma vez que ao dormir acordará disposto e consciente para realizar uma instalação."
@@ -105,9 +107,9 @@ texture_pressed = ExtResource( 5 )
 texture_hover = ExtResource( 3 )
 
 [node name="Label" type="Label" parent="TextureButton2"]
-margin_left = 18.0
+margin_left = 24.0
 margin_top = 9.0
-margin_right = 338.0
+margin_right = 331.0
 margin_bottom = 117.0
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_fonts/font = SubResource( 3 )
@@ -126,9 +128,9 @@ texture_pressed = ExtResource( 5 )
 texture_hover = ExtResource( 3 )
 
 [node name="Label" type="Label" parent="TextureButton3"]
-margin_left = 15.0
+margin_left = 39.0
 margin_top = 13.0
-margin_right = 339.0
+margin_right = 321.0
 margin_bottom = 115.0
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_fonts/font = SubResource( 4 )
@@ -150,9 +152,9 @@ margin_right = 299.0
 margin_bottom = 33.0
 
 [node name="Label" type="Label" parent="."]
-margin_left = 18.0
+margin_left = 25.0
 margin_top = 69.0
-margin_right = 348.0
+margin_right = 341.0
 margin_bottom = 186.0
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_fonts/font = SubResource( 5 )
