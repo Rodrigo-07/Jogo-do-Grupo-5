@@ -238,7 +238,7 @@ __meta__ = {
 margin_left = 15.0
 margin_right = 55.0
 margin_bottom = 14.0
-text = " > 200MB"
+text = " = 200MB"
 
 [node name="corY" type="ColorRect" parent="Fundo"]
 margin_left = 105.0
@@ -254,7 +254,7 @@ __meta__ = {
 margin_left = 15.0
 margin_right = 55.0
 margin_bottom = 14.0
-text = " > 400MB"
+text = " = 400MB"
 
 [node name="Fire" type="AnimatedSprite" parent="Fundo"]
 visible = false
@@ -262,7 +262,7 @@ position = Vector2( 119, 159 )
 scale = Vector2( 1.29688, 1.28125 )
 frames = SubResource( 37 )
 animation = "run"
-frame = 3
+frame = 25
 playing = true
 
 [node name="Fire2" type="AnimatedSprite" parent="Fundo"]
@@ -271,7 +271,7 @@ position = Vector2( 258, 309 )
 scale = Vector2( 1.29688, 1.28125 )
 frames = SubResource( 37 )
 animation = "run"
-frame = 2
+frame = 24
 playing = true
 
 [node name="Fire3" type="AnimatedSprite" parent="Fundo"]
@@ -280,7 +280,7 @@ position = Vector2( 81, 414 )
 scale = Vector2( 1.29688, 1.28125 )
 frames = SubResource( 37 )
 animation = "run"
-frame = 1
+frame = 23
 playing = true
 
 [node name="corB" type="ColorRect" parent="Fundo"]
@@ -297,7 +297,7 @@ __meta__ = {
 margin_left = 15.0
 margin_right = 55.0
 margin_bottom = 14.0
-text = " > 500MB"
+text = " = 500MB"
 
 [node name="corW" type="ColorRect" parent="Fundo"]
 margin_left = 275.0
@@ -312,7 +312,7 @@ __meta__ = {
 margin_left = 15.0
 margin_right = 55.0
 margin_bottom = 14.0
-text = " > 1GB"
+text = " = 1GB"
 
 [node name="Connecteds" type="Node" parent="Fundo"]
 
