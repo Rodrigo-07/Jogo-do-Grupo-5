@@ -16,7 +16,7 @@ func _on_TextureButton3_button_up():
 	Points.points -=1
 	Points.addpoint()
 	
-	get_tree().change_scene("res://Dialogos/Dialogo1_2.tscn")
+	get_tree().change_scene("res://Dialogos/dialogo_fase1_4.tscn")
 
 func _on_TextureButton2_button_up():
 	$TextureButton2.texture_normal = errou
