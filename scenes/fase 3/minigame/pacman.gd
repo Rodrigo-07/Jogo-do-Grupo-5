@@ -22,4 +22,4 @@ func _on_HSlider_value_changed(value):
 
 
 func _on_Button3_pressed():
-	get_tree().change_scene("res://scenes/menu/main_interface.tscn")
+	get_tree().change_scene("res://scenes/fase 3/Dialogos/dialogo_fase3_3.tscn")
