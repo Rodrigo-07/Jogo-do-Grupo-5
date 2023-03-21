@@ -3,7 +3,7 @@ extends Node2D
 
 
 # Código para adicionar o obstáculo na fase 1
-var obstaculoScene = preload("res://scenes/Obstaculo.tscn")
+var obstaculoScene = preload("res://scenes/fase 3/minigame/Obstaculo.tscn")
 var obs
 
 func obstacle():

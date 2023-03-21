@@ -64,7 +64,7 @@ func _physics_process(delta):
 	move_and_slide(move)
 
 	var collision = move_and_collide(move * delta)
-	var checkCollision = ['parede1','parede2','parede3','parede4','parede5','parede6','parede7','parede8','parede9','parede10', 'parede11','parede12','parede13','parede14','key']
+	var checkCollision = ['TileMap','key']
 	
 	# Dependendo do que o personagem colidir acontece algo diferente
 	if collision:
@@ -74,9 +74,12 @@ func _physics_process(delta):
 			keyCard[0] += 1
 			print(keyCard)
 
-		elif !(bateu in checkCollision):
+		elif (bateu in checkCollision):
 			
 			print(bateu)
+			
+		elif !(bateu in checkCollision):
+			get_tree().reload_current_scene()
 	
 
 # Quando o player chega no lugar
