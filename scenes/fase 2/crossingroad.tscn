@@ -29,7 +29,7 @@ points = PoolVector2Array( 0, 0, 1450, -2600, -1800, -3200 )
 extents = Vector2( 61.875, 41.375 )
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 11, 21.75 )
+extents = Vector2( 8.5, 7 )
 
 [sub_resource type="Animation" id=3]
 resource_name = "andar para direita"
@@ -163,7 +163,7 @@ position = Vector2( 180, 610 )
 script = ExtResource( 7 )
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="mapa/Personagem"]
-position = Vector2( 0, 2 )
+position = Vector2( -0.5, 8 )
 shape = SubResource( 1 )
 
 [node name="Sprite" type="Sprite" parent="mapa/Personagem"]

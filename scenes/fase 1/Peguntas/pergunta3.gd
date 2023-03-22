@@ -3,7 +3,7 @@ extends Node2D
 var errou = load("res://sprites/Buttonvermelho.png")
 var acertou = load("res://sprites/Buttonverde.png")
 
-func _ready():
+func _process(delta):
 	$Points.text = str(Points.points)
 
 func _on_TextureButton3_button_up():
@@ -11,18 +11,19 @@ func _on_TextureButton3_button_up():
 	$TextureButton3.texture_pressed = errou
 	$TextureButton3.texture_hover = errou
 	
-	yield(get_tree().create_timer(2), 'timeout')
+	yield(get_tree().create_timer(1), 'timeout')
 	get_tree().reload_current_scene()
 	
 func _on_TextureButton2_button_up():
 	$TextureButton2.texture_normal = acertou
 	$TextureButton2.texture_pressed = acertou
 	$TextureButton2.texture_hover = acertou
-	Points.points +=1
 	
-	yield(get_tree().create_timer(3), 'timeout')
-	Points.points -=1
-	Points.addpoint()
+	yield(get_tree().create_timer(1), 'timeout')
+	if Points.pergunta11 == false:
+		Points.addpoint()
+		Points.addpoint()
+		Points.pergunta11 = true
 	
 	get_tree().change_scene("res://Dialogos/dialogo_fase1_2.tscn")
 
@@ -31,5 +32,5 @@ func _on_TextureButton_button_up():
 	$TextureButton.texture_pressed = errou
 	$TextureButton.texture_hover = errou
 	
-	yield(get_tree().create_timer(2), 'timeout')
+	yield(get_tree().create_timer(1), 'timeout')
 	get_tree().reload_current_scene()

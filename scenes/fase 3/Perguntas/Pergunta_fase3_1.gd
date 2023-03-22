@@ -11,7 +11,7 @@ func _on_TextureButton2_button_up():
 	$TextureButton2.texture_pressed = errou
 	$TextureButton2.texture_hover = errou
 	
-	yield(get_tree().create_timer(5), 'timeout')
+	yield(get_tree().create_timer(1), 'timeout')
 	get_tree().reload_current_scene()
 	
 func _on_TextureButton3_button_up():
@@ -19,9 +19,11 @@ func _on_TextureButton3_button_up():
 	$TextureButton3.texture_pressed = acertou
 	$TextureButton3.texture_hover = acertou
 	
-	yield(get_tree().create_timer(5), 'timeout')
-	Points.addpoint()
-	
+	yield(get_tree().create_timer(1), 'timeout')
+	if Points.pergunta31 == false:
+		Points.addpoint()
+		Points.addpoint()
+		Points.pergunta31 = true
 	get_tree().change_scene("res://scenes/fase 3/Perguntas/Pergunta_fase3_2.tscn")
 
 func _on_TextureButton_button_up():
@@ -29,5 +31,5 @@ func _on_TextureButton_button_up():
 	$TextureButton.texture_pressed = errou
 	$TextureButton.texture_hover = errou
 	
-	yield(get_tree().create_timer(5), 'timeout')
+	yield(get_tree().create_timer(1), 'timeout')
 	get_tree().reload_current_scene()

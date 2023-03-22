@@ -18,11 +18,12 @@ func _on_TextureButton3_button_up():
 	$TextureButton3.texture_normal = acertou
 	$TextureButton3.texture_pressed = acertou
 	$TextureButton3.texture_hover = acertou
-	Points.points +=1
 	
-	yield(get_tree().create_timer(5), 'timeout')
-	Points.points -=1
-	Points.addpoint()
+	yield(get_tree().create_timer(1), 'timeout')
+	if Points.pergunta22 == false:
+		Points.addpoint()
+		Points.addpoint()
+		Points.pergunta22 = true
 	
 	get_tree().change_scene("res://scenes/fase 2/Dialogos fase 2/dialogo_fase2_2.tscn")
 

@@ -163,7 +163,7 @@ func _process(delta):
 		yield(get_tree().create_timer(5), 'timeout')
 		if Points.fios == false:
 			Points.addpoint()
-		Points.fios == true
+			Points.fios == true
 		get_tree().change_scene("res://scenes/fase 2/Dialogos fase 2/dialogo_fase2_4.tscn")
 		
 		

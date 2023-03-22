@@ -89,10 +89,9 @@ func _on_Compliance_body_shape_entered(body_rid, body, body_shape_index, local_s
 		# Jogador vence o jogo quando coletar as 3 chaves e recebe mais um ponto na variável global
 		if Points.whg == false:
 			Points.addpoint()
-		Points.whg = true
+			Points.whg = true
 		get_tree().change_scene("res://scenes/fase 1/Peguntas/pergunta4.tscn")
-	else: 
-		print("Folgado, vai pegar a key")
+
 
 # Quando o jogador vai para o lugar errado
 func _on_Area2D_body_shape_entered(body_rid, body, body_shape_index, local_shape_index):

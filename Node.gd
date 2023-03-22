@@ -1,5 +1,10 @@
 extends Node
 
+#variaveis utilizadas para checar legitimidade do codigo
+var pointForCheck
+var checkingPoints = 0
+var next
+
 #Código do estado instantaneo do jogo
 var currentCodeArray = []
 var currentCode = ""
@@ -37,60 +42,107 @@ func addpoint():
 	
 func addSaveCode():
 	
-	#define estado dos niveis
-	stateLevel1 = currentCodeArray[0]
-	stateLevel2 = currentCodeArray[1]
-	stateLevel3 = currentCodeArray[2]
-
-	#define estado dos pontos
-	if currentCodeArray.size() == 4:
-		points = currentCodeArray[3]
-	elif currentCodeArray.size() == 5:
-		points = int(str(currentCodeArray[3])+str(currentCodeArray[4]))
-	
-	#muda cada parte das fases definindo em qual parte do jogo o player está
-	if stateLevel1 == 0:
-		pergunta11 =  false
-	if stateLevel1 == 1:
-		pergunta11 =  true
-	if stateLevel1 == 2:
-		whg =  true
-	if stateLevel1 == 3:
-		pergunta12 =  true
-	if stateLevel1 == 4:
-		pergunta13 =  true
-	if stateLevel1 == 5:
-		pergunta14 = true
-	
-	if stateLevel2 == 0:
-		pergunta21 = false
-	if stateLevel2 == 1:
-		pergunta21 = true
-	if stateLevel2 == 2:
-		pergunta22 = true
-	if stateLevel2 == 3:
-		pergunta23 = true
-	if stateLevel2 == 4:
-		crossingroad = true
-	if stateLevel2 == 5:
-		pergunta24 = true
-	if stateLevel2 == 6:
-		fios = true
+		#Parte do codigo para fase 1
+	if currentCodeArray[0] == 1:
+		checkingPoints += 2
+	if currentCodeArray[0] == 2:
+		checkingPoints += 3
+	if currentCodeArray[0] == 3:
+		checkingPoints += 5
+	if currentCodeArray[0] == 4:
+		checkingPoints += 7
+	if currentCodeArray[0] == 5:
+		checkingPoints += 9
 		
-	if stateLevel3 == 0:
-		pergunta31 =  false
-	if stateLevel3 == 1:
-		pergunta31 =  true
-	if stateLevel3 == 2:
-		pergunta32 =  true
-	if stateLevel3 == 3:
-		pergunta33 =  true
-	if stateLevel3 == 4:
-		pergunta34 =  true
-	if stateLevel3 == 5:
-		pacMan = true
+	#Parte do codigo para fase 2
+	if currentCodeArray[1] == 1:
+		checkingPoints += 2
+	if currentCodeArray[1] == 2:
+		checkingPoints += 4
+	if currentCodeArray[1] == 3:
+		checkingPoints += 6
+	if currentCodeArray[1] == 4:
+		checkingPoints += 7
+	if currentCodeArray[1] == 5:
+		checkingPoints += 9
+	if currentCodeArray[1] == 6:
+		checkingPoints += 10
 	
-	return currentCodeArray
+	#Parte do codigo para fase 3
+	if currentCodeArray[2] == 1:
+		checkingPoints += 2
+	if currentCodeArray[2] == 2:
+		checkingPoints += 4
+	if currentCodeArray[2] == 3:
+		checkingPoints += 6
+	if currentCodeArray[2] == 4:
+		checkingPoints += 8
+	if currentCodeArray[2] == 5:
+		checkingPoints += 9
+		
+	if currentCodeArray.size() == 4:
+		pointForCheck = currentCodeArray[3]
+	elif currentCodeArray.size() == 5:
+		pointForCheck = int(str(currentCodeArray[3])+str(currentCodeArray[4]))
+		
+	if checkingPoints == pointForCheck:
+		#define estado dos niveis
+		stateLevel1 = currentCodeArray[0]
+		stateLevel2 = currentCodeArray[1]
+		stateLevel3 = currentCodeArray[2]
+
+		#define estado dos pontos
+		if currentCodeArray.size() == 4:
+			points = currentCodeArray[3]
+		elif currentCodeArray.size() == 5:
+			points = int(str(currentCodeArray[3])+str(currentCodeArray[4]))
+		
+		#muda cada parte das fases definindo em qual parte do jogo o player está
+		if stateLevel1 == 0:
+			pergunta11 =  false
+		if stateLevel1 == 1:
+			pergunta11 =  true
+		if stateLevel1 == 2:
+			whg =  true
+		if stateLevel1 == 3:
+			pergunta12 =  true
+		if stateLevel1 == 4:
+			pergunta13 =  true
+		if stateLevel1 == 5:
+			pergunta14 = true
+		
+		if stateLevel2 == 0:
+			pergunta21 = false
+		if stateLevel2 == 1:
+			pergunta21 = true
+		if stateLevel2 == 2:
+			pergunta22 = true
+		if stateLevel2 == 3:
+			pergunta23 = true
+		if stateLevel2 == 4:
+			crossingroad = true
+		if stateLevel2 == 5:
+			pergunta24 = true
+		if stateLevel2 == 6:
+			fios = true
+			
+		if stateLevel3 == 0:
+			pergunta31 =  false
+		if stateLevel3 == 1:
+			pergunta31 =  true
+		if stateLevel3 == 2:
+			pergunta32 =  true
+		if stateLevel3 == 3:
+			pergunta33 =  true
+		if stateLevel3 == 4:
+			pergunta34 =  true
+		if stateLevel3 == 5:
+			pacMan = true
+		
+		next = true
+		
+	else:
+		next = false
 
 
 #Codigo que define save do game no estado instantaneo

@@ -20,10 +20,11 @@ func _on_TextureButton_button_up():
 	$TextureButton.texture_hover = acertou
 	Points.points +=1
 	
-	yield(get_tree().create_timer(5), 'timeout')
-	Points.points -=1
-	Points.addpoint()
-	
+	yield(get_tree().create_timer(1), 'timeout')
+	if Points.pergunta32 == false:
+		Points.addpoint()
+		Points.addpoint()
+		Points.pergunta32 = true
 	get_tree().change_scene("res://scenes/fase 3/Dialogos/dialogo_fase3_2.tscn")
 
 func _on_TextureButton2_button_up():

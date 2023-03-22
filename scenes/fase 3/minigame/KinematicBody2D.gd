@@ -33,7 +33,7 @@ func _process(delta):
 		
 		if Points.pacMan == false:
 			Points.addpoint()
-		Points.pacMan == true
+			Points.pacMan == true
 		
 		get_tree().change_scene("res://scenes/menu/main_interface.tscn")
 

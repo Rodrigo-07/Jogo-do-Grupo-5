@@ -44,7 +44,8 @@ func _on_SaveCodeButton_pressed():
 		Points.currentCodeArray.append(int(Points.currentCode[i]))
 		
 	Points.addSaveCode()
-	Points.currentSaveCode()
-	
-	get_tree().reload_current_scene()
-
+	if Points.next == true:
+		Points.currentSaveCode()
+		get_tree().reload_current_scene()
+	else:
+		$Atual.text = "O código inserido é invalido"
