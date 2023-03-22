@@ -8,7 +8,7 @@
 [ext_resource path="res://sprites/invisivel.png" type="Texture" id=6]
 [ext_resource path="res://sprites/trutinha_vtal_1.png" type="Texture" id=7]
 [ext_resource path="res://sprites/trutinha_vtal_2.png" type="Texture" id=8]
-[ext_resource path="res://Fonte/LUCON.TTF" type="DynamicFontData" id=9]
+[ext_resource path="res://Fonte/Lato-Bold.ttf" type="DynamicFontData" id=9]
 [ext_resource path="res://Fonte/upheaval/upheavtt.ttf" type="DynamicFontData" id=10]
 [ext_resource path="res://sprites/gray_empty_button.png" type="Texture" id=11]
 
@@ -53,10 +53,11 @@ outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 10 )
 
 [sub_resource type="DynamicFont" id=4]
+size = 18
 font_data = ExtResource( 10 )
 
 [sub_resource type="DynamicFont" id=3]
-size = 18
+size = 19
 font_data = ExtResource( 9 )
 
 [node name="Control" type="Control"]
@@ -109,14 +110,14 @@ texture = ExtResource( 7 )
 anims/trutinha_vtal_falando = SubResource( 2 )
 
 [node name="balaodefalaAlex" type="Sprite" parent="ColorRect"]
-position = Vector2( -24.5, 7.71998 )
-scale = Vector2( 1.25312, 1.27325 )
+position = Vector2( -22, 6.50001 )
+scale = Vector2( 1.425, 1.29062 )
 z_index = -1
 texture = ExtResource( 2 )
 
 [node name="balaodefalaVtal" type="Sprite" parent="ColorRect"]
-position = Vector2( -53.1409, 8.5724 )
-scale = Vector2( -1.29734, 1.26688 )
+position = Vector2( -56.9207, 8.5724 )
+scale = Vector2( -1.42333, 1.26688 )
 z_index = -1
 texture = ExtResource( 2 )
 
@@ -142,16 +143,16 @@ text = "Começar"
 [node name="Name" type="RichTextLabel" parent="ColorRect"]
 modulate = Color( 0, 0, 0, 1 )
 self_modulate = Color( 0, 0, 0, 1 )
-margin_left = -161.0
+margin_left = -175.0
 margin_top = -93.0
-margin_right = 23.0
+margin_right = 72.0
 margin_bottom = -56.0
 custom_fonts/normal_font = SubResource( 4 )
 
 [node name="Text" type="RichTextLabel" parent="ColorRect"]
 modulate = Color( 0, 0, 0, 1 )
 self_modulate = Color( 0, 0, 0, 1 )
-margin_left = -163.0
+margin_left = -179.0
 margin_top = -66.0
 margin_right = 86.0
 margin_bottom = 119.0
