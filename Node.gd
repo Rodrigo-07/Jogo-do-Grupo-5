@@ -151,45 +151,45 @@ func currentSaveCode():
 	#Parte do codigo para fase 1
 	if pergunta11 == false:
 		stateLevel1 = 0
-	if pergunta11 != false:
+	if pergunta11 == true:
 		stateLevel1 = 1
-	if whg != false:
+	if whg == true:
 		stateLevel1 = 2
-	if pergunta12 != false:
+	if pergunta12 == true:
 		stateLevel1 = 3
-	if pergunta13 != false:
+	if pergunta13 == true:
 		stateLevel1 = 4
-	if pergunta14 != false:
+	if pergunta14 == true:
 		stateLevel1 = 5
 		
 	#Parte do codigo para fase 2
 	if pergunta21 == false:
 		stateLevel2 = 0
-	if pergunta21 != false:
+	if pergunta21 == true:
 		stateLevel2 = 1
-	if pergunta22 != false:
+	if pergunta22 == true:
 		stateLevel2 = 2
-	if pergunta23 != false:
+	if pergunta23 == true:
 		stateLevel2 = 3
-	if crossingroad != false:
+	if crossingroad == true:
 		stateLevel2 = 4
-	if pergunta24 != false:
+	if pergunta24 == true:
 		stateLevel2 = 5
-	if fios != false:
+	if fios == true:
 		stateLevel2 = 6
 	
 	#Parte do codigo para fase 3
 	if pergunta31 == false:
 		stateLevel3 = 0
-	if pergunta31 != false:
+	if pergunta31 == true:
 		stateLevel3 = 1
-	if pergunta32 != false:
+	if pergunta32 == true:
 		stateLevel3 = 2
-	if pergunta33 != false:
+	if pergunta33 == true:
 		stateLevel3 = 3
-	if pergunta34 != false:
+	if pergunta34 == true:
 		stateLevel3 = 4
-	if pacMan != false:
+	if pacMan == true:
 		stateLevel3 = 5
 	
 	currentCodeArray.clear()

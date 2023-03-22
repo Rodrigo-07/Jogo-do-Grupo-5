@@ -29,7 +29,7 @@ func _process(delta):
 	# Para vencer o jogo é preciso coletar os itens bons
 	if coletaveis[0] == 4:
 		get_node("../texto final").visible = true
-		yield(get_tree().create_timer(5), 'timeout')
+		yield(get_tree().create_timer(1.5), 'timeout')
 		
 		if Points.pacMan == false:
 			Points.addpoint()
