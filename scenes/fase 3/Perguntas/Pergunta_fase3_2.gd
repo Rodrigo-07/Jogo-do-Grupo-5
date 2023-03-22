@@ -18,7 +18,6 @@ func _on_TextureButton_button_up():
 	$TextureButton.texture_normal = acertou
 	$TextureButton.texture_pressed = acertou
 	$TextureButton.texture_hover = acertou
-	Points.points +=1
 	
 	yield(get_tree().create_timer(1), 'timeout')
 	if Points.pergunta32 == false:

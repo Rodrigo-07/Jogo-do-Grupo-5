@@ -23,7 +23,7 @@ func _on_TextureButton2_button_up():
 	if Points.pergunta21 == false:
 		Points.addpoint()
 		Points.addpoint()
-		Points.pergunta22 = true
+		Points.pergunta21 = true
 	
 	get_tree().change_scene("res://scenes/fase 2/Perguntas/pergunta2.tscn")
 
