@@ -104,6 +104,5 @@ func nextPhrase() -> void:
 	return
 
 # Quando o diálogo for finalizado o botão leva para a fase 2
-func on_Button_pressed():
-	get_tree().change_scene("res://scenes/fase 2/Perguntas/pergunta1.tscn")
-
+func _on_Button_pressed():
+	get_tree().change_scene("res://scenes/fase 2/Perguntas/pergunta3.tscn")

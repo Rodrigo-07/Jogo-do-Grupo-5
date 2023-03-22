@@ -1,6 +1,6 @@
 [gd_scene load_steps=17 format=2]
 
-[ext_resource path="res://scenes/fase 2/Dialogos fase 2/dialogo_fase2_2.gd" type="Script" id=1]
+[ext_resource path="res://scenes/fase 2/Dialogos fase 2/dialogo_fase2_1.gd" type="Script" id=1]
 [ext_resource path="res://Fonte/rainyhearts/rainyhearts.ttf" type="DynamicFontData" id=2]
 [ext_resource path="res://Fonte/upheaval/upheavtt.ttf" type="DynamicFontData" id=3]
 [ext_resource path="res://sprites/personagem.png" type="Texture" id=4]
