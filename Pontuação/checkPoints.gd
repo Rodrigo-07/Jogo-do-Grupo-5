@@ -37,11 +37,13 @@ func _http_request_completed(result, response_code, headers, body):
 	
 #Colocar save code no jogo
 func _on_SaveCodeButton_pressed():
+	
 	Points.currentCode = ($LineEdit.text)
 	Points.currentCodeArray.clear()
 	
 	for i in range(Points.currentCode.length()):
 		Points.currentCodeArray.append(int(Points.currentCode[i]))
+		print(Points.currentCode[i])
 		
 	Points.addSaveCode()
 	if Points.next == true:
@@ -49,3 +51,4 @@ func _on_SaveCodeButton_pressed():
 		get_tree().reload_current_scene()
 	else:
 		$Atual.text = "O código inserido é invalido"
+	print("codigo:", Points.currentCode,"\narray:", Points.currentCodeArray, "\nlevel1: ", Points.stateLevel1, "\nlevel2: ", Points.stateLevel2, "\nlevel3: ", Points.stateLevel3, "\nPontos: ",Points.points)

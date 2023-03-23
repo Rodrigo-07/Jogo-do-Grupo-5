@@ -1,13 +1,11 @@
 extends Node
 
-#variaveis utilizadas para checar legitimidade do codigo
-var pointForCheck
-var checkingPoints = 0
+#apenas para o addCode
 var next
 
 #Código do estado instantaneo do jogo
-var currentCodeArray = []
-var currentCode = ""
+var currentCodeArray: Array
+var currentCode: String
 
 #checagem fase1
 var stateLevel1
@@ -35,6 +33,9 @@ var pergunta34 = false
 var pacMan = false
 
 var points = 00
+	
+	
+
 
 
 func addpoint():
@@ -42,6 +43,14 @@ func addpoint():
 	
 func addSaveCode():
 	
+	stateLevel1 = 0
+	stateLevel2 = 0
+	stateLevel3 = 0
+	
+	#variaveis utilizadas para checar legitimidade do codigo
+	var pointForCheck
+	var checkingPoints = 0
+
 		#Parte do codigo para fase 1
 	if currentCodeArray[0] == 1:
 		checkingPoints += 2
@@ -139,10 +148,12 @@ func addSaveCode():
 		if stateLevel3 == 5:
 			pacMan = true
 		
+		# se next é igual a true, o código é valido
 		next = true
-		
+		#Código invalido
 	else:
 		next = false
+	
 
 
 #Codigo que define save do game no estado instantaneo

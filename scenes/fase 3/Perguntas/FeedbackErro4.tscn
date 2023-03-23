@@ -4,7 +4,7 @@
 [ext_resource path="res://sprites/tenta novamente.png" type="Texture" id=2]
 [ext_resource path="res://Fonte/Lato-Bold.ttf" type="DynamicFontData" id=3]
 [ext_resource path="res://Fonte/Concert_One/ConcertOne-Regular.ttf" type="DynamicFontData" id=4]
-[ext_resource path="res://scenes/fase 3/Perguntas/FeedbackErro1.gd" type="Script" id=5]
+[ext_resource path="res://scenes/fase 3/Perguntas/FeedbackErro4.gd" type="Script" id=5]
 
 [sub_resource type="DynamicFont" id=1]
 size = 25
@@ -18,9 +18,10 @@ font_data = ExtResource( 3 )
 size = 150
 font_data = ExtResource( 4 )
 
-[node name="FeedbackErro1" type="Node2D"]
+[node name="FeedbackErro4" type="Node2D"]
 
 [node name="Popup" type="Popup" parent="."]
+visible = true
 margin_right = 40.0
 margin_bottom = 40.0
 script = ExtResource( 5 )
@@ -48,14 +49,14 @@ align = 1
 valign = 1
 
 [node name="Text" type="Label" parent="Popup"]
-margin_left = 38.0
-margin_top = 354.0
-margin_right = 322.0
-margin_bottom = 504.0
+margin_left = 36.0
+margin_top = 320.0
+margin_right = 326.0
+margin_bottom = 567.0
 rect_pivot_offset = Vector2( 1325, -205 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_fonts/font = SubResource( 2 )
-text = "Lembre-se que todos os funcionários devem realizar os treinamentos e também se apresentar em condições saudáveis para as atividades do trabalho.
+text = "Lembre-se que sua vida social também é extremamente importante, não apenas por ser divertido ir a uma festa mas também para sua saúde, contudo, lembre-se sempre de impor alguns limites para que depois consiga trabalhar com segurança e eficiência.
 "
 align = 1
 valign = 1
@@ -63,9 +64,9 @@ autowrap = true
 
 [node name="TentarNovamente" type="TextureButton" parent="Popup"]
 margin_left = 80.0
-margin_top = 538.0
+margin_top = 544.0
 margin_right = 1745.0
-margin_bottom = 898.0
+margin_bottom = 904.0
 rect_scale = Vector2( 0.12, 0.12 )
 texture_normal = ExtResource( 2 )
 
