@@ -1,6 +1,6 @@
 [gd_scene load_steps=16 format=2]
 
-[ext_resource path="res://scripts/fase 2/Fase fios.gd" type="Script" id=1]
+[ext_resource path="res://scenes/scripts/fase 2/Fase fios.gd" type="Script" id=1]
 [ext_resource path="res://sprites/fase_dos_fios-Sheet.png" type="Texture" id=2]
 [ext_resource path="res://scenes/fase 3/minigame/Sprite.gd" type="Script" id=3]
 [ext_resource path="res://sprites/button play.png" type="Texture" id=4]
