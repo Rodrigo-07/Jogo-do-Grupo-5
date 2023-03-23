@@ -2,7 +2,7 @@
 
 [ext_resource path="res://sprites/inimigos whg.png" type="Texture" id=1]
 [ext_resource path="res://scenes/cena de teste.gd" type="Script" id=2]
-[ext_resource path="res://scenes/popup teste.tscn" type="PackedScene" id=3]
+[ext_resource path="res://sprites/popup teste.tscn" type="PackedScene" id=3]
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource( 2 )
