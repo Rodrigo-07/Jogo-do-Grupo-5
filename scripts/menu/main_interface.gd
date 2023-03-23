@@ -7,7 +7,7 @@ func _ready():
 	points = get_node("/root/Points")
 	
 func _process(delta):
-	$Container/score.text = str(Points.points) + " pts"
+	$Container/score.text = str(Points.points) + " Vcoins"
 	
 # Botão para ir para a fase 1
 func _on_Button_pressed():

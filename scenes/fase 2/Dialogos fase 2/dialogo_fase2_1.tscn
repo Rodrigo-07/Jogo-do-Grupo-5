@@ -1,7 +1,7 @@
 [gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://scenes/fase 2/Dialogos fase 2/dialogo_fase2_1.gd" type="Script" id=1]
-[ext_resource path="res://Fonte/rainyhearts/rainyhearts.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://Fonte/Lato-Bold.ttf" type="DynamicFontData" id=2]
 [ext_resource path="res://Fonte/upheaval/upheavtt.ttf" type="DynamicFontData" id=3]
 [ext_resource path="res://sprites/personagem.png" type="Texture" id=4]
 [ext_resource path="res://sprites/invisivel.png" type="Texture" id=5]
@@ -56,10 +56,11 @@ outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 3 )
 
 [sub_resource type="DynamicFont" id=3]
+size = 18
 font_data = ExtResource( 3 )
 
 [sub_resource type="DynamicFont" id=4]
-size = 22
+size = 19
 font_data = ExtResource( 2 )
 
 [node name="Control" type="Control"]
@@ -112,16 +113,16 @@ texture = ExtResource( 10 )
 anims/trutinha_vtal_falando = SubResource( 1 )
 
 [node name="balaodefalaVtal" type="Sprite" parent="ColorRect"]
-position = Vector2( -27.457, 68.6655 )
+position = Vector2( -55.489, 43.8932 )
 rotation = 3.14159
-scale = Vector2( 1.06581, -0.952662 )
+scale = Vector2( 1.21656, -1.08304 )
 z_index = -1
 texture = ExtResource( 6 )
 
 [node name="balaodefalaAlex" type="Sprite" parent="ColorRect"]
-position = Vector2( -7, 62 )
+position = Vector2( -23.2703, 42.4298 )
 rotation = 0.0008383
-scale = Vector2( 1.08055, 0.949234 )
+scale = Vector2( 1.2394, 1.07146 )
 z_index = -1
 texture = ExtResource( 6 )
 
@@ -147,17 +148,17 @@ text = "Começar"
 [node name="Name" type="RichTextLabel" parent="ColorRect"]
 modulate = Color( 0, 0, 0, 1 )
 self_modulate = Color( 0, 0, 0, 1 )
-margin_left = -113.0
-margin_top = -14.0
-margin_right = 71.0
-margin_bottom = 23.0
+margin_left = -150.0
+margin_top = -40.0
+margin_right = 72.0
+margin_bottom = -3.0
 custom_fonts/normal_font = SubResource( 3 )
 
 [node name="Text" type="RichTextLabel" parent="ColorRect"]
 modulate = Color( 0, 0, 0, 1 )
 self_modulate = Color( 0, 0, 0, 1 )
-margin_left = -115.0
-margin_top = 36.0
+margin_left = -155.0
+margin_top = -8.0
 margin_right = 82.0
 margin_bottom = 136.0
 custom_fonts/normal_font = SubResource( 4 )
