@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/feedbacksprit2e.png-f86735c7ae8c66a6161ded05c1e4dff2.stex"
+path="res://.import/corruption-button-Sheet_incompleto.png-cf2fc583d2fd79e958cf29fa7f4669b5.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/feedbacksprit2e.png"
-dest_files=[ "res://.import/feedbacksprit2e.png-f86735c7ae8c66a6161ded05c1e4dff2.stex" ]
+source_file="res://sprites/corruption-button-Sheet_incompleto.png"
+dest_files=[ "res://.import/corruption-button-Sheet_incompleto.png-cf2fc583d2fd79e958cf29fa7f4669b5.stex" ]
 
 [params]
 

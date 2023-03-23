@@ -35,7 +35,7 @@ func _process(delta):
 			Points.addpoint()
 			Points.pacMan = true
 		
-		get_tree().change_scene("res://scenes/menu/main_interface.tscn")
+		get_tree().change_scene("res://scenes/fase 3/Dialogos/dialogo_fase3_3.tscn")
 
 	# Código que configura a vida do player
 	if vida == 3:
