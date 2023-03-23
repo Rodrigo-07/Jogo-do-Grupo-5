@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://scenes/fase 2/Perguntas/pergunta3.gd" type="Script" id=1]
 [ext_resource path="res://sprites/Buttonmuitoescuro.png" type="Texture" id=2]
@@ -7,6 +7,8 @@
 [ext_resource path="res://sprites/Buttonescuro.png" type="Texture" id=5]
 [ext_resource path="res://Fonte/Concert_One/ConcertOne-Regular.ttf" type="DynamicFontData" id=6]
 [ext_resource path="res://Fonte/Lato-Bold.ttf" type="DynamicFontData" id=7]
+[ext_resource path="res://scenes/fase 2/Perguntas/FeedbackErro3.tscn" type="PackedScene" id=8]
+[ext_resource path="res://scenes/fase 2/Perguntas/FeedbackAcerto3.tscn" type="PackedScene" id=9]
 
 [sub_resource type="TileSet" id=1]
 0/name = "Tela perguntas.png 0"
@@ -164,6 +166,10 @@ text = "Quais são as consequência da prática de corrupção para os funcioná
 align = 1
 valign = 1
 autowrap = true
+
+[node name="FeedbackErro3" parent="." instance=ExtResource( 8 )]
+
+[node name="FeedbackAcerto3" parent="." instance=ExtResource( 9 )]
 
 [connection signal="button_up" from="TextureButton" to="." method="_on_TextureButton_button_up"]
 [connection signal="button_up" from="TextureButton2" to="." method="_on_TextureButton2_button_up"]

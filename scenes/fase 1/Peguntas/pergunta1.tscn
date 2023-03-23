@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://scenes/fase 1/Peguntas/pergunta1.gd" type="Script" id=1]
 [ext_resource path="res://sprites/Tela perguntas.png" type="Texture" id=2]
@@ -7,6 +7,8 @@
 [ext_resource path="res://sprites/Buttonescuro.png" type="Texture" id=5]
 [ext_resource path="res://Fonte/Lato-Bold.ttf" type="DynamicFontData" id=6]
 [ext_resource path="res://Fonte/Concert_One/ConcertOne-Regular.ttf" type="DynamicFontData" id=7]
+[ext_resource path="res://scenes/fase 1/Peguntas/FeedbackErro1.tscn" type="PackedScene" id=8]
+[ext_resource path="res://scenes/fase 1/Peguntas/FeedbackAcerto1.tscn" type="PackedScene" id=9]
 
 [sub_resource type="TileSet" id=1]
 0/name = "Tela perguntas.png 0"
@@ -146,7 +148,7 @@ align = 1
 margin_top = 212.0
 margin_right = 360.0
 margin_bottom = 213.0
-color = Color( 0, 0, 0, 1 )
+color = Color( 0.666667, 0.686275, 0.952941, 1 )
 
 [node name="Label" type="Label" parent="."]
 margin_left = 9.0
@@ -166,6 +168,10 @@ margin_left = 248.0
 margin_top = 17.0
 margin_right = 299.0
 margin_bottom = 33.0
+
+[node name="FeedbackErro1" parent="." instance=ExtResource( 8 )]
+
+[node name="FeedbackAcerto1" parent="." instance=ExtResource( 9 )]
 
 [connection signal="pressed" from="TextureButton" to="." method="_on_TextureButton_pressed"]
 [connection signal="button_up" from="TextureButton2" to="." method="_on_TextureButton2_button_up"]

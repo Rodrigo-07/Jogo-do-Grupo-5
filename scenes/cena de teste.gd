@@ -14,4 +14,4 @@ func _process(delta):
 
 
 func _on_Button_pressed():
-	$Node2D/Popup.popup()
+	$Node2D/Popup.show()

@@ -1,10 +1,11 @@
-[gd_scene load_steps=24 format=2]
+[gd_scene load_steps=25 format=2]
 
 [ext_resource path="res://sprites/Cenario crossy road.png" type="Texture" id=1]
+[ext_resource path="res://scenes/fase 2/tutorial_crossy.tscn" type="PackedScene" id=2]
 [ext_resource path="res://sprites/sprite do personagem.png" type="Texture" id=4]
 [ext_resource path="res://sprites/casinha do balacobaco.png" type="Texture" id=5]
-[ext_resource path="res://scripts/fase 2/crossingroad_scene.gd" type="Script" id=6]
-[ext_resource path="res://scripts/fase 2/personagem.gd" type="Script" id=7]
+[ext_resource path="res://scenes/scripts/fase 2/crossingroad_scene.gd" type="Script" id=6]
+[ext_resource path="res://scenes/scripts/fase 2/personagem.gd" type="Script" id=7]
 [ext_resource path="res://sprites/esquerda.png" type="Texture" id=8]
 [ext_resource path="res://sprites/direita.png" type="Texture" id=9]
 [ext_resource path="res://sprites/cima.png" type="Texture" id=10]
@@ -105,7 +106,7 @@ extents = Vector2( 106.75, 10 )
 [node name="crossingroad" type="Node2D"]
 script = ExtResource( 6 )
 __meta__ = {
-"_edit_horizontal_guides_": [ 292.0 ],
+"_edit_horizontal_guides_": [ 292.0, 662.0 ],
 "_edit_vertical_guides_": [ 334.0, -155.0 ]
 }
 
@@ -160,6 +161,7 @@ shape = SubResource( 2 )
 
 [node name="Personagem" type="KinematicBody2D" parent="mapa"]
 position = Vector2( 180, 610 )
+z_index = 2
 script = ExtResource( 7 )
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="mapa/Personagem"]
@@ -169,6 +171,7 @@ shape = SubResource( 1 )
 [node name="Sprite" type="Sprite" parent="mapa/Personagem"]
 position = Vector2( 2, -2 )
 scale = Vector2( 0.5, 0.5 )
+z_index = 2
 texture = ExtResource( 4 )
 hframes = 4
 vframes = 4
@@ -252,6 +255,10 @@ margin_bottom = 6929.0
 rect_scale = Vector2( 0.00596626, 0.00596626 )
 text = "pausar"
 icon = ExtResource( 13 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Control" parent="CanvasLayer" instance=ExtResource( 2 )]
 
 [connection signal="pressed" from="mapa/ruas/baixo" to="mapa/Personagem" method="_on_baixo_pressed"]
 [connection signal="released" from="mapa/ruas/baixo" to="mapa/Personagem" method="_on_baixo_released"]
