@@ -12,7 +12,7 @@ func _ready():
 	transition.material.set_shader_param("type", transition_type)
 	animation.playback_speed = duration
 	$AudioStreamPlayer2D.play(true)
-	$Atual.text = "Seu código atual é:"+Points.currentCode
+
 
 # Botão para voltar para o menu
 func _on_Button_pressed():

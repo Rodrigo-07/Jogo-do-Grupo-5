@@ -1,6 +1,5 @@
 extends Node2D
 
-var erro = Color(1, 0, 0, 1)
 var errosCheck = []
 
 var connections = []
@@ -48,7 +47,7 @@ func _process(delta):
 	check = sum(connected)
 	#Conexão do fio vermelho
 	if check == 40:
-		$Fundo/Connecteds/ConnectRed.visible = true
+		$Connecteds/ConnectRed.visible = true
 		$Fios/F_red/Red.visible = false
 		get_node("terminais/term100/100").visible = false
 		connected.clear()
@@ -56,7 +55,7 @@ func _process(delta):
 		
 	#Conexão do fio amarelo
 	if check == 7:
-		$Fundo/Connecteds/ConnectYellow.visible = true
+		$Connecteds/ConnectYellow.visible = true
 		$Fios/F_yellow/Yellow.visible = false
 		get_node("terminais/term400/400").visible = false
 		connected.clear()
@@ -64,7 +63,7 @@ func _process(delta):
 
 	#Conexão do fio azul
 	if check == 75:
-		$Fundo/Connecteds/ConnectBlue.visible = true
+		$Connecteds/ConnectBlue.visible = true
 		$Fios/F_blue/Blue.visible = false
 		get_node("terminais/term500/500").visible = false
 		connected.clear()
@@ -72,7 +71,7 @@ func _process(delta):
 		
 	#Conexão do fio branco
 	if check == 232:
-		$Fundo/Connecteds/ConnectWhite.visible = true
+		$Connecteds/ConnectWhite.visible = true
 		$Fios/F_white/White.visible = false
 		get_node("terminais/term1GB/1GB").visible = false
 		connected.clear()
@@ -136,16 +135,13 @@ func _process(delta):
 
 	#visualização do erro
 	if sum(errosCheck) == 17:
-		$erros/vida11.color = erro
-		$erros/vida12.color = erro
+		$Fundo/AnimatedSprite.play("oneError")
 	
 	if sum(errosCheck) == 34:
-		$erros/vida21.color = erro
-		$erros/vida22.color = erro
+		$Fundo/AnimatedSprite.play("twoError")
 		
 	if sum(errosCheck) == 51:
-		$erros/vida31.color = erro
-		$erros/vida32.color = erro
+		$Fundo/AnimatedSprite.play("ThreeError")
 		
 	if sum(errosCheck) == 68:
 		$Again/AgainButton.visible = true
@@ -154,13 +150,8 @@ func _process(delta):
 	
 	#Passou de fase
 	if correct == 8:
-		get_node("Fundo/Fire").play("run")
-		get_node("Fundo/Fire").visible = true
-		get_node("Fundo/Fire2").play("run")
-		get_node("Fundo/Fire2").visible = true
-		get_node("Fundo/Fire3").play("run")
-		get_node("Fundo/Fire3").visible = true
-		yield(get_tree().create_timer(5), 'timeout')
+		$Fundo/AnimatedSprite.play("Win")
+		yield(get_tree().create_timer(3), 'timeout')
 		if Points.fios == false:
 			Points.addpoint()
 			Points.fios == true
