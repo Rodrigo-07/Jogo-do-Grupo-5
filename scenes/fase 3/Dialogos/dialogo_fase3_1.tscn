@@ -7,7 +7,7 @@
 [ext_resource path="res://sprites/personagem_sprite_2.png" type="Texture" id=5]
 [ext_resource path="res://sprites/gray_empty_button.png" type="Texture" id=6]
 [ext_resource path="res://sprites/invisivel.png" type="Texture" id=7]
-[ext_resource path="res://Fonte/rainyhearts/rainyhearts.ttf" type="DynamicFontData" id=8]
+[ext_resource path="res://Fonte/Lato-Bold.ttf" type="DynamicFontData" id=8]
 [ext_resource path="res://Fonte/upheaval/upheavtt.ttf" type="DynamicFontData" id=9]
 [ext_resource path="res://sprites/trutinha_vtal_1.png" type="Texture" id=10]
 
@@ -56,10 +56,11 @@ outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 9 )
 
 [sub_resource type="DynamicFont" id=3]
+size = 18
 font_data = ExtResource( 9 )
 
 [sub_resource type="DynamicFont" id=4]
-size = 22
+size = 19
 font_data = ExtResource( 8 )
 
 [node name="Control" type="Control"]
@@ -112,16 +113,16 @@ texture = ExtResource( 10 )
 anims/trutinha_vtal_falando = SubResource( 1 )
 
 [node name="balaodefalaVtal" type="Sprite" parent="ColorRect"]
-position = Vector2( -62.291, 27.1222 )
+position = Vector2( -63.4803, -5.58099 )
 rotation = 3.14159
-scale = Vector2( 1.35629, -1.21231 )
+scale = Vector2( 1.34886, -1.37954 )
 z_index = -1
 texture = ExtResource( 3 )
 
 [node name="balaodefalaAlex" type="Sprite" parent="ColorRect"]
-position = Vector2( -29.32, 25.6401 )
+position = Vector2( -29.2906, -9.43948 )
 rotation = 0.0008383
-scale = Vector2( 1.33899, 1.17627 )
+scale = Vector2( 1.33899, 1.39552 )
 z_index = -1
 texture = ExtResource( 3 )
 
@@ -147,18 +148,18 @@ text = "Começar"
 [node name="Name" type="RichTextLabel" parent="ColorRect"]
 modulate = Color( 0, 0, 0, 1 )
 self_modulate = Color( 0, 0, 0, 1 )
-margin_left = -155.0
-margin_top = -67.0
-margin_right = 29.0
-margin_bottom = -30.0
+margin_left = -169.0
+margin_top = -126.0
+margin_right = 64.0
+margin_bottom = -89.0
 custom_fonts/normal_font = SubResource( 3 )
 
 [node name="Text" type="RichTextLabel" parent="ColorRect"]
 modulate = Color( 0, 0, 0, 1 )
 self_modulate = Color( 0, 0, 0, 1 )
 margin_left = -168.0
-margin_top = -28.0
-margin_right = 77.0
+margin_top = -96.0
+margin_right = 83.0
 margin_bottom = 136.0
 custom_fonts/normal_font = SubResource( 4 )
 scroll_following = true
