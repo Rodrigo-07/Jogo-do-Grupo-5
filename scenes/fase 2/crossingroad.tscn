@@ -105,7 +105,7 @@ extents = Vector2( 106.75, 10 )
 [node name="crossingroad" type="Node2D"]
 script = ExtResource( 6 )
 __meta__ = {
-"_edit_horizontal_guides_": [ 292.0 ],
+"_edit_horizontal_guides_": [ 292.0, 662.0 ],
 "_edit_vertical_guides_": [ 334.0, -155.0 ]
 }
 
