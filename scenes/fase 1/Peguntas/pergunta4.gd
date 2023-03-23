@@ -4,7 +4,7 @@ var errou = load("res://sprites/Buttonvermelho.png")
 var acertou = load("res://sprites/Buttonverde.png")
 
 func _process(delta):
-	$Points.text = str(Points.points)
+	$Points.text = str(Points.points) + "V Coins"
 
 func _on_TextureButton2_button_up():
 	$TextureButton2.texture_normal = errou
