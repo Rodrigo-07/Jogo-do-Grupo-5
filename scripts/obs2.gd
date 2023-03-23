@@ -5,14 +5,18 @@ var move = Vector2()
 var speed = 15
 
 func _ready():
-	set_position(Vector2(62,290))
+	set_position(Vector2(25,476))
 	set_z_index(1)
 func _physics_process(delta):
 	
-	if position.x == 245:
+	if position.x == 328:
 		move.x = - speed
-	if position.x == 62:
+	if position.x == 25:
 		move.x = speed
+	if position.y == 476:
+		move.y = speed
+	if position.y == 526:
+		move.y = -speed
 
 	move_and_slide(move)
 
@@ -20,3 +24,7 @@ func _physics_process(delta):
 	
 	if collide:
 		get_tree().change_scene("res://scenes/whg.tscn")
+		if collide:
+			var colisor = str(collide.collider.name)
+			if colisor == "KinematicBody2D":
+				get_tree().reload_current_scene()
