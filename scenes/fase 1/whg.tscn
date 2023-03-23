@@ -1,4 +1,4 @@
-[gd_scene load_steps=39 format=2]
+[gd_scene load_steps=49 format=2]
 
 [ext_resource path="res://sprites/whgggg.png" type="Texture" id=1]
 [ext_resource path="res://scripts/Node2D.gd" type="Script" id=2]
@@ -11,12 +11,17 @@
 [ext_resource path="res://sprites/button play.png" type="Texture" id=9]
 [ext_resource path="res://sprites/pausar .png" type="Texture" id=10]
 [ext_resource path="res://sprites/button casinha .png" type="Texture" id=11]
+[ext_resource path="res://sprites/invisivel.png" type="Texture" id=12]
+[ext_resource path="res://sprites/paccccc.png" type="Texture" id=13]
+[ext_resource path="res://sprites/pasta_whg.png" type="Texture" id=14]
+[ext_resource path="res://sprites/camera_whg.png" type="Texture" id=15]
+[ext_resource path="res://sprites/celular_whg.png" type="Texture" id=16]
 
 [sub_resource type="RectangleShape2D" id=9]
-extents = Vector2( 9.5, 9.5 )
+extents = Vector2( 11, 10.5 )
 
 [sub_resource type="RectangleShape2D" id=10]
-extents = Vector2( 5, 4.5 )
+extents = Vector2( 8, 6.5 )
 
 [sub_resource type="ConvexPolygonShape2D" id=16]
 points = PoolVector2Array( 0, 0, 1800, -3200, -1800, -3200 )
@@ -221,6 +226,31 @@ points = PoolVector2Array( 105.741, 636.69, 95.324, 636.69, 95.324, 537.153, 105
 [sub_resource type="RectangleShape2D" id=40]
 extents = Vector2( 76, 32 )
 
+[sub_resource type="RectangleShape2D" id=41]
+extents = Vector2( 73.75, 50.75 )
+
+[sub_resource type="RectangleShape2D" id=42]
+extents = Vector2( 13.5, 51 )
+
+[sub_resource type="RectangleShape2D" id=43]
+extents = Vector2( 35, 52.5 )
+
+[sub_resource type="Theme" id=44]
+
+[sub_resource type="StyleBoxFlat" id=45]
+bg_color = Color( 0.0117647, 0.0196078, 0.207843, 1 )
+border_width_left = 9
+border_width_top = 9
+border_width_right = 9
+border_width_bottom = 9
+border_color = Color( 0.968627, 1, 0, 1 )
+corner_radius_top_left = 9
+corner_radius_top_right = 9
+corner_radius_bottom_right = 9
+corner_radius_bottom_left = 9
+shadow_size = 7
+shadow_offset = Vector2( 3, 3 )
+
 [node name="WHG" type="Node2D"]
 script = ExtResource( 2 )
 
@@ -233,51 +263,61 @@ __meta__ = {
 "_edit_lock_": true
 }
 
+[node name="Node" type="Node" parent="ColorRect"]
+
+[node name="Node" type="Node" parent="ColorRect/Node"]
+
 [node name="KinematicBody2D" type="KinematicBody2D" parent="."]
 collision_layer = 3
 collision_mask = 11
 script = ExtResource( 3 )
 
-[node name="Icon" type="ColorRect" parent="KinematicBody2D"]
-margin_left = 48.0
-margin_top = 563.0
-margin_right = 67.0
-margin_bottom = 582.0
-color = Color( 0.443137, 0.92549, 0, 1 )
-__meta__ = {
-"_edit_use_anchors_": true
-}
+[node name="Sprite" type="Sprite" parent="KinematicBody2D"]
+position = Vector2( 55.8409, 570.188 )
+scale = Vector2( 0.133017, 0.144504 )
+texture = ExtResource( 13 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="KinematicBody2D"]
-position = Vector2( 57.5, 572.5 )
+position = Vector2( 56, 570.5 )
 shape = SubResource( 9 )
 
 [node name="key" type="Node" parent="."]
 
-[node name="KeyCheck" type="ColorRect" parent="key"]
-visible = false
-margin_left = 302.0
-margin_top = 18.0
-margin_right = 325.0
-margin_bottom = 41.0
-color = Color( 1, 0.584314, 0, 1 )
-
 [node name="key" type="StaticBody2D" parent="key"]
-position = Vector2( 261, 499 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="ColorRect" type="ColorRect" parent="key/key"]
-margin_left = -5.0
-margin_top = -4.0
-margin_right = 8.0
-margin_bottom = 8.0
-color = Color( 1, 0.537255, 0, 1 )
+position = Vector2( 239, 487 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="key/key"]
-position = Vector2( 1.5, 2 )
+position = Vector2( 4, 3.5 )
 shape = SubResource( 10 )
+
+[node name="Sprite" type="Sprite" parent="key/key"]
+position = Vector2( 4, 3 )
+scale = Vector2( 0.125, 0.125 )
+texture = ExtResource( 15 )
+
+[node name="key2" type="StaticBody2D" parent="key"]
+position = Vector2( 239, 487 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="key/key2"]
+position = Vector2( 82, -77 )
+shape = SubResource( 10 )
+
+[node name="Sprite" type="Sprite" parent="key/key2"]
+position = Vector2( 82, -77 )
+scale = Vector2( 0.104167, 0.0937499 )
+texture = ExtResource( 16 )
+
+[node name="key3" type="StaticBody2D" parent="key"]
+position = Vector2( 239, 487 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="key/key3"]
+position = Vector2( -7, -340 )
+shape = SubResource( 10 )
+
+[node name="Sprite" type="Sprite" parent="key/key3"]
+position = Vector2( -6.5, -340.5 )
+scale = Vector2( 0.109375, 0.109375 )
+texture = ExtResource( 14 )
 
 [node name="Controles" type="Node" parent="."]
 
@@ -304,17 +344,6 @@ position = Vector2( 180, 320 )
 scale = Vector2( 0.1, 0.1 )
 normal = ExtResource( 6 )
 shape = SubResource( 19 )
-
-[node name="Label" type="Label" parent="."]
-margin_left = 77.0
-margin_top = 13.0
-margin_right = 296.0
-margin_bottom = 45.0
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "Pegue os blocos laranjas(chaves)"
-__meta__ = {
-"_edit_use_anchors_": true
-}
 
 [node name="TileMap" type="TileMap" parent="."]
 z_index = -1
@@ -385,6 +414,56 @@ margin_bottom = 309.0
 margin_right = 40.0
 margin_bottom = 14.0
 
+[node name="RH" type="Area2D" parent="."]
+position = Vector2( 60, 333 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RH"]
+position = Vector2( 29.25, 37.25 )
+shape = SubResource( 41 )
+
+[node name="Agua" type="Area2D" parent="."]
+position = Vector2( 295, 79 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Agua"]
+position = Vector2( -9.5, -10 )
+shape = SubResource( 42 )
+
+[node name="Planta" type="Area2D" parent="."]
+position = Vector2( 310, 327 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Planta"]
+position = Vector2( 1, 2 )
+shape = SubResource( 43 )
+
+[node name="TouchScreenButton" type="TouchScreenButton" parent="."]
+pause_mode = 2
+position = Vector2( -24.9999, -20 )
+scale = Vector2( 0.361667, 0.579167 )
+normal = ExtResource( 12 )
+
+[node name="PopUp" type="Sprite" parent="."]
+pause_mode = 2
+visible = false
+z_index = 3
+
+[node name="Panel" type="Panel" parent="PopUp"]
+anchor_right = 0.952
+margin_left = 31.0
+margin_top = 227.0
+margin_right = 330.0
+margin_bottom = 394.0
+theme = SubResource( 44 )
+theme_type_variation = "s"
+custom_styles/panel = SubResource( 45 )
+
+[node name="Label" type="Label" parent="PopUp"]
+margin_left = 62.0
+margin_top = 263.0
+margin_right = 299.0
+margin_bottom = 363.0
+align = 1
+percent_visible = -0.5
+
 [connection signal="pressed" from="Controles/Cima" to="KinematicBody2D" method="_on_Cima_pressed"]
 [connection signal="released" from="Controles/Cima" to="KinematicBody2D" method="_on_Cima_released"]
 [connection signal="pressed" from="Controles/Baixo" to="KinematicBody2D" method="_on_Baixo_pressed"]
@@ -398,3 +477,7 @@ margin_bottom = 14.0
 [connection signal="pressed" from="FundoPause/Button3" to="." method="_on_Button3_pressed"]
 [connection signal="pressed" from="FundoPause/Button2" to="." method="_on_Button2_pressed"]
 [connection signal="value_changed" from="FundoPause/HSlider" to="." method="_on_HSlider_value_changed"]
+[connection signal="body_shape_entered" from="RH" to="KinematicBody2D" method="_on_RH_body_shape_entered"]
+[connection signal="body_shape_entered" from="Agua" to="KinematicBody2D" method="_on_Agua_body_shape_entered"]
+[connection signal="body_shape_entered" from="Planta" to="KinematicBody2D" method="_on_Planta_body_shape_entered"]
+[connection signal="pressed" from="TouchScreenButton" to="KinematicBody2D" method="_on_TouchScreenButton_pressed"]

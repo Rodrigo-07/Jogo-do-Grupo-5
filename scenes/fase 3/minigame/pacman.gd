@@ -23,4 +23,5 @@ func _on_HSlider_value_changed(value):
 
 
 func _on_Button3_pressed():
+	get_tree().paused = false
 	get_tree().change_scene("res://scenes/menu/main_interface.tscn")

@@ -3,7 +3,7 @@ extends KinematicBody2D
 var move = Vector2().normalized()
 var speed = 5000
 var bateu
-
+var tocou = false
 var keyCard = [0]
 
 # Variáveis e funções para o funcionamento touch do jogo no mobile
@@ -11,6 +11,9 @@ var cima = false
 var baixo = false
 var esquerda = false
 var direita = false
+var entrou
+var ganhou
+var nome
 
 func _on_Esquerda_pressed():
 	esquerda = true
@@ -32,16 +35,16 @@ func _on_Cima_pressed():
 func _on_Cima_released():
 	cima = false
 
-func _process(delta):
-	# A cada keycard pega em um posição ela muda
-	if keyCard == [1]:
-		get_node("../key/key").position = Vector2(271, 429)
-#		get_node("../key/KeyCheck").visible = true
-	if keyCard == [2]:
-		get_node("../key/key").position = Vector2(268, 190)
-	if keyCard == [3]:
-		get_node("../key/key").visible = false
-		get_node("../key/key").position = Vector2(560, 381)
+#func _process(delta):
+#	# A cada keycard pega em um posição ela muda
+#	if keyCard == [1]:
+#		get_node("../key/key").position = Vector2(271, 429)
+##		get_node("../key/KeyCheck").visible = true
+#	if keyCard == [2]:
+#		get_node("../key/key").position = Vector2(268, 190)
+#	if keyCard == [3]:
+#		get_node("../key/key").visible = false
+#		get_node("../key/key").position = Vector2(560, 381)
 
 func _physics_process(delta):
 	# Movimentação do personagem
@@ -64,15 +67,17 @@ func _physics_process(delta):
 	move_and_slide(move)
 
 	var collision = move_and_collide(move * delta)
-	var checkCollision = ['TileMap','key']
+	var checkCollision = ['TileMap','key', 'key2', 'key3']
 	
 	# Dependendo do que o personagem colidir acontece algo diferente
 	if collision:
 		bateu = collision.collider.name
-		if bateu == 'key':
+		if bateu == 'key' or bateu == 'key2' or bateu == 'key3':
 			# Adiciona +1 ao valor anterior
 			keyCard[0] += 1
 			print(keyCard)
+			nome = "../key/" + bateu
+			get_node(nome).position = Vector2(-50, -50)
 
 		elif (bateu in checkCollision):
 			
@@ -85,16 +90,45 @@ func _physics_process(delta):
 # Quando o player chega no lugar
 func _on_Compliance_body_shape_entered(body_rid, body, body_shape_index, local_shape_index):
 	if keyCard == [3]:
-		print("Deu certo caralho")
+		ganhou = true
+		get_node("../PopUp").show()
+		get_tree().paused = true
+		get_node("../PopUp/Label").text = "Parabéns, você foi ao lugar correto!\nToque na tela para continuar"
 		# Jogador vence o jogo quando coletar as 3 chaves e recebe mais um ponto na variável global
 		if Points.whg == false:
 			Points.addpoint()
 			Points.whg = true
-		get_tree().change_scene("res://scenes/fase 1/Peguntas/pergunta4.tscn")
+		
 
 
 # Quando o jogador vai para o lugar errado
-func _on_Area2D_body_shape_entered(body_rid, body, body_shape_index, local_shape_index):
-	print("ruinzão")
+func _on_RH_body_shape_entered(body_rid, body, body_shape_index, local_shape_index):
+	entrou = true
+	get_node("../PopUp").show()
+	get_tree().paused = true
+	get_node("../PopUp/Label").text = "Lugar errado\nToque na tela para tentar novamente"
+
+func _on_Agua_body_shape_entered(body_rid, body, body_shape_index, local_shape_index):
+	entrou = true
+	get_node("../PopUp").show()
+	get_tree().paused = true
+	get_node("../PopUp/Label").text = "Lugar errado\nToque na tela para tentar novamente"
+
+func _on_Planta_body_shape_entered(body_rid, body, body_shape_index, local_shape_index):
+	entrou = true
+	get_node("../PopUp").show()
+	get_tree().paused = true
+	get_node("../PopUp/Label").text = "Lugar errado\nToque na tela para tentar novamente"
+
+func _on_TouchScreenButton_pressed():
+	if entrou:
+		get_node("../PopUp").hide()
+		get_tree().paused = false
+		get_tree().reload_current_scene()
+	if ganhou:
+		get_node("../PopUp").hide()
+		get_tree().paused = false
+		get_tree().change_scene("res://scenes/fase 1/Peguntas/pergunta4.tscn")
+
 
 
