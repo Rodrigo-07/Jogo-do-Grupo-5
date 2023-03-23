@@ -1,4 +1,4 @@
-[gd_scene load_steps=78 format=2]
+[gd_scene load_steps=79 format=2]
 
 [ext_resource path="res://scenes/fase 3/minigame/pacman.gd" type="Script" id=1]
 [ext_resource path="res://sprites/Black-Pacman-PNG.png" type="Texture" id=2]
@@ -22,6 +22,7 @@
 [ext_resource path="res://sprites/pausar .png" type="Texture" id=20]
 [ext_resource path="res://sprites/button play.png" type="Texture" id=21]
 [ext_resource path="res://sprites/button casinha .png" type="Texture" id=22]
+[ext_resource path="res://scenes/fase 3/tutorial/tutorial_pacman.tscn" type="PackedScene" id=23]
 
 [sub_resource type="SegmentShape2D" id=1]
 a = Vector2( 828, 10 )
@@ -3138,6 +3139,11 @@ margin_left = 77.0
 margin_top = 360.0
 margin_right = 323.0
 margin_bottom = 397.0
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Control" parent="CanvasLayer" instance=ExtResource( 23 )]
+pause_mode = 2
 
 [connection signal="pressed" from="controls/Cima" to="Person" method="_on_Cima_pressed"]
 [connection signal="pressed" from="controls/Baixo" to="Person" method="_on_Baixo_pressed"]
