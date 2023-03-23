@@ -55,22 +55,24 @@ func _physics_process(delta):
 		andar.y = velocidade
 		andar.x = 0
 		baixo = false
-		rotation = deg2rad(90)
+		
 	if Input.is_action_just_pressed("ui_up") or cima:
 		andar.y = -velocidade
 		andar.x = 0
 		cima = false
-		rotation = deg2rad(-90)
+
 	if Input.is_action_just_pressed("ui_right") or direita:
 		andar.x = velocidade
 		andar.y = 0
 		direita = false
-		rotation = deg2rad(0)
+		$AnimatedSprite.set_flip_h(false)
+
 	if Input.is_action_just_pressed("ui_left") or esquerda:
 		andar.x = -velocidade
 		andar.y = 0
 		esquerda = false
-		rotation = deg2rad(-180)
+		$AnimatedSprite.set_flip_h(true)
+
 	
 	# Detectar colisões com os inimigos e paredes
 	var collision = move_and_collide(andar * delta)
