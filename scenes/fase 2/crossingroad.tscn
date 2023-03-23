@@ -105,7 +105,7 @@ extents = Vector2( 106.75, 10 )
 [node name="crossingroad" type="Node2D"]
 script = ExtResource( 6 )
 __meta__ = {
-"_edit_horizontal_guides_": [ 292.0 ],
+"_edit_horizontal_guides_": [ 292.0, 662.0 ],
 "_edit_vertical_guides_": [ 334.0, -155.0 ]
 }
 
@@ -160,6 +160,7 @@ shape = SubResource( 2 )
 
 [node name="Personagem" type="KinematicBody2D" parent="mapa"]
 position = Vector2( 180, 610 )
+z_index = 2
 script = ExtResource( 7 )
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="mapa/Personagem"]
@@ -169,6 +170,7 @@ shape = SubResource( 1 )
 [node name="Sprite" type="Sprite" parent="mapa/Personagem"]
 position = Vector2( 2, -2 )
 scale = Vector2( 0.5, 0.5 )
+z_index = 2
 texture = ExtResource( 4 )
 hframes = 4
 vframes = 4

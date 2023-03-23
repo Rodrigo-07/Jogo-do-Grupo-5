@@ -8,7 +8,7 @@
 [ext_resource path="res://sprites/invisivel.png" type="Texture" id=6]
 [ext_resource path="res://sprites/trutinha_vtal_1.png" type="Texture" id=7]
 [ext_resource path="res://sprites/trutinha_vtal_2.png" type="Texture" id=8]
-[ext_resource path="res://Fonte/rainyhearts/rainyhearts.ttf" type="DynamicFontData" id=9]
+[ext_resource path="res://Fonte/Lato-Bold.ttf" type="DynamicFontData" id=9]
 [ext_resource path="res://Fonte/upheaval/upheavtt.ttf" type="DynamicFontData" id=10]
 [ext_resource path="res://sprites/gray_empty_button.png" type="Texture" id=11]
 
@@ -53,10 +53,11 @@ outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 10 )
 
 [sub_resource type="DynamicFont" id=3]
+size = 18
 font_data = ExtResource( 10 )
 
 [sub_resource type="DynamicFont" id=4]
-size = 22
+size = 19
 font_data = ExtResource( 9 )
 
 [node name="Control" type="Control"]
@@ -101,14 +102,14 @@ texture = ExtResource( 7 )
 anims/trutinha_vtal_falando = SubResource( 2 )
 
 [node name="balaodefalaAlex" type="Sprite" parent="ColorRect"]
-position = Vector2( -29, 38.9432 )
-scale = Vector2( 1.4625, 1.00935 )
+position = Vector2( -29, -4.28042 )
+scale = Vector2( 1.4625, 1.2795 )
 z_index = -1
 texture = ExtResource( 4 )
 
 [node name="balaodefalaVtal" type="Sprite" parent="ColorRect"]
-position = Vector2( -64, 42 )
-scale = Vector2( -1.45452, 1.04521 )
+position = Vector2( -64, -0.207325 )
+scale = Vector2( -1.45452, 1.30901 )
 z_index = -1
 texture = ExtResource( 4 )
 
@@ -134,19 +135,19 @@ text = "Começar"
 [node name="Name" type="RichTextLabel" parent="ColorRect"]
 modulate = Color( 0, 0, 0, 1 )
 self_modulate = Color( 0, 0, 0, 1 )
-margin_left = -181.0
-margin_top = -34.0
-margin_right = 3.0
-margin_bottom = 3.0
+margin_left = -187.0
+margin_top = -108.0
+margin_right = 78.0
+margin_bottom = -71.0
 custom_fonts/normal_font = SubResource( 3 )
 
 [node name="Text" type="RichTextLabel" parent="ColorRect"]
 modulate = Color( 0, 0, 0, 1 )
 self_modulate = Color( 0, 0, 0, 1 )
 margin_left = -186.0
-margin_top = 21.0
+margin_top = -75.0
 margin_right = 93.0
-margin_bottom = 126.0
+margin_bottom = 118.0
 custom_fonts/normal_font = SubResource( 4 )
 
 [node name="Timer" type="Timer" parent="ColorRect"]

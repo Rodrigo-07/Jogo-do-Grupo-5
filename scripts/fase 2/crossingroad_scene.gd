@@ -87,7 +87,9 @@ func car_spaw_3():
 
 func _process(delta):
 	# Bloqueia o movimento do personagem além dos limites da tela
-	if $mapa/Personagem.position.x > 360 or $mapa/Personagem.position.x == 0 or $mapa/Personagem.position.y == 0 or $mapa/Personagem.position.y == 640:
+	if $mapa/Personagem.position.x > 380 or $mapa/Personagem.position.x < -15:
+		 $mapa/Personagem.set_position(Vector2(180, 610))
+	if $mapa/Personagem.position.y > 670 or $mapa/Personagem.position.y < -10:
 		 $mapa/Personagem.set_position(Vector2(180, 610))
 		
 func _on_Pausar_pressed():
