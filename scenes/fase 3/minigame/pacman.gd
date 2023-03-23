@@ -4,6 +4,7 @@ var audio = AudioServer.get_bus_index("Master")
 func _ready():
 	$FundoPause/Label.text = pontos
 	$FundoPause/Label2.text = "Seu código atual é:"+ Points.currentCode
+	$AnimatedSprite.play("default")
 func _on_Pausar_pressed():
 	get_tree().paused = true
 	$FundoPause.show()
