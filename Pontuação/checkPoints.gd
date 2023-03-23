@@ -52,3 +52,7 @@ func _on_SaveCodeButton_pressed():
 	else:
 		$Atual.text = "O código inserido é invalido"
 	print("codigo:", Points.currentCode,"\narray:", Points.currentCodeArray, "\nlevel1: ", Points.stateLevel1, "\nlevel2: ", Points.stateLevel2, "\nlevel3: ", Points.stateLevel3, "\nPontos: ",Points.points)
+
+
+func _on_Button_pressed():
+	get_tree().change_scene("res://scenes/menu/Menu.tscn")

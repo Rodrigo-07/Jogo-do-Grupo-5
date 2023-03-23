@@ -1,7 +1,18 @@
 extends Node2D
+
 var points
 
+var one = load("res://sprites/assedio_buttonsheet.png")
+var oneCompleted= load("res://sprites/assedio_buttonsheet.png")
+
+var two = load("res://sprites/corruption-button-Sheet_incompleto.png")
+var twoCompleted = load("res://sprites/corruption-button-Sheet_completed.png")
+
+var three = load("res://sprites/ambienteseguro-button-Sheet_incompleto.png")
+var threeCompleted = load("res://sprites/ambienteseguro-button-Sheet_completo.png")
+
 func _ready():
+
 	$Sprite2/AnimationPlayer.play("Mapa")
 	
 	points = get_node("/root/Points")
