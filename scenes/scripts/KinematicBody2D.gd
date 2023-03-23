@@ -85,6 +85,7 @@ func _physics_process(delta):
 			
 		elif !(bateu in checkCollision):
 			get_tree().reload_current_scene()
+			
 	
 
 # Quando o player chega no lugar
@@ -93,7 +94,7 @@ func _on_Compliance_body_shape_entered(body_rid, body, body_shape_index, local_s
 		ganhou = true
 		get_node("../PopUp").show()
 		get_tree().paused = true
-		get_node("../PopUp/Label").text = "Parabéns, você foi ao lugar correto!\nToque na tela para continuar"
+		get_node("../PopUp/Label").text = "Parabéns, você foi ao lugar correto!\nO Compliance é o lugar ideal para fazer\nreclamações e denúncias!\n\nToque na tela para continuar"
 		# Jogador vence o jogo quando coletar as 3 chaves e recebe mais um ponto na variável global
 		if Points.whg == false:
 			Points.addpoint()
@@ -106,25 +107,26 @@ func _on_RH_body_shape_entered(body_rid, body, body_shape_index, local_shape_ind
 	entrou = true
 	get_node("../PopUp").show()
 	get_tree().paused = true
-	get_node("../PopUp/Label").text = "Lugar errado\nToque na tela para tentar novamente"
+	get_node("../PopUp/Label").text = "Lugar errado!\n \nPor mais que tenha relação com\no assunto, o RH não é o lugar ideal!\n \nToque na tela para tentar novamente."
 
 func _on_Agua_body_shape_entered(body_rid, body, body_shape_index, local_shape_index):
 	entrou = true
 	get_node("../PopUp").show()
 	get_tree().paused = true
-	get_node("../PopUp/Label").text = "Lugar errado\nToque na tela para tentar novamente"
+	get_node("../PopUp/Label").text = "Lugar errado!\nToque na tela para tentar novamente."
 
 func _on_Planta_body_shape_entered(body_rid, body, body_shape_index, local_shape_index):
 	entrou = true
 	get_node("../PopUp").show()
 	get_tree().paused = true
-	get_node("../PopUp/Label").text = "Lugar errado\nToque na tela para tentar novamente"
+	get_node("../PopUp/Label").text = "Lugar errado!\nToque na tela para tentar novamente."
 
 func _on_TouchScreenButton_pressed():
 	if entrou:
 		get_node("../PopUp").hide()
 		get_tree().paused = false
 		get_tree().reload_current_scene()
+		
 	if ganhou:
 		get_node("../PopUp").hide()
 		get_tree().paused = false
