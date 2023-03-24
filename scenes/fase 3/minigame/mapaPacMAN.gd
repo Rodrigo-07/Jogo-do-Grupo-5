@@ -1,11 +1,5 @@
 extends Node2D
 
-
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
-
-
-# Called when the node enters the scene tree for the first time.
+# Play na animação de luzes piscando na fase do pacman
 func _ready():
 	$AnimatedSprite.play("pisca")

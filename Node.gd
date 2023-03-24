@@ -34,14 +34,13 @@ var pergunta34 = false
 var pacMan = false
 
 var points = 00
-	
-	
 
-
-
+# Função que adiciona um ponto para o jogador
+# Ela pode ser chamada em qualquer cena para adiciona pontos
 func addpoint():
 	points += 1
-	
+
+
 func addSaveCode():
 	
 	stateLevel1 = 0
@@ -107,7 +106,7 @@ func addSaveCode():
 		elif currentCodeArray.size() == 5:
 			points = int(str(currentCodeArray[3])+str(currentCodeArray[4]))
 		
-		#muda cada parte das fases definindo em qual parte do jogo o player está
+		# Muda cada parte das fases definindo em qual parte do jogo o player está
 		if stateLevel1 == 0:
 			pergunta11 =  false
 		if stateLevel1 == 1:

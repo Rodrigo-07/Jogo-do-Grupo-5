@@ -1,6 +1,7 @@
 extends KinematicBody2D
 
 
+# Funções e variáveis para fazer o movimento do player no celular
 var direita
 func _on_direita_pressed():
 	direita = true

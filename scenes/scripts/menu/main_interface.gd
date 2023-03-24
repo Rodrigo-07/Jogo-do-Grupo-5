@@ -2,6 +2,7 @@ extends Node2D
 
 var points
 
+# Variáveis usadas para detectar quando a fase está completa e atualizar a sprite do botão para uma nvoa
 var one = load("res://sprites/assedio_buttonsheet.png")
 var oneCompleted= load("res://sprites/assedio_buttonsheet.png")
 
@@ -12,11 +13,13 @@ var three = load("res://sprites/ambienteseguro-button-Sheet_incompleto.png")
 var threeCompleted = load("res://sprites/ambienteseguro-button-Sheet_completo.png")
 
 func _ready():
-
+	# Animação do mapa
 	$Sprite2/AnimationPlayer.play("Mapa")
 	
+	# Mostra os pontos do jogador
 	points = get_node("/root/Points")
 	
+# Mostra os pontos do jogador
 func _process(delta):
 	$Container/score.text = str(Points.points) + " Vcoins"
 	

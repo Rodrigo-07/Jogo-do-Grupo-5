@@ -24,6 +24,7 @@ func _physics_process(delta):
 
 	var collide = move_and_collide(move * delta)
 	
+	# Colisão do obstáculo apenas com o player
 	if collide:
 		get_tree().change_scene("res://scenes/whg.tscn")
 		if collide:
