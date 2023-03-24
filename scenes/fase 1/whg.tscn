@@ -274,7 +274,7 @@ collision_mask = 11
 script = ExtResource( 3 )
 
 [node name="Sprite" type="Sprite" parent="KinematicBody2D"]
-position = Vector2( 55.8409, 570.188 )
+position = Vector2( 55, 570 )
 scale = Vector2( 0.133017, 0.144504 )
 texture = ExtResource( 13 )
 
@@ -445,6 +445,24 @@ pause_mode = 2
 position = Vector2( -20, -17 )
 scale = Vector2( 0.361667, 0.579167 )
 normal = ExtResource( 12 )
+
+[node name="Camera" type="Sprite" parent="."]
+modulate = Color( 0.278431, 0.278431, 0.278431, 1 )
+position = Vector2( 200, 20 )
+scale = Vector2( 0.203125, 0.223958 )
+texture = ExtResource( 15 )
+
+[node name="Cell" type="Sprite" parent="."]
+modulate = Color( 0.145098, 0.145098, 0.145098, 1 )
+position = Vector2( 240, 20 )
+scale = Vector2( 0.153646, 0.160156 )
+texture = ExtResource( 16 )
+
+[node name="Pasta" type="Sprite" parent="."]
+modulate = Color( 0.188235, 0.188235, 0.188235, 1 )
+position = Vector2( 280, 20 )
+scale = Vector2( 0.161458, 0.195313 )
+texture = ExtResource( 14 )
 
 [node name="PopUp" type="Sprite" parent="."]
 pause_mode = 2
