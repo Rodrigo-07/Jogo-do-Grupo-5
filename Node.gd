@@ -2,6 +2,7 @@ extends Node
 
 #apenas para o addCode
 var next
+var permission = 0
 
 #Código do estado instantaneo do jogo
 var currentCodeArray: Array

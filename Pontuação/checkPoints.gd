@@ -37,21 +37,25 @@ func _http_request_completed(result, response_code, headers, body):
 	
 #Colocar save code no jogo
 func _on_SaveCodeButton_pressed():
-	
-	Points.currentCode = ($LineEdit.text)
-	Points.currentCodeArray.clear()
-	
-	for i in range(Points.currentCode.length()):
-		Points.currentCodeArray.append(int(Points.currentCode[i]))
-		print(Points.currentCode[i])
+	if Points.permission == 0:
+		Points.currentCode = ($LineEdit.text)
+		Points.currentCodeArray.clear()
+		Points.permission = 1
 		
-	Points.addSaveCode()
-	if Points.next == true:
-		Points.currentSaveCode()
-		get_tree().reload_current_scene()
+		for i in range(Points.currentCode.length()):
+			Points.currentCodeArray.append(int(Points.currentCode[i]))
+			print(Points.currentCode[i])
+			
+		Points.addSaveCode()
+		if Points.next == true:
+			Points.currentSaveCode()
+			get_tree().reload_current_scene()
+		else:
+			$Atual.text = "O código inserido é invalido"
+		print("codigo:", Points.currentCode,"\narray:", Points.currentCodeArray, "\nlevel1: ", Points.stateLevel1, "\nlevel2: ", Points.stateLevel2, "\nlevel3: ", Points.stateLevel3, "\nPontos: ",Points.points)
 	else:
-		$Atual.text = "O código inserido é invalido"
-	print("codigo:", Points.currentCode,"\narray:", Points.currentCodeArray, "\nlevel1: ", Points.stateLevel1, "\nlevel2: ", Points.stateLevel2, "\nlevel3: ", Points.stateLevel3, "\nPontos: ",Points.points)
+		$Atual.set_position(Vector2(45, 500))
+		$Atual.text = "Para inserir um novo código, por favor, feche o jogo e abra novamente"
 
 
 func _on_Button_pressed():
