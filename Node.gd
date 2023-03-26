@@ -107,7 +107,7 @@ func addSaveCode():
 		elif currentCodeArray.size() == 5:
 			points = int(str(currentCodeArray[3])+str(currentCodeArray[4]))
 		
-		#muda cada parte das fases definindo em qual parte do jogo o player está
+		# Muda cada parte das fases definindo em qual parte do jogo o player está
 		if stateLevel1 == 0:
 			pergunta11 =  false
 		if stateLevel1 == 1:

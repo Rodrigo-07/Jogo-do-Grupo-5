@@ -15,6 +15,7 @@ var entrou
 var ganhou
 var nome
 
+# Funções e variáveis para fazer o movimento do player no celular
 func _on_Esquerda_pressed():
 	esquerda = true
 func _on_Esquerda_released():
@@ -95,6 +96,7 @@ func _on_Compliance_body_shape_entered(body_rid, body, body_shape_index, local_s
 		get_node("../PopUp/Label").text = "Parabéns, você foi ao lugar correto!\nO Compliance é o lugar ideal para fazer\nreclamações e denúncias!\n\nToque na tela para continuar"
 		# Jogador vence o jogo quando coletar as 3 chaves e recebe mais um ponto na variável global
 		if Points.whg == false:
+			# Adiciona ponto e seta o estado da fase como true
 			Points.addpoint()
 			Points.whg = true
 		
