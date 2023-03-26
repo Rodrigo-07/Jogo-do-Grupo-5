@@ -34,14 +34,12 @@ var pergunta34 = false
 var pacMan = false
 
 var points = 00
-	
-	
 
-
-
+#Função a ser chamada quando é necessario adcionar 1 ponto
 func addpoint():
 	points += 1
-	
+
+#Verifica e adiciona um novo save code ao jogo
 func addSaveCode():
 	
 	stateLevel1 = 0
@@ -52,6 +50,7 @@ func addSaveCode():
 	var pointForCheck
 	var checkingPoints = 0
 
+#Apenas para checar se o código inserido pelo user é real
 		#Parte do codigo para fase 1
 	if currentCodeArray[0] == 1:
 		checkingPoints += 2
@@ -95,6 +94,7 @@ func addSaveCode():
 	elif currentCodeArray.size() == 5:
 		pointForCheck = int(str(currentCodeArray[3])+str(currentCodeArray[4]))
 		
+	#Se o código inserido for real, o jogo entra no estado do código inserido
 	if checkingPoints == pointForCheck:
 		#define estado dos niveis
 		stateLevel1 = currentCodeArray[0]
@@ -151,8 +151,9 @@ func addSaveCode():
 		
 		# se next é igual a true, o código é valido
 		next = true
-		#Código invalido
+		
 	else:
+		#Código invalido
 		next = false
 	
 
