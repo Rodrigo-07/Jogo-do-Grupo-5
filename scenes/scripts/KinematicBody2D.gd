@@ -15,6 +15,7 @@ var entrou
 var ganhou
 var nome
 
+# Funções e variáveis para fazer o movimento do player no celular
 func _on_Esquerda_pressed():
 	esquerda = true
 func _on_Esquerda_released():
@@ -35,18 +36,10 @@ func _on_Cima_pressed():
 func _on_Cima_released():
 	cima = false
 
-#func _process(delta):
-#	# A cada keycard pega em um posição ela muda
-#	if keyCard == [1]:
-#		get_node("../key/key").position = Vector2(271, 429)
-##		get_node("../key/KeyCheck").visible = true
-#	if keyCard == [2]:
-#		get_node("../key/key").position = Vector2(268, 190)
-#	if keyCard == [3]:
-#		get_node("../key/key").visible = false
-#		get_node("../key/key").position = Vector2(560, 381)
 
 func _physics_process(delta):
+	
+	print(position.x, position.y)
 	# Movimentação do personagem
 	if Input.is_action_pressed("ui_up") or cima:
 		move.y = - speed * delta
@@ -72,21 +65,27 @@ func _physics_process(delta):
 	# Dependendo do que o personagem colidir acontece algo diferente
 	if collision:
 		bateu = collision.collider.name
-		if bateu == 'key' or bateu == 'key2' or bateu == 'key3':
-			# Adiciona +1 ao valor anterior
+		if bateu == 'key' :
 			keyCard[0] += 1
-			print(keyCard)
-			nome = "../key/" + bateu
-			get_node(nome).position = Vector2(-50, -50)
+			get_node("../Camera").modulate = Color(1,1,1,1)
+			get_node("../key/key").queue_free()
+		elif bateu == 'key2':
+			keyCard[0] += 1
+			get_node("../Cell").modulate = Color(1,1,1,1)
+			get_node("../key/key2").queue_free()
+		elif bateu == 'key3':
+			keyCard[0] += 1
+			get_node("../Pasta").modulate = Color(1,1,1,1)
+			get_node("../key/key3").queue_free()
+			
 
 		elif (bateu in checkCollision):
 			
 			print(bateu)
 			
 		elif !(bateu in checkCollision):
-			get_tree().reload_current_scene()
+			position = Vector2(0,0)
 			
-	
 
 # Quando o player chega no lugar
 func _on_Compliance_body_shape_entered(body_rid, body, body_shape_index, local_shape_index):
@@ -97,6 +96,7 @@ func _on_Compliance_body_shape_entered(body_rid, body, body_shape_index, local_s
 		get_node("../PopUp/Label").text = "Parabéns, você foi ao lugar correto!\nO Compliance é o lugar ideal para fazer\nreclamações e denúncias!\n\nToque na tela para continuar"
 		# Jogador vence o jogo quando coletar as 3 chaves e recebe mais um ponto na variável global
 		if Points.whg == false:
+			# Adiciona ponto e seta o estado da fase como true
 			Points.addpoint()
 			Points.whg = true
 		

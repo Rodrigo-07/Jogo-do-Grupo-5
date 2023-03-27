@@ -5,10 +5,12 @@ var move = Vector2()
 var speed = 15
 
 func _ready():
+	# Posição inicial
 	set_position(Vector2(25,476))
 	set_z_index(1)
-func _physics_process(delta):
 	
+func _physics_process(delta):
+	# Movimento de patrula do obstáculo
 	if position.x == 328:
 		move.x = - speed
 	if position.x == 25:
@@ -22,6 +24,7 @@ func _physics_process(delta):
 
 	var collide = move_and_collide(move * delta)
 	
+	# Colisão do obstáculo apenas com o player
 	if collide:
 		get_tree().change_scene("res://scenes/whg.tscn")
 		if collide:

@@ -21,10 +21,13 @@ text = "Código de jogo"
 [node name="Atual" type="Label" parent="."]
 margin_left = 81.0
 margin_top = 500.0
-margin_right = 278.0
+margin_right = 341.0
 margin_bottom = 547.0
 rect_pivot_offset = Vector2( 31, 11 )
 text = "Seu código atual é:"
+align = 1
+valign = 1
+autowrap = true
 
 [node name="LineEdit" type="LineEdit" parent="."]
 margin_left = 73.0
@@ -39,4 +42,12 @@ margin_right = 337.0
 margin_bottom = 471.0
 text = "OK"
 
+[node name="Button" type="Button" parent="."]
+margin_left = 19.0
+margin_top = 569.0
+margin_right = 95.0
+margin_bottom = 613.0
+text = "Voltar"
+
 [connection signal="pressed" from="SaveCodeButton" to="." method="_on_SaveCodeButton_pressed"]
+[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]

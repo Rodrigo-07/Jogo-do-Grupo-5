@@ -1,8 +1,10 @@
 extends Node2D
 
+# Variáveis para carregar os efeitos de transição
 onready var transition = get_node("CanvasLayer/fill")
 onready var animation = get_node("CanvasLayer/fill/AnimationPlayer")
 
+# Export nas variáveis para modificar o efeito da transição
 export (int, "Pixels", "Spot Player", "Spot Centro", "Corte Vertical", "Corte Horizontal") var transition_type
 export (float, 2.0) var duration = 1.0
 
@@ -23,7 +25,7 @@ func _on_TextureButton3_pressed():
 #	animation.play("transition_out")
 	get_tree().change_scene("res://scenes/menu/Ajustes.tscn")
 
-
+# Botão que leva para a cena com o código e QR code do jgoador
 func _on_TextureButton4_pressed():
 	get_tree().change_scene("res://Pontuação/checkPoints.tscn")
 	

@@ -6,6 +6,7 @@ func _ready():
 
 var andar = Vector2() #movimento
 var velocidade = 65 #velocidade
+# Variáveis utilizadas para controlar o player no celular
 var cima = false
 var baixo = false
 var coletaveis = [0]
@@ -13,7 +14,7 @@ var bateu
 
 var vida = 3
 
-# touch para movimentar:
+# Funções utilizadas para controlar o player no celular
 var esquerda = false
 var direita = false 
 func _on_Cima_pressed():
@@ -26,11 +27,12 @@ func _on_Esquerda_pressed():
 	esquerda = true
 
 func _process(delta):
-	# Para vencer o jogo é preciso coletar os itens bons
+	# Verifica se foi coletado todos os número bons
 	if coletaveis[0] == 4:
 		get_node("../texto final").visible = true
 		yield(get_tree().create_timer(1.5), 'timeout')
 		
+		# Variável global que verifica se a fase está completa e adciona um ponto ao jogador
 		if Points.pacMan == false:
 			Points.addpoint()
 			Points.pacMan = true
@@ -55,22 +57,24 @@ func _physics_process(delta):
 		andar.y = velocidade
 		andar.x = 0
 		baixo = false
-		rotation = deg2rad(90)
+		
 	if Input.is_action_just_pressed("ui_up") or cima:
 		andar.y = -velocidade
 		andar.x = 0
 		cima = false
-		rotation = deg2rad(-90)
+
 	if Input.is_action_just_pressed("ui_right") or direita:
 		andar.x = velocidade
 		andar.y = 0
 		direita = false
-		rotation = deg2rad(0)
+		$AnimatedSprite.set_flip_h(false)
+
 	if Input.is_action_just_pressed("ui_left") or esquerda:
 		andar.x = -velocidade
 		andar.y = 0
 		esquerda = false
-		rotation = deg2rad(-180)
+		$AnimatedSprite.set_flip_h(true)
+
 	
 	# Detectar colisões com os inimigos e paredes
 	var collision = move_and_collide(andar * delta)
@@ -84,6 +88,7 @@ func _physics_process(delta):
 		for i in len(checkCollision):
 			if bateu == str(checkCollision[i]):
 				print("morreu")
+				# Quando o player colide com o inimigo a posição é deifinida para a inicial e perde uma vida
 				get_node("../Person").position = Vector2(181, 338)
 				andar.x = 0
 				andar.y = 0
