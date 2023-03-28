@@ -12,7 +12,14 @@ var finished = false
 var botao = false
 
 func _ready():
-#	$Text.z_index = 1
+	#if Points.stateLevel1 == 5 and Points.stateLevel2 == 6 and Points.stateLevel3 == 5:
+	finish()
+	$Text.visible = true
+	get_node("../ColorRect").visible = true
+	get_node("../MapaBrasil").visible = true
+	
+func finish():
+	#	$Text.z_index = 1
 	# Determina velocidaede que o texto aparece na tela
 	$Timer.wait_time = textSpeed
 	dialog = getDialog()

@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://Fonte/Lato-Bold.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://Dialogos/dialogofinal.gd" type="Script" id=2]
@@ -6,7 +6,6 @@
 [ext_resource path="res://sprites/sprite_mapa_2.png" type="Texture" id=4]
 [ext_resource path="res://sprites/cenario das falas.png" type="Texture" id=5]
 [ext_resource path="res://sprites/invisivel.png" type="Texture" id=6]
-[ext_resource path="res://sprites/spritesheet.png" type="Texture" id=7]
 [ext_resource path="res://Fonte/upheaval/upheavtt.ttf" type="DynamicFontData" id=8]
 [ext_resource path="res://sprites/mapa brasil.png" type="Texture" id=9]
 [ext_resource path="res://sprites/sprite_mapa_1.png" type="Texture" id=10]
@@ -28,28 +27,6 @@ tracks/0/keys = {
 "values": [ ExtResource( 10 ), ExtResource( 4 ) ]
 }
 
-[sub_resource type="Animation" id=1]
-resource_name = "boneca_falando"
-length = 0.4
-loop = true
-tracks/0/type = "value"
-tracks/0/path = NodePath(".:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 0.2 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 1,
-"values": [ 0, 2 ]
-}
-
-[sub_resource type="Animation" id=2]
-resource_name = "trutinha_vtal_falando"
-length = 0.5
-loop = true
-
 [sub_resource type="DynamicFont" id=3]
 size = 60
 outline_size = 3
@@ -57,7 +34,7 @@ outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 8 )
 
 [sub_resource type="DynamicFont" id=7]
-size = 2
+size = 15
 font_data = ExtResource( 1 )
 
 [node name="clara teste" type="Node2D"]
@@ -101,17 +78,6 @@ margin_right = 224.0
 margin_bottom = 164.0
 script = ExtResource( 2 )
 dialogPath = "res://Dialogos/dialogo_final.json"
-
-[node name="PersonagemVtal" type="Sprite" parent="ColorRect"]
-position = Vector2( -421, 258 )
-scale = Vector2( 0.220334, 0.249857 )
-z_index = -2
-texture = ExtResource( 7 )
-hframes = 3
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="ColorRect/PersonagemVtal"]
-anims/boneca_falando = SubResource( 1 )
-anims/trutinha_vtal_falando = SubResource( 2 )
 
 [node name="Button" type="Button" parent="ColorRect"]
 visible = false
