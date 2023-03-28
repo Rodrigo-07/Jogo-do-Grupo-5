@@ -80,11 +80,10 @@ script = ExtResource( 2 )
 dialogPath = "res://Dialogos/dialogo_final.json"
 
 [node name="Button" type="Button" parent="ColorRect"]
-visible = false
-margin_left = -37.0
-margin_top = 324.0
-margin_right = 375.0
-margin_bottom = 730.0
+margin_left = -130.0
+margin_top = 235.0
+margin_right = 282.0
+margin_bottom = 641.0
 rect_scale = Vector2( 0.445614, 0.457057 )
 icon = ExtResource( 3 )
 flat = true
@@ -97,7 +96,7 @@ margin_bottom = 235.597
 custom_colors/font_color = Color( 1, 0.85098, 0.247059, 1 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
 custom_fonts/font = SubResource( 3 )
-text = "Começar"
+text = "+ jogos"
 
 [node name="Text" type="RichTextLabel" parent="ColorRect"]
 margin_left = -162.0
