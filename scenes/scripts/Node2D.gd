@@ -12,10 +12,14 @@ func obstacle():
 	add_child(obs)
 	
 var audio = AudioServer.get_bus_index("Master")
+
 func _ready():
+	obstacle()
+
+func _process(delta):
 	$FundoPause/Label.text = pontos
 	$FundoPause/Label2.text = "Seu código atual é:"+Points.currentCode
-	obstacle()
+	
 func _on_Pausar2_pressed():
 	get_tree().paused = true
 	$FundoPause.show()
@@ -31,8 +35,6 @@ func _on_HSlider_value_changed(value):
 		AudioServer.set_bus_mute(audio,true)
 	else:
 		AudioServer.set_bus_mute(audio,false)
-	
-
 
 func _on_Button3_pressed():
 	get_tree().paused = false
