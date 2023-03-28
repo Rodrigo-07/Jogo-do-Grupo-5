@@ -6,7 +6,6 @@
 [ext_resource path="res://audios/videoplayback.mp3" type="AudioStream" id=4]
 [ext_resource path="res://cenas de transicao/Transicao.tscn" type="PackedScene" id=5]
 
-
 [node name="Node2D" type="Node2D"]
 script = ExtResource( 1 )
 
@@ -46,5 +45,12 @@ text = "VOLUME"
 
 [node name="Transition" parent="." instance=ExtResource( 5 )]
 
+[node name="Button2" type="Button" parent="."]
+margin_left = 93.0
+margin_top = 321.0
+margin_right = 279.0
+margin_bottom = 384.0
+
 [connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
 [connection signal="value_changed" from="HSlider" to="." method="_on_HSlider_value_changed"]
+[connection signal="pressed" from="Button2" to="." method="_on_Button2_pressed"]
