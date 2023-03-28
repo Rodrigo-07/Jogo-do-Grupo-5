@@ -1,6 +1,6 @@
 [gd_scene load_steps=14 format=2]
 
-[ext_resource path="res://Dialogos/dialogo_inicial.gd" type="Script" id=1]
+[ext_resource path="res://Fonte/dialogo_inicial.gd" type="Script" id=1]
 [ext_resource path="res://sprites/spritesheet.png" type="Texture" id=2]
 [ext_resource path="res://sprites/invisivel.png" type="Texture" id=3]
 [ext_resource path="res://sprites/balão (2).png" type="Texture" id=4]
@@ -80,8 +80,8 @@ script = ExtResource( 1 )
 dialogPath = "res://Dialogos/dialogo_inicial.json"
 
 [node name="PersonagemVtal" type="Sprite" parent="ColorRect"]
-position = Vector2( -110, 414 )
-scale = Vector2( 0.215668, 0.249857 )
+position = Vector2( -136, 403 )
+scale = Vector2( 0.228667, 0.264917 )
 z_index = -2
 texture = ExtResource( 2 )
 hframes = 3
@@ -129,7 +129,7 @@ margin_bottom = 119.0
 custom_fonts/normal_font = SubResource( 5 )
 
 [node name="balaodefalaVtal" type="Sprite" parent="ColorRect"]
-position = Vector2( -55.9737, 19.6652 )
+position = Vector2( -58, 4.99999 )
 rotation = 3.14086
 scale = Vector2( 1.3991, -1.14386 )
 z_index = -1

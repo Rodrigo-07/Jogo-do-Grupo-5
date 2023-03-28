@@ -4,7 +4,8 @@
 [ext_resource path="res://Fonte/Lato-Bold.ttf" type="DynamicFontData" id=2]
 [ext_resource path="res://sprites/tenta novamente.png" type="Texture" id=3]
 [ext_resource path="res://sprites/papel.png" type="Texture" id=4]
-[ext_resource path="res://scenes/fase 1/Peguntas/FeedbackAcerto3.gd" type="Script" id=5]
+[ext_resource path="res://scenes/Peguntas/FeedbackAcerto1.gd" type="Script" id=5]
+
 
 [sub_resource type="DynamicFont" id=1]
 size = 25
@@ -18,7 +19,7 @@ font_data = ExtResource( 2 )
 size = 150
 font_data = ExtResource( 1 )
 
-[node name="FeedbackAcerto3" type="Node2D"]
+[node name="FeedbackAcerto1" type="Node2D"]
 
 [node name="Popup" type="Popup" parent="."]
 margin_right = 40.0
@@ -60,12 +61,13 @@ valign = 1
 
 [node name="Text" type="Label" parent="Popup"]
 margin_left = 38.0
-margin_top = 335.0
+margin_top = 350.0
 margin_right = 319.0
-margin_bottom = 557.0
+margin_bottom = 572.0
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_fonts/font = SubResource( 2 )
-text = "Ao se sentir desconfortável com qualquer ação que afeta o seu ambiente de trabalho, você deve confrontar a situação e fazer uma denúncia no compliance."
+text = "Apesar de muitas vezes parecer apenas uma brincadeira, se as piadas fazem com que o empregado se sinta, além de ofendido, triste com o que é dito com constância para ele, esse pode sim ser considerado um assédio moral.
+"
 align = 1
 valign = 1
 autowrap = true

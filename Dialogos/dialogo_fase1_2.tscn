@@ -106,7 +106,7 @@ texture = ExtResource( 4 )
 anims/alex_falando = SubResource( 1 )
 
 [node name="PersonagemVtal" type="Sprite" parent="ColorRect"]
-position = Vector2( -134, 392 )
+position = Vector2( -140, 397 )
 scale = Vector2( 0.20925, 0.234175 )
 texture = ExtResource( 7 )
 hframes = 3
