@@ -1,5 +1,6 @@
 extends ColorRect
 
+
 #	Exportar o arquivo json
 export var dialogPath = ""
 export(float) var textSpeed = 0.05
@@ -11,9 +12,14 @@ var finished = false
 var botao = false
 
 func _ready():
-	# Inciar a animação de fala dos personagens
-	$PersonagemVtal/AnimationPlayer.play("boneca_falando")
-	$Alex/AnimationPlayer.play("alex_falando")
+	#if Points.stateLevel1 == 5 and Points.stateLevel2 == 6 and Points.stateLevel3 == 5:
+	finish()
+	$Text.visible = true
+	get_node("../ColorRect").visible = true
+	get_node("../MapaBrasil").visible = true
+	
+func finish():
+	#	$Text.z_index = 1
 	# Determina velocidaede que o texto aparece na tela
 	$Timer.wait_time = textSpeed
 	dialog = getDialog()
@@ -24,9 +30,11 @@ func _ready():
 	# O botão para continuar depois do diálogo só aparece depois que acabar todo diálogo
 	$Button.visible = false
 
+
 var touch
 func _on_touch_pressed():
 	touch = true
+
 func _process(delta):
 	# Se for precisonado enter o texto avança e vai para a próxima frase
 	if Input.is_action_just_pressed("ui_accept") or touch:
@@ -42,7 +50,7 @@ func _process(delta):
 	
 
 func getDialog() -> Array:
-	# Verifica se o arquivo do diálogo existe
+	# Check if the file of the dialogue exist
 	var f = File.new()
 	# se a condição for falso retorna essa mensagem
 	assert(f.file_exists(dialogPath), "File path does not exist")
@@ -71,24 +79,9 @@ func nextPhrase() -> void:
 	finished = false
 	
 	# Determinar o nome e texto em si que irá ser mostrado na tela
-	$Name.bbcode_text = dialog[phraseNum]["Name"]
 	$Text.bbcode_text = dialog[phraseNum]["Text"]
 	
 	$Text.visible_characters = 0
-	
-	# Código para alterar as sprites de fala do balão e personagem que estiver falando
-	if $Name.bbcode_text == "Alex":
-		$PersonagemVtal.visible = 0
-		$balaodefalaVtal.visible = 0
-		
-		$Alex.visible = 1
-		$balaodefalaAlex.visible = 1
-	elif $Name.bbcode_text == "Funcionário da Vtal":
-		$Alex.visible = 0
-		$balaodefalaAlex.visible = 0
-		
-		$PersonagemVtal.visible = 1
-		$balaodefalaVtal.visible = 1
 	
 	while $Text.visible_characters < len($Text.text):
 		$Text.visible_characters += 1
@@ -100,9 +93,6 @@ func nextPhrase() -> void:
 	phraseNum += 1
 	return
 
-# Quando o diálogo for finalizado o botão leva para o menu principal
+
 func _on_Button_pressed():
-	get_tree().change_scene("res://scenes/fase 1/whg.tscn")
-
-
-
+	pass # Replace with function body.

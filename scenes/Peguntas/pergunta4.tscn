@@ -1,14 +1,15 @@
 [gd_scene load_steps=15 format=2]
 
-[ext_resource path="res://scenes/fase 1/Peguntas/pergunta3.gd" type="Script" id=1]
+[ext_resource path="res://scenes/Peguntas/pergunta4.gd" type="Script" id=1]
 [ext_resource path="res://sprites/Button.png" type="Texture" id=2]
 [ext_resource path="res://sprites/Tela perguntas.png" type="Texture" id=3]
 [ext_resource path="res://sprites/Buttonmuitoescuro.png" type="Texture" id=4]
 [ext_resource path="res://sprites/Buttonescuro.png" type="Texture" id=5]
 [ext_resource path="res://Fonte/Concert_One/ConcertOne-Regular.ttf" type="DynamicFontData" id=6]
 [ext_resource path="res://Fonte/Lato-Bold.ttf" type="DynamicFontData" id=7]
-[ext_resource path="res://scenes/fase 1/Peguntas/FeedbackErro3.tscn" type="PackedScene" id=8]
-[ext_resource path="res://scenes/fase 1/Peguntas/FeedbackAcerto3.tscn" type="PackedScene" id=9]
+[ext_resource path="res://scenes/Peguntas/FeedbackErro4.tscn" type="PackedScene" id=8]
+[ext_resource path="res://scenes/Peguntas/FeedbackAcerto4.tscn" type="PackedScene" id=9]
+
 
 [sub_resource type="TileSet" id=1]
 0/name = "Tela perguntas.png 0"
@@ -91,14 +92,16 @@ texture_pressed = ExtResource( 5 )
 texture_hover = ExtResource( 4 )
 
 [node name="Label" type="Label" parent="TextureButton"]
-margin_left = 25.0
-margin_top = 51.0
-margin_right = 334.0
-margin_bottom = 78.0
+margin_left = 7.0
+margin_top = 34.0
+margin_right = 342.0
+margin_bottom = 91.0
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_fonts/font = SubResource( 2 )
-text = "Você deve bloquear a pessoa."
+text = "Entende que é uma questão entre os dois, portanto você apenas vai embora."
 align = 1
+valign = 1
+autowrap = true
 
 [node name="TextureButton2" type="TextureButton" parent="."]
 margin_left = 5.0
@@ -110,15 +113,15 @@ texture_pressed = ExtResource( 5 )
 texture_hover = ExtResource( 4 )
 
 [node name="Label" type="Label" parent="TextureButton2"]
-margin_left = 30.0
-margin_top = 26.0
-margin_right = 330.0
-margin_bottom = 123.0
+margin_left = 27.0
+margin_top = 33.0
+margin_right = 327.0
+margin_bottom = 96.0
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_fonts/font = SubResource( 3 )
-text = "Apesar de ser em um canal pessoal, o certo é realizar a denúncia dentro do ambiente  de trabalho.
-"
+text = "Você conversa com seu chefe, fala que viu e que não foi uma situação legal."
 align = 1
+valign = 1
 autowrap = true
 
 [node name="TextureButton3" type="TextureButton" parent="."]
@@ -131,14 +134,15 @@ texture_pressed = ExtResource( 5 )
 texture_hover = ExtResource( 4 )
 
 [node name="Label" type="Label" parent="TextureButton3"]
-margin_left = 25.0
-margin_top = 36.0
-margin_right = 325.0
-margin_bottom = 97.0
+margin_left = 30.0
+margin_top = 30.0
+margin_right = 320.0
+margin_bottom = 96.0
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_fonts/font = SubResource( 4 )
-text = "Como não é no ambiente de trabalho,não cabe ao meio profissional."
+text = "Você realiza um relato formal ao Compliance por meio do Canal Confidencial."
 align = 1
+valign = 1
 autowrap = true
 
 [node name="ColorRect" type="ColorRect" parent="."]
@@ -154,20 +158,21 @@ margin_right = 299.0
 margin_bottom = 33.0
 
 [node name="Label" type="Label" parent="."]
-margin_left = 21.0
-margin_top = 83.0
-margin_right = 345.0
-margin_bottom = 180.0
+margin_left = 36.0
+margin_top = 58.0
+margin_right = 336.0
+margin_bottom = 195.0
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_fonts/font = SubResource( 5 )
-text = " Se um colega te envia mensagens no whatsapp de teor sexual constantemente sem o seu consentimento:
+text = "Você está saindo do trabalho e seu chefe interagindo de forma inapropriada com um colega,  que está claramente desconfortável com a situação. Nesse cenário você:
 "
 align = 1
+valign = 1
 autowrap = true
 
-[node name="FeedbackErro3" parent="." instance=ExtResource( 8 )]
+[node name="FeedbackErro4" parent="." instance=ExtResource( 8 )]
 
-[node name="FeedbackAcerto3" parent="." instance=ExtResource( 9 )]
+[node name="FeedbackAcerto4" parent="." instance=ExtResource( 9 )]
 
 [connection signal="button_up" from="TextureButton" to="." method="_on_TextureButton_button_up"]
 [connection signal="button_up" from="TextureButton2" to="." method="_on_TextureButton2_button_up"]
