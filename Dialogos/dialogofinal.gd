@@ -93,6 +93,5 @@ func nextPhrase() -> void:
 	phraseNum += 1
 	return
 
-
 func _on_Button_pressed():
-	pass # Replace with function body.
+	get_tree().change_scene("res://linkdosoutrosjogos.tscn")
