@@ -63,7 +63,7 @@ font_data = ExtResource( 9 )
 size = 18
 font_data = ExtResource( 9 )
 
-[sub_resource type="DynamicFont" id=4]
+[sub_resource type="DynamicFont" id=9]
 size = 19
 font_data = ExtResource( 8 )
 
@@ -161,14 +161,13 @@ margin_bottom = -89.0
 custom_fonts/normal_font = SubResource( 3 )
 
 [node name="Text" type="RichTextLabel" parent="ColorRect"]
-modulate = Color( 0, 0, 0, 1 )
-self_modulate = Color( 0, 0, 0, 1 )
-margin_left = -168.0
-margin_top = -96.0
-margin_right = 83.0
-margin_bottom = 136.0
-custom_fonts/normal_font = SubResource( 4 )
-scroll_following = true
+margin_left = -172.0
+margin_top = -91.0
+margin_right = 84.0
+margin_bottom = 112.0
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+custom_fonts/normal_font = SubResource( 9 )
+bbcode_enabled = true
 
 [node name="Timer" type="Timer" parent="ColorRect"]
 
