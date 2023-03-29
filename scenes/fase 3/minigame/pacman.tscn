@@ -1,4 +1,4 @@
-[gd_scene load_steps=59 format=2]
+[gd_scene load_steps=57 format=2]
 
 [ext_resource path="res://scenes/fase 3/minigame/pacman.gd" type="Script" id=1]
 [ext_resource path="res://sprites/pacman.png" type="Texture" id=2]
@@ -7,10 +7,7 @@
 [ext_resource path="res://sprites/pac_man_level (1).png" type="Texture" id=5]
 [ext_resource path="res://sprites/balinhaVTal.png" type="Texture" id=6]
 [ext_resource path="res://sprites/copo_agua.png" type="Texture" id=7]
-[ext_resource path="res://sprites/baixo.png" type="Texture" id=10]
-[ext_resource path="res://sprites/direita.png" type="Texture" id=11]
-[ext_resource path="res://sprites/esquerda.png" type="Texture" id=12]
-[ext_resource path="res://sprites/cima.png" type="Texture" id=13]
+[ext_resource path="res://scenes/fase 3/minigame/SwipeControl.gd" type="Script" id=8]
 [ext_resource path="res://scenes/fase 3/minigame/spriteCerveja.gd" type="Script" id=14]
 [ext_resource path="res://sprites/cerveja-transformed.png" type="Texture" id=15]
 [ext_resource path="res://sprites/hearts.png" type="Texture" id=17]
@@ -41,6 +38,8 @@ animations = [ {
 [sub_resource type="DynamicFont" id=55]
 size = 28
 font_data = ExtResource( 18 )
+
+[sub_resource type="RectangleShape2D" id=88]
 
 [sub_resource type="AtlasTexture" id=82]
 flags = 4
@@ -227,25 +226,10 @@ text = "Você é incrivel!!!"
 
 [node name="controls" type="Node" parent="."]
 
-[node name="Cima" type="TouchScreenButton" parent="controls"]
-position = Vector2( 151, 467 )
-scale = Vector2( 1.8125, 2.25 )
-normal = ExtResource( 13 )
-
-[node name="Baixo" type="TouchScreenButton" parent="controls"]
-position = Vector2( 153, 567 )
-scale = Vector2( 1.8125, 2.09375 )
-normal = ExtResource( 10 )
-
-[node name="Direita" type="TouchScreenButton" parent="controls"]
-position = Vector2( 202, 522 )
-scale = Vector2( 2.21875, 1.875 )
-normal = ExtResource( 11 )
-
-[node name="Esquerda" type="TouchScreenButton" parent="controls"]
-position = Vector2( 91, 525 )
-scale = Vector2( 2.1875, 1.84375 )
-normal = ExtResource( 12 )
+[node name="SwipeScreenButton" type="TouchScreenButton" parent="controls"]
+scale = Vector2( 19.2575, 31.6562 )
+shape = SubResource( 88 )
+script = ExtResource( 8 )
 
 [node name="Person" type="KinematicBody2D" parent="."]
 position = Vector2( 177, 308 )
@@ -256,7 +240,7 @@ script = ExtResource( 3 )
 position = Vector2( -7.50002, -22.4999 )
 scale = Vector2( 0.84375, 0.84375 )
 frames = SubResource( 86 )
-frame = 3
+frame = 2
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Person"]
@@ -642,10 +626,6 @@ position = Vector2( 150, 328.172 )
 scale = Vector2( 0.999999, 0.999999 )
 shape = SubResource( 81 )
 
-[connection signal="pressed" from="controls/Cima" to="Person" method="_on_Cima_pressed"]
-[connection signal="pressed" from="controls/Baixo" to="Person" method="_on_Baixo_pressed"]
-[connection signal="pressed" from="controls/Direita" to="Person" method="_on_Direita_pressed"]
-[connection signal="pressed" from="controls/Esquerda" to="Person" method="_on_Esquerda_pressed"]
 [connection signal="body_shape_entered" from="good/Capacete" to="Person" method="_on_Capacete_body_shape_entered"]
 [connection signal="body_shape_entered" from="good/Capacete2" to="Person" method="_on_Capacete2_body_shape_entered"]
 [connection signal="body_shape_entered" from="good/Capacete3" to="Person" method="_on_Capacete3_body_shape_entered"]
