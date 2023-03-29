@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://Fonte/Lato-Bold.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://Dialogos/dialogofinal.gd" type="Script" id=2]
@@ -32,6 +32,10 @@ size = 60
 outline_size = 3
 outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 8 )
+
+[sub_resource type="DynamicFont" id=8]
+size = 17
+font_data = ExtResource( 1 )
 
 [sub_resource type="DynamicFont" id=7]
 size = 15
@@ -80,10 +84,10 @@ script = ExtResource( 2 )
 dialogPath = "res://Dialogos/dialogo_final.json"
 
 [node name="Button" type="Button" parent="ColorRect"]
-margin_left = -130.0
-margin_top = 235.0
-margin_right = 282.0
-margin_bottom = 641.0
+margin_left = -133.0
+margin_top = 248.0
+margin_right = 279.0
+margin_bottom = 654.0
 rect_scale = Vector2( 0.445614, 0.457057 )
 icon = ExtResource( 3 )
 flat = true
@@ -99,13 +103,23 @@ custom_fonts/font = SubResource( 3 )
 text = "+ jogos"
 
 [node name="Text" type="RichTextLabel" parent="ColorRect"]
+margin_left = -161.0
+margin_top = -50.0
+margin_right = 78.0
+margin_bottom = 305.0
+custom_colors/default_color = Color( 1, 1, 1, 1 )
+custom_fonts/normal_font = SubResource( 8 )
+bbcode_enabled = true
+
+[node name="Timer" type="Timer" parent="ColorRect"]
+
+[node name="Text23" type="RichTextLabel" parent="ColorRect"]
+visible = false
 margin_left = -162.0
 margin_top = -67.0
 margin_right = 73.0
 margin_bottom = 379.0
 custom_fonts/mono_font = SubResource( 7 )
 bbcode_enabled = true
-
-[node name="Timer" type="Timer" parent="ColorRect"]
 
 [connection signal="pressed" from="ColorRect/Button" to="ColorRect" method="_on_Button_pressed"]

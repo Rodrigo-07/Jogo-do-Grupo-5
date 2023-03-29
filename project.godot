@@ -8,6 +8,16 @@
 
 config_version=4
 
+_global_script_classes=[ {
+"base": "TouchScreenButton",
+"class": "SwipeScreenButton",
+"language": "GDScript",
+"path": "res://scenes/fase 3/minigame/SwipeControl.gd"
+} ]
+_global_script_class_icons={
+"SwipeScreenButton": ""
+}
+
 [application]
 
 config/name="Jogo-do- Grupo- 5"
@@ -17,6 +27,7 @@ config/icon="res://icon.png"
 [autoload]
 
 Points="*res://Node.gd"
+SwipeControl="*res://scenes/fase 3/minigame/SwipeControl.gd"
 
 [display]
 

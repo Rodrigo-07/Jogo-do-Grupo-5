@@ -1,4 +1,4 @@
-[gd_scene load_steps=59 format=2]
+[gd_scene load_steps=57 format=2]
 
 [ext_resource path="res://scenes/fase 3/minigame/pacman.gd" type="Script" id=1]
 [ext_resource path="res://sprites/pacman.png" type="Texture" id=2]
@@ -7,10 +7,7 @@
 [ext_resource path="res://sprites/pac_man_level (1).png" type="Texture" id=5]
 [ext_resource path="res://sprites/balinhaVTal.png" type="Texture" id=6]
 [ext_resource path="res://sprites/copo_agua.png" type="Texture" id=7]
-[ext_resource path="res://sprites/baixo.png" type="Texture" id=10]
-[ext_resource path="res://sprites/direita.png" type="Texture" id=11]
-[ext_resource path="res://sprites/esquerda.png" type="Texture" id=12]
-[ext_resource path="res://sprites/cima.png" type="Texture" id=13]
+[ext_resource path="res://scenes/fase 3/minigame/SwipeControl.gd" type="Script" id=8]
 [ext_resource path="res://scenes/fase 3/minigame/spriteCerveja.gd" type="Script" id=14]
 [ext_resource path="res://sprites/cerveja-transformed.png" type="Texture" id=15]
 [ext_resource path="res://sprites/hearts.png" type="Texture" id=17]
@@ -42,6 +39,8 @@ animations = [ {
 size = 28
 font_data = ExtResource( 18 )
 
+[sub_resource type="RectangleShape2D" id=88]
+
 [sub_resource type="AtlasTexture" id=82]
 flags = 4
 atlas = ExtResource( 2 )
@@ -71,7 +70,7 @@ animations = [ {
 } ]
 
 [sub_resource type="RectangleShape2D" id=87]
-extents = Vector2( 52.5001, 45 )
+extents = Vector2( 52.5001, 40 )
 
 [sub_resource type="RectangleShape2D" id=11]
 extents = Vector2( 12.5, 12.5 )
@@ -140,83 +139,80 @@ tracks/0/keys = {
 }
 
 [sub_resource type="RectangleShape2D" id=59]
-extents = Vector2( 8, 67 )
+extents = Vector2( 8, 91.5 )
 
 [sub_resource type="RectangleShape2D" id=60]
-extents = Vector2( 107.5, 5.5 )
+extents = Vector2( 107.75, 8 )
 
 [sub_resource type="RectangleShape2D" id=61]
-extents = Vector2( 8, 71 )
+extents = Vector2( 7.5, 89.5 )
 
 [sub_resource type="RectangleShape2D" id=62]
-extents = Vector2( 125.5, 5.5 )
+extents = Vector2( 129.75, 7.75 )
 
 [sub_resource type="RectangleShape2D" id=63]
 extents = Vector2( 10, 48.172 )
 
 [sub_resource type="RectangleShape2D" id=64]
-extents = Vector2( 55, 10 )
+extents = Vector2( 55, 13.8441 )
 
 [sub_resource type="RectangleShape2D" id=65]
-extents = Vector2( 10, 62.6344 )
+extents = Vector2( 10, 100.134 )
 
 [sub_resource type="RectangleShape2D" id=66]
-extents = Vector2( 125, 10.3226 )
+extents = Vector2( 125.625, 13.7634 )
 
 [sub_resource type="RectangleShape2D" id=67]
-extents = Vector2( 90, 10 )
+extents = Vector2( 91.25, 13.6022 )
 
 [sub_resource type="RectangleShape2D" id=68]
-extents = Vector2( 10, 55.7527 )
+extents = Vector2( 10, 65.7258 )
 
 [sub_resource type="RectangleShape2D" id=69]
-extents = Vector2( 10, 64.3549 )
+extents = Vector2( 10, 89.4624 )
 
 [sub_resource type="RectangleShape2D" id=70]
-extents = Vector2( 225, 5.16123 )
+extents = Vector2( 225, 7.74199 )
 
 [sub_resource type="RectangleShape2D" id=71]
-extents = Vector2( 5.00007, 394.839 )
+extents = Vector2( 4.99998, 551.398 )
 
 [sub_resource type="RectangleShape2D" id=72]
-extents = Vector2( 90, 10.1612 )
+extents = Vector2( 55, 13.7634 )
 
 [sub_resource type="RectangleShape2D" id=73]
-extents = Vector2( 10, 87.742 )
+extents = Vector2( 10.625, 120 )
 
 [sub_resource type="RectangleShape2D" id=74]
 extents = Vector2( 10, 48.172 )
 
 [sub_resource type="RectangleShape2D" id=75]
-extents = Vector2( 30, 10.1613 )
+extents = Vector2( 30.625, 13.6828 )
 
 [sub_resource type="RectangleShape2D" id=76]
-extents = Vector2( 10, 37.8495 )
+extents = Vector2( 10, 52.4731 )
 
 [sub_resource type="RectangleShape2D" id=77]
-extents = Vector2( 55, 10.3225 )
+extents = Vector2( 80, 13.7635 )
 
 [sub_resource type="RectangleShape2D" id=78]
-extents = Vector2( 10, 17.2043 )
+extents = Vector2( 10, 49.0324 )
 
 [sub_resource type="RectangleShape2D" id=79]
-extents = Vector2( 40.9375, 9.93273 )
+extents = Vector2( 40.4688, 13.5685 )
 
 [sub_resource type="RectangleShape2D" id=80]
-extents = Vector2( 30, 10.3226 )
+extents = Vector2( 30, 13.7635 )
 
 [sub_resource type="RectangleShape2D" id=81]
-extents = Vector2( 10, 37.8494 )
+extents = Vector2( 10, 51.183 )
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource( 1 )
 
-[node name="TileMap" type="TileMap" parent="."]
-format = 1
-
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
-position = Vector2( 180, 232.5 )
-scale = Vector2( 0.8, 0.58125 )
+position = Vector2( 180, 320 )
+scale = Vector2( 0.8, 0.8 )
 frames = SubResource( 58 )
 
 [node name="texto final" type="Label" parent="."]
@@ -230,25 +226,10 @@ text = "Você é incrivel!!!"
 
 [node name="controls" type="Node" parent="."]
 
-[node name="Cima" type="TouchScreenButton" parent="controls"]
-position = Vector2( 151, 467 )
-scale = Vector2( 1.8125, 2.25 )
-normal = ExtResource( 13 )
-
-[node name="Baixo" type="TouchScreenButton" parent="controls"]
-position = Vector2( 153, 567 )
-scale = Vector2( 1.8125, 2.09375 )
-normal = ExtResource( 10 )
-
-[node name="Direita" type="TouchScreenButton" parent="controls"]
-position = Vector2( 202, 522 )
-scale = Vector2( 2.21875, 1.875 )
-normal = ExtResource( 11 )
-
-[node name="Esquerda" type="TouchScreenButton" parent="controls"]
-position = Vector2( 91, 525 )
-scale = Vector2( 2.1875, 1.84375 )
-normal = ExtResource( 12 )
+[node name="SwipeScreenButton" type="TouchScreenButton" parent="controls"]
+scale = Vector2( 19.2575, 31.6562 )
+shape = SubResource( 88 )
+script = ExtResource( 8 )
 
 [node name="Person" type="KinematicBody2D" parent="."]
 position = Vector2( 177, 308 )
@@ -259,17 +240,18 @@ script = ExtResource( 3 )
 position = Vector2( -7.50002, -22.4999 )
 scale = Vector2( 0.84375, 0.84375 )
 frames = SubResource( 86 )
+frame = 2
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Person"]
-position = Vector2( -7.5, -20 )
+position = Vector2( -7.5, -25 )
 scale = Vector2( 0.999999, 0.999999 )
 shape = SubResource( 87 )
 
 [node name="enemies" type="Node" parent="."]
 
 [node name="spriteCerveja" type="KinematicBody2D" parent="enemies" groups=["inimigos"]]
-position = Vector2( 151, 267 )
+position = Vector2( 196, 33 )
 script = ExtResource( 14 )
 __meta__ = {
 "_edit_group_": true
@@ -314,7 +296,7 @@ __meta__ = {
 }
 
 [node name="spriteCerveja3" type="KinematicBody2D" parent="enemies" groups=["inimigos"]]
-position = Vector2( 248, 153 )
+position = Vector2( 219, 147 )
 collision_layer = 4
 script = ExtResource( 14 )
 __meta__ = {
@@ -503,28 +485,28 @@ margin_bottom = 397.0
 position = Vector2( 198, 413 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2( 2, -21 )
+position = Vector2( 2, 126.5 )
 shape = SubResource( 59 )
 
 [node name="StaticBody2D2" type="StaticBody2D" parent="."]
 position = Vector2( 140, 280 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
-position = Vector2( 15.5, 1.5 )
+position = Vector2( 15.75, 108 )
 shape = SubResource( 60 )
 
 [node name="StaticBody2D3" type="StaticBody2D" parent="."]
 position = Vector2( 255, 340 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3"]
-position = Vector2( 1, 7 )
+position = Vector2( 0.5, 129.5 )
 shape = SubResource( 61 )
 
 [node name="StaticBody2D4" type="StaticBody2D" parent="."]
 position = Vector2( 159, 40 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D4"]
-position = Vector2( 14.5, 0.5 )
+position = Vector2( 24.25, 15.75 )
 shape = SubResource( 62 )
 
 [node name="StaticBody2D" type="StaticBody2D" parent="StaticBody2D4"]
@@ -532,35 +514,35 @@ position = Vector2( 25, 79 )
 scale = Vector2( 0.8, 0.58125 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D4/StaticBody2D"]
-position = Vector2( 0, -27.5269 )
+position = Vector2( 0, 22.3656 )
 shape = SubResource( 63 )
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D4/StaticBody2D"]
-position = Vector2( -115, 10.3225 )
+position = Vector2( -115, 91.2635 )
 shape = SubResource( 64 )
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D4/StaticBody2D"]
-position = Vector2( -160, -62.957 )
+position = Vector2( -160, -22.0161 )
 shape = SubResource( 65 )
 
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D4/StaticBody2D"]
-position = Vector2( -45, 80.8601 )
+position = Vector2( -44.375, 187.527 )
 shape = SubResource( 66 )
 
 [node name="CollisionShape2D5" type="CollisionShape2D" parent="StaticBody2D4/StaticBody2D"]
-position = Vector2( -9.99998, 209.892 )
+position = Vector2( -8.75, 366.29 )
 shape = SubResource( 67 )
 
 [node name="CollisionShape2D6" type="CollisionShape2D" parent="StaticBody2D4/StaticBody2D"]
-position = Vector2( 70, 145.215 )
+position = Vector2( 70, 39.9193 )
 shape = SubResource( 68 )
 
 [node name="CollisionShape2D7" type="CollisionShape2D" parent="StaticBody2D4/StaticBody2D"]
-position = Vector2( -160, 155.86 )
+position = Vector2( -160, 290.753 )
 shape = SubResource( 69 )
 
 [node name="CollisionShape2D8" type="CollisionShape2D" parent="StaticBody2D4/StaticBody2D"]
-position = Vector2( -4.99994, 591.827 )
+position = Vector2( -3.75, 890.323 )
 scale = Vector2( 0.999999, 0.999999 )
 shape = SubResource( 70 )
 
@@ -570,90 +552,80 @@ scale = Vector2( 0.999999, 0.999999 )
 shape = SubResource( 70 )
 
 [node name="CollisionShape2D10" type="CollisionShape2D" parent="StaticBody2D4/StaticBody2D"]
-position = Vector2( -225, 190.107 )
+position = Vector2( -225, 344.946 )
 scale = Vector2( 0.999999, 0.999999 )
 shape = SubResource( 71 )
 
 [node name="CollisionShape2D11" type="CollisionShape2D" parent="StaticBody2D4/StaticBody2D"]
-position = Vector2( 215, 199.57 )
+position = Vector2( 215, 349.247 )
 scale = Vector2( 0.999999, 0.999999 )
 shape = SubResource( 71 )
 
 [node name="CollisionShape2D12" type="CollisionShape2D" parent="StaticBody2D4/StaticBody2D"]
-position = Vector2( -80, 505.645 )
+position = Vector2( -45, 579.785 )
 shape = SubResource( 72 )
 
 [node name="CollisionShape2D13" type="CollisionShape2D" parent="StaticBody2D4/StaticBody2D"]
-position = Vector2( 150, 12.043 )
+position = Vector2( 150.625, 94.1936 )
 shape = SubResource( 73 )
 
 [node name="CollisionShape2D14" type="CollisionShape2D" parent="StaticBody2D4/StaticBody2D"]
-position = Vector2( 70, -27.5269 )
+position = Vector2( -1.52588e-05, 56.7742 )
 shape = SubResource( 74 )
 
 [node name="CollisionShape2D15" type="CollisionShape2D" parent="StaticBody2D4/StaticBody2D"]
-position = Vector2( 110, -65.2151 )
+position = Vector2( 110.625, -12.1236 )
 shape = SubResource( 75 )
 
 [node name="CollisionShape2D16" type="CollisionShape2D" parent="StaticBody2D4/StaticBody2D"]
-position = Vector2( -75, -87.742 )
+position = Vector2( -75, -43.871 )
 shape = SubResource( 76 )
 
 [node name="CollisionShape2D17" type="CollisionShape2D" parent="StaticBody2D4/StaticBody2D"]
-position = Vector2( -45, 364.731 )
+position = Vector2( -70, 772.473 )
 shape = SubResource( 77 )
 
 [node name="CollisionShape2D18" type="CollisionShape2D" parent="StaticBody2D4/StaticBody2D"]
-position = Vector2( -160, 478.279 )
+position = Vector2( -160, 748.387 )
 shape = SubResource( 78 )
 
 [node name="CollisionShape2D19" type="CollisionShape2D" parent="StaticBody2D4/StaticBody2D"]
-position = Vector2( -160, 392.258 )
+position = Vector2( 70, 328.602 )
 shape = SubResource( 78 )
 
 [node name="CollisionShape2D20" type="CollisionShape2D" parent="StaticBody2D4/StaticBody2D"]
-position = Vector2( -160, 357.849 )
+position = Vector2( -160, 500.645 )
 shape = SubResource( 78 )
 
 [node name="CollisionShape2D21" type="CollisionShape2D" parent="StaticBody2D4/StaticBody2D"]
-position = Vector2( -160, 323.441 )
+position = Vector2( -160, 593.548 )
 shape = SubResource( 78 )
 
 [node name="CollisionShape2D22" type="CollisionShape2D" parent="StaticBody2D4/StaticBody2D"]
-position = Vector2( -160, 306.237 )
+position = Vector2( 70, 231.398 )
 shape = SubResource( 78 )
 
 [node name="CollisionShape2D23" type="CollisionShape2D" parent="StaticBody2D4/StaticBody2D"]
-position = Vector2( 120, 505.416 )
+position = Vector2( 119.531, 772.278 )
 shape = SubResource( 79 )
 
 [node name="CollisionShape2D24" type="CollisionShape2D" parent="StaticBody2D4/StaticBody2D"]
-position = Vector2( 180, 364.731 )
+position = Vector2( 180, 579.785 )
 shape = SubResource( 80 )
 
 [node name="CollisionShape2D27" type="CollisionShape2D" parent="StaticBody2D4/StaticBody2D"]
-position = Vector2( -191.25, -55.0538 )
+position = Vector2( -192.5, 1.72043 )
 shape = SubResource( 80 )
 
 [node name="CollisionShape2D25" type="CollisionShape2D" parent="StaticBody2D4/StaticBody2D"]
-position = Vector2( 180, 209.892 )
+position = Vector2( 180, 366.452 )
 shape = SubResource( 80 )
 
 [node name="CollisionShape2D26" type="CollisionShape2D" parent="StaticBody2D4/StaticBody2D"]
-position = Vector2( 150, 182.365 )
+position = Vector2( 150, 328.172 )
 scale = Vector2( 0.999999, 0.999999 )
 shape = SubResource( 81 )
 
-[node name="ColorRect" type="ColorRect" parent="."]
-margin_left = 160.0
-margin_top = 866.0
-margin_right = 172.0
-margin_bottom = 881.0
-
-[connection signal="pressed" from="controls/Cima" to="Person" method="_on_Cima_pressed"]
-[connection signal="pressed" from="controls/Baixo" to="Person" method="_on_Baixo_pressed"]
-[connection signal="pressed" from="controls/Direita" to="Person" method="_on_Direita_pressed"]
-[connection signal="pressed" from="controls/Esquerda" to="Person" method="_on_Esquerda_pressed"]
 [connection signal="body_shape_entered" from="good/Capacete" to="Person" method="_on_Capacete_body_shape_entered"]
 [connection signal="body_shape_entered" from="good/Capacete2" to="Person" method="_on_Capacete2_body_shape_entered"]
 [connection signal="body_shape_entered" from="good/Capacete3" to="Person" method="_on_Capacete3_body_shape_entered"]
