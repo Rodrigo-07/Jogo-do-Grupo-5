@@ -31,7 +31,7 @@ func _on_TextureButton3_button_up():
 	if Points.pergunta12 == false:
 		Points.addpoint()
 		Points.addpoint()
-		Points.pergunta12 = false
+		Points.pergunta12 = true
 	
 	# Timer e popup com o feedback da resposta
 	yield(get_tree().create_timer(0.5), 'timeout')

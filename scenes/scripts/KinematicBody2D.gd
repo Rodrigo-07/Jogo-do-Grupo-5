@@ -92,15 +92,17 @@ func _on_Planta_body_shape_entered(body_rid, body, body_shape_index, local_shape
 	get_tree().paused = true
 	get_node("../PopUp/Label").text = "Lugar errado!\nToque na tela para tentar novamente."
 
+#Cuida do touchscreen quando o personagem ganha e vai para a area certa e quando vai para a area errada
 func _on_TouchScreenButton_pressed():
 	if entrou:
 		get_node("../PopUp").hide()
 		get_tree().paused = false
 		get_tree().reload_current_scene()
 		
-	if ganhou == true:
+	if ganhou == true and Input.is_mouse_button_pressed(1):
 		get_node("../PopUp").hide()
 		get_tree().paused = false
+		yield(get_tree().create_timer(0.5), 'timeout')
 		get_tree().change_scene("res://scenes/fase 1/Peguntas/pergunta4.tscn")
 
 #Pegando as provas pelo mapa
