@@ -64,8 +64,6 @@ func _on_Compliance_body_shape_entered(body_rid, body, body_shape_index, local_s
 	if keyCard == 3:
 		ganhou = true
 		get_node("../PopUp").show()
-		get_tree().paused = true
-		get_node("../PopUp/Label").text = "Parabéns, você foi ao lugar correto!\nO Compliance é o lugar ideal para fazer\nreclamações e denúncias!\n\nToque na tela para continuar"
 		# Jogador vence o jogo quando coletar as 3 chaves e recebe mais um ponto na variável global
 		if Points.whg == false:
 			# Adiciona ponto e seta o estado da fase como true
@@ -78,32 +76,21 @@ func _on_RH_body_shape_entered(body_rid, body, body_shape_index, local_shape_ind
 	entrou = true
 	get_node("../PopUp").show()
 	get_tree().paused = true
-	get_node("../PopUp/Label").text = "Lugar errado!\n \nPor mais que tenha relação com\no assunto, o RH não é o lugar ideal!\n \nToque na tela para tentar novamente."
+	get_node("../PopUp/Sprite2/Label").text = "Lugar errado!\n \nPor mais que tenha relação com\no assunto, o RH não é o lugar ideal"
 
 func _on_Agua_body_shape_entered(body_rid, body, body_shape_index, local_shape_index):
 	entrou = true
 	get_node("../PopUp").show()
 	get_tree().paused = true
-	get_node("../PopUp/Label").text = "Lugar errado!\nToque na tela para tentar novamente."
-
+	get_node("../PopUp/Sprite2/Label").text = "Lugar errado"
+	
 func _on_Planta_body_shape_entered(body_rid, body, body_shape_index, local_shape_index):
 	entrou = true
 	get_node("../PopUp").show()
 	get_tree().paused = true
-	get_node("../PopUp/Label").text = "Lugar errado!\nToque na tela para tentar novamente."
+	get_node("../PopUp/Sprite2/Label").text = "Lugar errado!"
 
 #Cuida do touchscreen quando o personagem ganha e vai para a area certa e quando vai para a area errada
-func _on_TouchScreenButton_pressed():
-	if entrou:
-		get_node("../PopUp").hide()
-		get_tree().paused = false
-		get_tree().reload_current_scene()
-		
-	if ganhou == true and Input.is_mouse_button_pressed(1):
-		get_node("../PopUp").hide()
-		get_tree().paused = false
-		yield(get_tree().create_timer(0.5), 'timeout')
-		get_tree().change_scene("res://scenes/fase 1/Peguntas/pergunta4.tscn")
 
 #Pegando as provas pelo mapa
 func _on_key_body_entered(body):
@@ -123,3 +110,9 @@ func _on_key3_body_entered(body):
 		get_node("../key/key3").queue_free()
 		get_node("../Pasta").modulate = Color(1,1,1,1)
 		keyCard += 1
+
+
+func _on_Button_pressed():
+	if entrou ==  true:
+		get_tree().paused = false
+		get_tree().reload_current_scene()

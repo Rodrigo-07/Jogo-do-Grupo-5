@@ -259,7 +259,6 @@ script = ExtResource( 3 )
 position = Vector2( -7.50002, -22.4999 )
 scale = Vector2( 0.84375, 0.84375 )
 frames = SubResource( 86 )
-frame = 1
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Person"]
@@ -644,6 +643,12 @@ shape = SubResource( 80 )
 position = Vector2( 150, 182.365 )
 scale = Vector2( 0.999999, 0.999999 )
 shape = SubResource( 81 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_left = 160.0
+margin_top = 866.0
+margin_right = 172.0
+margin_bottom = 881.0
 
 [connection signal="pressed" from="controls/Cima" to="Person" method="_on_Cima_pressed"]
 [connection signal="pressed" from="controls/Baixo" to="Person" method="_on_Baixo_pressed"]

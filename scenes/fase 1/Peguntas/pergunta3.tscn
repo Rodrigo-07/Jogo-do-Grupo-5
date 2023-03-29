@@ -1,14 +1,15 @@
 [gd_scene load_steps=15 format=2]
 
-[ext_resource path="res://scenes/Peguntas/pergunta3.gd" type="Script" id=1]
+[ext_resource path="res://scenes/fase 1/Peguntas/pergunta3.gd" type="Script" id=1]
 [ext_resource path="res://sprites/Button.png" type="Texture" id=2]
 [ext_resource path="res://sprites/Tela perguntas.png" type="Texture" id=3]
 [ext_resource path="res://sprites/Buttonmuitoescuro.png" type="Texture" id=4]
 [ext_resource path="res://sprites/Buttonescuro.png" type="Texture" id=5]
 [ext_resource path="res://Fonte/Concert_One/ConcertOne-Regular.ttf" type="DynamicFontData" id=6]
 [ext_resource path="res://Fonte/Lato-Bold.ttf" type="DynamicFontData" id=7]
-[ext_resource path="res://scenes/Peguntas/FeedbackErro3.tscn" type="PackedScene" id=8]
-[ext_resource path="res://scenes/Peguntas/FeedbackAcerto3.tscn" type="PackedScene" id=9]
+[ext_resource path="res://scenes/fase 1/Peguntas/FeedbackErro3.tscn" type="PackedScene" id=8]
+[ext_resource path="res://scenes/fase 1/Peguntas/FeedbackAcerto3.tscn" type="PackedScene" id=9]
+
 
 
 [sub_resource type="TileSet" id=1]

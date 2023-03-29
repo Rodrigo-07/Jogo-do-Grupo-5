@@ -1,10 +1,11 @@
 [gd_scene load_steps=9 format=2]
 
-[ext_resource path="res://scenes/Peguntas/FeedbackErro1.gd" type="Script" id=1]
+[ext_resource path="res://scenes/fase 1/Peguntas/FeedbackErro1.gd" type="Script" id=1]
 [ext_resource path="res://Fonte/Concert_One/ConcertOne-Regular.ttf" type="DynamicFontData" id=2]
 [ext_resource path="res://sprites/tenta novamente.png" type="Texture" id=3]
 [ext_resource path="res://sprites/papel.png" type="Texture" id=4]
 [ext_resource path="res://Fonte/Lato-Bold.ttf" type="DynamicFontData" id=5]
+
 
 
 [sub_resource type="DynamicFont" id=1]
