@@ -4,7 +4,8 @@
 [ext_resource path="res://Fonte/Lato-Bold.ttf" type="DynamicFontData" id=2]
 [ext_resource path="res://sprites/tenta novamente.png" type="Texture" id=3]
 [ext_resource path="res://sprites/papel.png" type="Texture" id=4]
-[ext_resource path="res://scenes/fase 1/Peguntas/Popup.gd" type="Script" id=5]
+[ext_resource path="res://scenes/Peguntas/FeedbackAcerto3.gd" type="Script" id=5]
+
 
 [sub_resource type="DynamicFont" id=1]
 size = 25
@@ -18,10 +19,9 @@ font_data = ExtResource( 2 )
 size = 150
 font_data = ExtResource( 1 )
 
-[node name="FeedbackAcerto4" type="Node2D"]
+[node name="FeedbackAcerto3" type="Node2D"]
 
 [node name="Popup" type="Popup" parent="."]
-visible = true
 margin_right = 40.0
 margin_bottom = 40.0
 script = ExtResource( 5 )
@@ -60,14 +60,13 @@ align = 1
 valign = 1
 
 [node name="Text" type="Label" parent="Popup"]
-margin_left = 53.0
-margin_top = 348.0
-margin_right = 314.0
-margin_bottom = 570.0
+margin_left = 38.0
+margin_top = 335.0
+margin_right = 319.0
+margin_bottom = 557.0
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_fonts/font = SubResource( 2 )
-text = "Em casos como esse, primeiramente, deve-se conversar com ambas as partes e em seguida realizar um relato formal ao compliance para que a situação seja resolvida da melhor maneira possível.
-"
+text = "Ao se sentir desconfortável com qualquer ação que afeta o seu ambiente de trabalho, você deve confrontar a situação e fazer uma denúncia no compliance."
 align = 1
 valign = 1
 autowrap = true

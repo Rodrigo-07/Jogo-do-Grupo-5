@@ -26,3 +26,7 @@ func _on_HSlider_value_changed(value):
 		AudioServer.set_bus_mute(audio,true)
 	else:
 		AudioServer.set_bus_mute(audio,false)
+
+
+func _on_Button2_pressed():
+	get_tree().change_scene("res://linkdosoutrosjogos.tscn")

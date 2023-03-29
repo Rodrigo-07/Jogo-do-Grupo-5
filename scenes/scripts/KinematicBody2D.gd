@@ -11,6 +11,7 @@ var cima = false
 var baixo = false
 var esquerda = false
 var direita = false
+
 var entrou
 var ganhou
 var nome
@@ -39,7 +40,6 @@ func _on_Cima_released():
 
 func _physics_process(delta):
 	
-	print(position.x, position.y)
 	# Movimentação do personagem
 	if Input.is_action_pressed("ui_up") or cima:
 		move.y = - speed * delta
