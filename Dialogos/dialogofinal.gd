@@ -95,3 +95,7 @@ func nextPhrase() -> void:
 
 func _on_Button_pressed():
 	get_tree().change_scene("res://linkdosoutrosjogos.tscn")
+
+
+func _on_Button2_pressed():
+	get_node("../../finish").visible = false
