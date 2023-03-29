@@ -1,7 +1,8 @@
 extends KinematicBody2D
 
 func _ready():
-	pass # Replace with function body.
+#	print(SwipeControl.down)
+	pass
 
 
 var andar = Vector2() #movimento
@@ -16,7 +17,8 @@ var vida = 3
 
 # Funções utilizadas para controlar o player no celular
 var esquerda = false
-var direita = false 
+var direita = false
+
 func _on_Cima_pressed():
 	cima = true
 func _on_Baixo_pressed():
@@ -28,6 +30,7 @@ func _on_Esquerda_pressed():
 
 func _process(delta):
 	# Verifica se foi coletado todos os número bons
+#	
 	if coletaveis[0] == 4:
 		get_node("../texto final").visible = true
 		yield(get_tree().create_timer(1.5), 'timeout')
@@ -53,12 +56,12 @@ func _process(delta):
 func _physics_process(delta):
 	move_and_slide(andar)
 	# Controle do Personagem
-	if Input.is_action_just_pressed("ui_down") or baixo:
+	if Input.is_action_just_pressed("ui_down"):
 		andar.y = velocidade
 		andar.x = 0
 		baixo = false
 		
-	if Input.is_action_just_pressed("ui_up") or cima:
+	if Input.is_action_just_pressed("ui_up"):
 		andar.y = -velocidade
 		andar.x = 0
 		cima = false
@@ -119,3 +122,6 @@ func _on_Capacete4_body_shape_entered(body_rid, body, body_shape_index, local_sh
 		coletaveis[0] += 1
 		get_node("../good/Capacete4").position = Vector2(402, 107)
 		print(coletaveis)
+
+
+
