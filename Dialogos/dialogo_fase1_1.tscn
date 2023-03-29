@@ -60,7 +60,7 @@ font_data = ExtResource( 10 )
 size = 18
 font_data = ExtResource( 10 )
 
-[sub_resource type="DynamicFont" id=3]
+[sub_resource type="DynamicFont" id=7]
 size = 19
 font_data = ExtResource( 9 )
 
@@ -116,8 +116,8 @@ anims/boneca_falando = SubResource( 6 )
 anims/trutinha_vtal_falando = SubResource( 2 )
 
 [node name="balaodefalaAlex" type="Sprite" parent="ColorRect"]
-position = Vector2( -28, -8.50002 )
-scale = Vector2( 1.3625, 1.35938 )
+position = Vector2( -25.5, -5.49998 )
+scale = Vector2( 1.37812, 1.38438 )
 z_index = -1
 texture = ExtResource( 2 )
 
@@ -156,13 +156,13 @@ margin_bottom = -81.0
 custom_fonts/normal_font = SubResource( 4 )
 
 [node name="Text" type="RichTextLabel" parent="ColorRect"]
-modulate = Color( 0, 0, 0, 1 )
-self_modulate = Color( 0, 0, 0, 1 )
-margin_left = -174.0
-margin_top = -87.0
-margin_right = 78.0
-margin_bottom = 119.0
-custom_fonts/normal_font = SubResource( 3 )
+margin_left = -182.0
+margin_top = -85.0
+margin_right = 84.0
+margin_bottom = 123.0
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+custom_fonts/normal_font = SubResource( 7 )
+bbcode_enabled = true
 
 [node name="Timer" type="Timer" parent="ColorRect"]
 

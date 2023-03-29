@@ -74,7 +74,7 @@ func nextPhrase() -> void:
 	# Determinar o nome e texto em si que irá ser mostrado na tela
 	$Name.bbcode_text = dialog[phraseNum]["Name"]
 	$Text.bbcode_text = dialog[phraseNum]["Text"]
-	
+#	$Text.bbcode_text = "[color=#4ab3ff]"+dialog[phraseNum]["Text"]+"[/color]"
 	$Text.visible_characters = 0
 	
 	while $Text.visible_characters < len($Text.text):

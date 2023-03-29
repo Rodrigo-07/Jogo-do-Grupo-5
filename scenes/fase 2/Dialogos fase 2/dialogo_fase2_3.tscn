@@ -75,8 +75,8 @@ font_data = ExtResource( 10 )
 size = 18
 font_data = ExtResource( 10 )
 
-[sub_resource type="DynamicFont" id=4]
-size = 19
+[sub_resource type="DynamicFont" id=8]
+size = 18
 font_data = ExtResource( 9 )
 
 [node name="Control" type="Control"]
@@ -161,20 +161,20 @@ text = "Começar"
 [node name="Name" type="RichTextLabel" parent="ColorRect"]
 modulate = Color( 0, 0, 0, 1 )
 self_modulate = Color( 0, 0, 0, 1 )
-margin_left = -163.0
-margin_top = -113.0
-margin_right = 60.0
-margin_bottom = -75.0
+margin_left = -172.0
+margin_top = -109.0
+margin_right = 51.0
+margin_bottom = -71.0
 custom_fonts/normal_font = SubResource( 3 )
 
 [node name="Text" type="RichTextLabel" parent="ColorRect"]
-modulate = Color( 0, 0, 0, 1 )
-self_modulate = Color( 0, 0, 0, 1 )
-margin_left = -163.0
-margin_top = -85.0
-margin_right = 84.0
-margin_bottom = 124.0
-custom_fonts/normal_font = SubResource( 4 )
+margin_left = -175.0
+margin_top = -72.0
+margin_right = 88.0
+margin_bottom = 111.0
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+custom_fonts/normal_font = SubResource( 8 )
+bbcode_enabled = true
 
 [node name="Timer" type="Timer" parent="ColorRect"]
 

@@ -42,7 +42,7 @@ size = 18
 outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 8 )
 
-[sub_resource type="DynamicFont" id=5]
+[sub_resource type="DynamicFont" id=7]
 size = 19
 font_data = ExtResource( 7 )
 
@@ -112,26 +112,26 @@ text = "Começar"
 [node name="Name" type="RichTextLabel" parent="ColorRect"]
 modulate = Color( 0, 0, 0, 1 )
 self_modulate = Color( 0, 0, 0, 1 )
-margin_left = -169.0
-margin_top = -72.0
-margin_right = 77.0
-margin_bottom = -35.0
+margin_left = -178.0
+margin_top = -59.0
+margin_right = 68.0
+margin_bottom = -22.0
 custom_fonts/normal_font = SubResource( 2 )
 fit_content_height = true
 
 [node name="Text" type="RichTextLabel" parent="ColorRect"]
-modulate = Color( 0, 0, 0, 1 )
-self_modulate = Color( 0, 0, 0, 1 )
-margin_left = -181.0
-margin_top = -36.0
-margin_right = 99.0
-margin_bottom = 119.0
-custom_fonts/normal_font = SubResource( 5 )
+margin_left = -183.0
+margin_top = -25.0
+margin_right = 89.0
+margin_bottom = 134.0
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+custom_fonts/normal_font = SubResource( 7 )
+bbcode_enabled = true
 
 [node name="balaodefalaVtal" type="Sprite" parent="ColorRect"]
-position = Vector2( -55.9737, 19.6652 )
+position = Vector2( -58.8367, 33.3467 )
 rotation = 3.14086
-scale = Vector2( 1.3991, -1.14386 )
+scale = Vector2( 1.41266, -1.19793 )
 z_index = -1
 texture = ExtResource( 4 )
 
