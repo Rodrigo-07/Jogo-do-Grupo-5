@@ -68,3 +68,7 @@ func _on_SaveCodeButton_pressed():
 # Botão que volta para o menu
 func _on_Button_pressed():
 	get_tree().change_scene("res://scenes/menu/Menu.tscn")
+
+
+func _on_LineEdit_focus_entered():
+	Input.set_os_keyboard_visible(true)

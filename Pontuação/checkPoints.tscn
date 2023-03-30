@@ -49,5 +49,6 @@ margin_right = 95.0
 margin_bottom = 613.0
 text = "Voltar"
 
+[connection signal="focus_entered" from="LineEdit" to="." method="_on_LineEdit_focus_entered"]
 [connection signal="pressed" from="SaveCodeButton" to="." method="_on_SaveCodeButton_pressed"]
 [connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
