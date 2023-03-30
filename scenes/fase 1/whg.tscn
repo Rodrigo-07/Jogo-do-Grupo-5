@@ -355,7 +355,6 @@ __meta__ = {
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="KinematicBody2D"]
 position = Vector2( 0.351494, 0.351501 )
-scale = Vector2( 1, 1 )
 shape = SubResource( 9 )
 
 [node name="Sprite" type="Sprite" parent="KinematicBody2D"]
@@ -585,7 +584,6 @@ valign = 1
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="Control" parent="CanvasLayer" instance=ExtResource( 17 )]
-visible = false
 
 [connection signal="body_entered" from="key/key" to="KinematicBody2D" method="_on_key_body_entered"]
 [connection signal="body_entered" from="key/key2" to="KinematicBody2D" method="_on_key2_body_entered"]
