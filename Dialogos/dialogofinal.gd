@@ -12,11 +12,9 @@ var finished = false
 var botao = false
 
 func _ready():
-	#if Points.stateLevel1 == 5 and Points.stateLevel2 == 6 and Points.stateLevel3 == 5:
+
 	finish()
 	$Text.visible = true
-	get_node("../ColorRect").visible = true
-	get_node("../MapaBrasil").visible = true
 	
 func finish():
 	#	$Text.z_index = 1
@@ -28,7 +26,6 @@ func finish():
 	nextPhrase()
 	
 	# O botão para continuar depois do diálogo só aparece depois que acabar todo diálogo
-	$Button.visible = false
 
 
 var touch
@@ -44,9 +41,6 @@ func _process(delta):
 		else:
 			$Text.visible_characters = len($Text.text)
 			touch = false
-	
-	if botao == true:
-		$Button.visible = true
 	
 
 func getDialog() -> Array:
@@ -93,6 +87,3 @@ func nextPhrase() -> void:
 	phraseNum += 1
 	return
 
-
-func _on_Button_pressed():
-	pass # Replace with function body.

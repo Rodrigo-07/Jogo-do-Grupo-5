@@ -7,7 +7,7 @@
 [ext_resource path="res://sprites/cenario das falas.png" type="Texture" id=5]
 [ext_resource path="res://sprites/invisivel.png" type="Texture" id=6]
 [ext_resource path="res://sprites/spritesheet.png" type="Texture" id=7]
-[ext_resource path="res://Fonte/Lato-Bold.ttf" type="DynamicFontData" id=9]
+[ext_resource path="res://Fonte/Lato-Bold.ttf" type="DynamicFontData" id=8]
 [ext_resource path="res://Fonte/upheaval/upheavtt.ttf" type="DynamicFontData" id=10]
 [ext_resource path="res://sprites/gray_empty_button.png" type="Texture" id=11]
 
@@ -62,7 +62,7 @@ font_data = ExtResource( 10 )
 
 [sub_resource type="DynamicFont" id=7]
 size = 19
-font_data = ExtResource( 9 )
+font_data = ExtResource( 8 )
 
 [node name="Control" type="Control"]
 margin_right = 40.0
@@ -158,8 +158,8 @@ custom_fonts/normal_font = SubResource( 4 )
 [node name="Text" type="RichTextLabel" parent="ColorRect"]
 margin_left = -182.0
 margin_top = -59.0
-margin_right = 95.0
-margin_bottom = 120.0
+margin_right = 99.0
+margin_bottom = 125.0
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 custom_fonts/normal_font = SubResource( 7 )
 bbcode_enabled = true

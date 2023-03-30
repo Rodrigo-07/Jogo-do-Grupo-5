@@ -11,18 +11,18 @@ margin_bottom = 640.0
 color = Color( 0.45098, 0.45098, 0.45098, 1 )
 
 [node name="Label2" type="Label" parent="."]
-margin_left = 129.0
-margin_top = 395.0
-margin_right = 240.0
-margin_bottom = 442.0
+margin_left = 115.0
+margin_top = 31.0
+margin_right = 226.0
+margin_bottom = 78.0
 rect_pivot_offset = Vector2( 31, 11 )
 text = "Código de jogo"
 
 [node name="Atual" type="Label" parent="."]
-margin_left = 81.0
-margin_top = 500.0
-margin_right = 341.0
-margin_bottom = 547.0
+margin_left = 56.0
+margin_top = 123.0
+margin_right = 316.0
+margin_bottom = 170.0
 rect_pivot_offset = Vector2( 31, 11 )
 text = "Seu código atual é:"
 align = 1
@@ -30,16 +30,16 @@ valign = 1
 autowrap = true
 
 [node name="LineEdit" type="LineEdit" parent="."]
-margin_left = 73.0
-margin_top = 424.0
-margin_right = 284.0
-margin_bottom = 474.0
+margin_left = 57.0
+margin_top = 60.0
+margin_right = 268.0
+margin_bottom = 110.0
 
 [node name="SaveCodeButton" type="Button" parent="."]
-margin_left = 286.0
-margin_top = 432.0
-margin_right = 337.0
-margin_bottom = 471.0
+margin_left = 270.0
+margin_top = 68.0
+margin_right = 321.0
+margin_bottom = 107.0
 text = "OK"
 
 [node name="Button" type="Button" parent="."]
@@ -49,5 +49,6 @@ margin_right = 95.0
 margin_bottom = 613.0
 text = "Voltar"
 
+[connection signal="focus_entered" from="LineEdit" to="." method="_on_LineEdit_focus_entered"]
 [connection signal="pressed" from="SaveCodeButton" to="." method="_on_SaveCodeButton_pressed"]
 [connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
