@@ -15,7 +15,6 @@ func _ready():
 
 	finish()
 	$Text.visible = true
-	get_node("../ColorRect").visible = true
 	
 func finish():
 	#	$Text.z_index = 1
@@ -27,7 +26,6 @@ func finish():
 	nextPhrase()
 	
 	# O botão para continuar depois do diálogo só aparece depois que acabar todo diálogo
-	$Button.visible = false
 
 
 var touch
@@ -43,9 +41,6 @@ func _process(delta):
 		else:
 			$Text.visible_characters = len($Text.text)
 			touch = false
-	
-	if botao == true:
-		$Button.visible = true
 	
 
 func getDialog() -> Array:
@@ -92,9 +87,3 @@ func nextPhrase() -> void:
 	phraseNum += 1
 	return
 
-func _on_Button_pressed():
-	get_tree().change_scene("res://linkdosoutrosjogos.tscn")
-
-
-func _on_Button2_pressed():
-	get_node("../../finish").visible = false

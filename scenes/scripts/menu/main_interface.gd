@@ -18,7 +18,7 @@ func _ready():
 		$Button2.set_normal_texture(twoCompleted)
 		
 	if Points.stateLevel3 == 5:
-		$Button.set_normal_texture(threeCompleted)
+		$Button3.set_normal_texture(threeCompleted)
 		
 	# Animação do mapa
 	$Sprite2/AnimationPlayer.play("Mapa")
@@ -28,6 +28,7 @@ func _ready():
 	
 	if Points.stateLevel1 == 5 and Points.stateLevel2 == 6 and Points.stateLevel3 == 5:
 		$finish/ColorRect.visible = true
+		$exit.visible = true
 		
 # Mostra os pontos do jogador
 	
@@ -48,5 +49,6 @@ func _on_Button3_pressed():
 	get_tree().change_scene("res://scenes/fase 3/Dialogos/dialogo_fase3_1.tscn")
 
 
-
-
+func _on_exit_pressed():
+	get_node("finish").visible = false
+	get_node("exit").visible = false

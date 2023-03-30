@@ -113,12 +113,22 @@ func addSaveCode():
 		if stateLevel1 == 1:
 			pergunta11 =  true
 		if stateLevel1 == 2:
+			pergunta11 =  true
 			whg =  true
 		if stateLevel1 == 3:
+			pergunta11 =  true
+			whg =  true
 			pergunta12 =  true
 		if stateLevel1 == 4:
+			pergunta11 =  true
+			whg =  true
+			pergunta12 =  true
 			pergunta13 =  true
 		if stateLevel1 == 5:
+			pergunta11 =  true
+			whg =  true
+			pergunta12 =  true
+			pergunta13 =  true
 			pergunta14 = true
 		
 		if stateLevel2 == 0:
@@ -126,14 +136,29 @@ func addSaveCode():
 		if stateLevel2 == 1:
 			pergunta21 = true
 		if stateLevel2 == 2:
+			pergunta21 = true
 			pergunta22 = true
 		if stateLevel2 == 3:
+			pergunta21 = true
+			pergunta22 = true
 			pergunta23 = true
 		if stateLevel2 == 4:
+			pergunta21 = true
+			pergunta22 = true
+			pergunta23 = true
 			crossingroad = true
 		if stateLevel2 == 5:
+			pergunta21 = true
+			pergunta22 = true
+			pergunta23 = true
+			crossingroad = true
 			pergunta24 = true
 		if stateLevel2 == 6:
+			pergunta21 = true
+			pergunta22 = true
+			pergunta23 = true
+			crossingroad = true
+			pergunta24 = true
 			fios = true
 			
 		if stateLevel3 == 0:
@@ -141,12 +166,22 @@ func addSaveCode():
 		if stateLevel3 == 1:
 			pergunta31 =  true
 		if stateLevel3 == 2:
+			pergunta31 =  true
 			pergunta32 =  true
 		if stateLevel3 == 3:
+			pergunta31 =  true
+			pergunta32 =  true
 			pergunta33 =  true
 		if stateLevel3 == 4:
+			pergunta31 =  true
+			pergunta32 =  true
+			pergunta33 =  true
 			pergunta34 =  true
 		if stateLevel3 == 5:
+			pergunta31 =  true
+			pergunta32 =  true
+			pergunta33 =  true
+			pergunta34 =  true
 			pacMan = true
 		
 		# se next é igual a true, o código é valido

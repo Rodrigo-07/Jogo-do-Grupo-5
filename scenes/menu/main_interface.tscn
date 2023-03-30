@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://Dialogos/dialogo_final.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scenes/scripts/menu/main_interface.gd" type="Script" id=2]
@@ -9,6 +9,8 @@
 [ext_resource path="res://sprites/corruption-button-Sheet_incompleto.png" type="Texture" id=7]
 [ext_resource path="res://sprites/assedio_buttonsheet.png" type="Texture" id=8]
 [ext_resource path="res://sprites/ambienteseguro-button-Sheet_incompleto.png" type="Texture" id=9]
+[ext_resource path="res://sprites/gray_empty_button.png" type="Texture" id=10]
+[ext_resource path="res://Fonte/upheaval/upheavtt.ttf" type="DynamicFontData" id=11]
 
 [sub_resource type="Animation" id=2]
 resource_name = "Mapa"
@@ -33,6 +35,12 @@ corner_radius_top_left = 100
 corner_radius_top_right = 100
 corner_radius_bottom_right = 100
 corner_radius_bottom_left = 100
+
+[sub_resource type="DynamicFont" id=3]
+size = 60
+outline_size = 3
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 11 )
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource( 2 )
@@ -113,7 +121,29 @@ margin_bottom = 31.0
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 text = "0 V Coins"
 
+[node name="exit" type="Button" parent="."]
+visible = false
+margin_left = 198.0
+margin_top = 446.0
+margin_right = 610.0
+margin_bottom = 852.0
+rect_scale = Vector2( 0.3, 0.3 )
+icon = ExtResource( 10 )
+flat = true
+
+[node name="Label" type="Label" parent="exit"]
+margin_left = 80.7875
+margin_top = 181.597
+margin_right = 338.788
+margin_bottom = 235.597
+custom_colors/font_color = Color( 1, 0.85098, 0.247059, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 3 )
+text = "fechar"
+align = 1
+
 [connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
 [connection signal="pressed" from="Button2" to="." method="_on_Button2_pressed"]
 [connection signal="pressed" from="Button3" to="." method="_on_Button3_pressed"]
 [connection signal="pressed" from="Button4" to="." method="_on_Button4_pressed"]
+[connection signal="pressed" from="exit" to="." method="_on_exit_pressed"]
