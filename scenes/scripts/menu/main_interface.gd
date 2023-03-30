@@ -11,6 +11,8 @@ var threeCompleted = load("res://sprites/ambienteseguro-button-Sheet_completo.pn
 
 func _ready():
 	
+	Points.currentSaveCode()
+	
 	if Points.stateLevel1 == 5:
 		$Button.set_normal_texture(oneCompleted)
 	
@@ -29,6 +31,8 @@ func _ready():
 	if Points.stateLevel1 == 5 and Points.stateLevel2 == 6 and Points.stateLevel3 == 5:
 		$finish/ColorRect.visible = true
 		$exit.visible = true
+		
+	$Container/score.text = str(Points.points) + " V Cois"
 		
 # Mostra os pontos do jogador
 	
