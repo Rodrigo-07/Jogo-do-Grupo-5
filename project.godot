@@ -27,7 +27,6 @@ config/icon="res://icon.png"
 [autoload]
 
 Points="*res://Node.gd"
-SwipeControl="*res://scenes/fase 3/minigame/SwipeControl.gd"
 
 [display]
 
