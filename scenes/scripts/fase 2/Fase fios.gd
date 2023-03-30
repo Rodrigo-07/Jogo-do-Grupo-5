@@ -1,5 +1,9 @@
 extends Node2D
 
+onready var line := $Line2D
+
+var test4 = false
+
 var errosCheck = []
 
 var connections = []
@@ -39,10 +43,19 @@ func wrong():
 func on():
 	on.append(2)
 	correct = sum(on)
-	
 
-	
+func _ready():
+	$FundoPause/Label2.text = "Seu código atual é:"+Points.currentCode
+	$FundoPause/Label.text = pontos
+	line.points[0] = Vector2()
+
 func _process(delta):
+	if test4 == true:
+		line.points[1] = get_global_mouse_position()
+		print(line.points[1])
+		print("Mouse", get_global_mouse_position())
+	else:
+		pass
 	#Soma da lista connected para causar a conexão dos fios
 	check = sum(connected)
 	#Conexão do fio vermelho
@@ -197,6 +210,7 @@ func _on_500_pressed():
 
 #Determina as conexões do fio branco
 func _on_White_pressed():
+	test4 = true
 	whiteWire = 45
 	connected.append(whiteWire)
 
@@ -229,11 +243,8 @@ func _on_HSlider_value_changed(value):
 		AudioServer.set_bus_mute(audio,true)
 	else:
 		AudioServer.set_bus_mute(audio,false)
-	
-func _ready():
-	$FundoPause/Label2.text = "Seu código atual é:"+Points.currentCode
-	$FundoPause/Label.text = pontos
 
 func _on_Button3_pressed():
 	get_tree().paused = false
 	get_tree().change_scene("res://scenes/menu/main_interface.tscn")
+
