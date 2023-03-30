@@ -5,16 +5,19 @@ var move = Vector2()
 var speed = 15
 
 func _ready():
-	# Posição incial
-	set_position(Vector2(176,162))
+	# Posição inicial
+	set_position(Vector2(150, 300))
 	set_z_index(1)
-
+	
 func _physics_process(delta):
-	# # Movimento de patrula do obstáculo
-	if position.y == 162:
+	# Movimento de patrula do obstáculo
+	if position.x == 150:
+		move.x = speed
+		move.y = -speed
+	if position.y == 180:
 		move.y = speed
-	if position.y == 248:
-		move.y = - speed
+		move.x = -speed
+
 	move_and_slide(move)
 
 	var collide = move_and_collide(move * delta)
