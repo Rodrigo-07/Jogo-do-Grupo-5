@@ -38,7 +38,7 @@ func _process(delta):
 # FUNÇÕES DE SELEÇÃO DO FIO
 
 func _on_Red_selection_input_event(viewport, event, shape_idx):
-	if Input.is_action_just_pressed("click"):
+	if Input.is_mouse_button_pressed(BUTTON_LEFT):
 		selected = true
 		red_wire = true
 		current_line = $Red_line
@@ -46,7 +46,7 @@ func _on_Red_selection_input_event(viewport, event, shape_idx):
 		print(current_line)
 
 func _on_Green_selection_input_event(viewport, event, shape_idx):
-	if Input.is_action_just_pressed("click"):
+	if Input.is_mouse_button_pressed(BUTTON_LEFT):
 			selected = true
 			green_wire = true
 			current_line = $Green_line
@@ -69,11 +69,11 @@ func _on_Orange_selection_input_event(viewport, event, shape_idx):
 # FUNÇÕES DOS TERMINAIS
 
 func _on_Green_terminal_input_event(viewport, event, shape_idx):
-	if Input.is_action_just_pressed("click") and green_wire == true:
+	if Input.is_mouse_button_pressed(BUTTON_LEFT) and green_wire == true:
 		selected = false
 		current_line.points[1] = Vector2(330, 251)
 		print(vidas)
-	elif Input.is_action_just_pressed("click") and green_wire == false:
+	elif Input.is_mouse_button_pressed(BUTTON_LEFT) and green_wire == false:
 		vidas += 1
 		selected = false
 		current_line.points[1] = Vector2(72,123)
@@ -82,10 +82,10 @@ func _on_Green_terminal_input_event(viewport, event, shape_idx):
 
 
 func _on_Red_terminal_input_event(viewport, event, shape_idx):
-	if Input.is_action_just_pressed("click") and red_wire == true:
+	if Input.is_mouse_button_pressed(BUTTON_LEFT) and red_wire == true:
 		selected = false
 		current_line.points[1] = Vector2(265, -190)
-	elif Input.is_action_just_pressed("click") and red_wire == false:
+	elif Input.is_mouse_button_pressed(BUTTON_LEFT) and red_wire == false:
 		vidas += 1
 		selected = false
 		current_line.points[1] = Vector2(0,0)
