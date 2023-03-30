@@ -250,17 +250,17 @@ margin_right = 127.0
 margin_bottom = 26.0
 
 [node name="F_white" type="ColorRect" parent="Fios"]
-margin_left = -47.0
-margin_top = 77.0
-margin_right = -17.0
-margin_bottom = 97.0
+margin_left = -59.0
+margin_top = 86.0
+margin_right = -29.0
+margin_bottom = 106.0
 color = Color( 0.380392, 0.647059, 0.247059, 1 )
 
 [node name="White" type="Button" parent="Fios/F_white"]
-margin_left = 107.0
-margin_top = -2.0
-margin_right = 122.0
-margin_bottom = 28.0
+margin_left = 117.0
+margin_top = -1.0
+margin_right = 132.0
+margin_bottom = 29.0
 
 [node name="Again" type="Node" parent="."]
 
@@ -341,6 +341,10 @@ margin_top = 360.0
 margin_right = 323.0
 margin_bottom = 397.0
 
+[node name="Line2D" type="Line2D" parent="."]
+position = Vector2( 20, 86 )
+points = PoolVector2Array( 33, 6, 56, 25 )
+
 [connection signal="pressed" from="Fundo/Pausar" to="." method="_on_Pausar_pressed"]
 [connection signal="pressed" from="terminais/term1GB/1GB" to="." method="_on_1GB_pressed"]
 [connection signal="pressed" from="terminais/term500/500" to="." method="_on_500_pressed"]
@@ -351,6 +355,7 @@ margin_bottom = 397.0
 [connection signal="pressed" from="Fios/F_yellow/Yellow" to="." method="_on_Yellow_pressed"]
 [connection signal="pressed" from="Fios/F_blue/Blue" to="." method="_on_Blue_pressed"]
 [connection signal="pressed" from="Fios/F_white/White" to="." method="_on_White_pressed"]
+[connection signal="toggled" from="Fios/F_white/White" to="." method="_on_White_toggled"]
 [connection signal="pressed" from="Again/AgainButton" to="." method="_on_AgainButton_pressed"]
 [connection signal="pressed" from="FundoPause/Button3" to="." method="_on_Button3_pressed"]
 [connection signal="pressed" from="FundoPause/Button2" to="." method="_on_Button2_pressed"]
