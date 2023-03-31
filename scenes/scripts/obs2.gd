@@ -6,18 +6,18 @@ var speed = 15
 
 func _ready():
 	# Posição inicial
-	set_position(Vector2(25,476))
+	set_position(Vector2(143, 107))
 	set_z_index(1)
 	
 func _physics_process(delta):
 	# Movimento de patrula do obstáculo
-	if position.x == 328:
+	if position.x == 153:
 		move.x = - speed
-	if position.x == 25:
+	if position.x == 143:
 		move.x = speed
-	if position.y == 476:
+	if position.y == 107:
 		move.y = speed
-	if position.y == 526:
+	if position.y == 183:
 		move.y = -speed
 
 	move_and_slide(move)

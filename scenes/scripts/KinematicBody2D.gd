@@ -51,7 +51,7 @@ func _physics_process(delta):
 		position = position.move_toward(get_global_mouse_position(), 2)
 	
 		var collision = move_and_collide(move * delta)
-		var checkCollision = ['TileMap','key', 'key2', 'key3']
+		var checkCollision = ['mapa','key', 'key2', 'key3']
 		
 		# Dependendo do que o personagem colidir acontece algo diferente
 		if collision:
@@ -84,11 +84,11 @@ func _on_Agua_body_shape_entered(body_rid, body, body_shape_index, local_shape_i
 	get_tree().paused = true
 	get_node("../PopUp/Sprite2/Label").text = "Lugar errado"
 	
-func _on_Planta_body_shape_entered(body_rid, body, body_shape_index, local_shape_index):
-	entrou = true
-	get_node("../PopUp").show()
-	get_tree().paused = true
-	get_node("../PopUp/Sprite2/Label").text = "Lugar errado!"
+#func _on_Planta_body_shape_entered(body_rid, body, body_shape_index, local_shape_index):
+#	entrou = true
+#	get_node("../PopUp").show()
+#	get_tree().paused = true
+#	get_node("../PopUp/Sprite2/Label").text = "Lugar errado!"
 
 #Cuida do touchscreen quando o personagem ganha e vai para a area certa e quando vai para a area errada
 

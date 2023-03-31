@@ -1,0 +1,196 @@
+[gd_scene load_steps=21 format=2]
+
+[ext_resource path="res://scenes/fase 2/Area2D.gd" type="Script" id=1]
+[ext_resource path="res://sprites/fase_dos_fios-Sheet.png" type="Texture" id=2]
+[ext_resource path="res://scenes/fase 2/fios level.gd" type="Script" id=3]
+[ext_resource path="res://sprites/balinhaVTal.png" type="Texture" id=4]
+
+[sub_resource type="AtlasTexture" id=9]
+atlas = ExtResource( 2 )
+region = Rect2( 0, 0, 360, 640 )
+
+[sub_resource type="AtlasTexture" id=10]
+atlas = ExtResource( 2 )
+region = Rect2( 360, 0, 360, 640 )
+
+[sub_resource type="AtlasTexture" id=11]
+atlas = ExtResource( 2 )
+region = Rect2( 1080, 0, 360, 640 )
+
+[sub_resource type="AtlasTexture" id=12]
+atlas = ExtResource( 2 )
+region = Rect2( 720, 0, 360, 640 )
+
+[sub_resource type="AtlasTexture" id=6]
+atlas = ExtResource( 2 )
+region = Rect2( 0, 0, 360, 640 )
+
+[sub_resource type="AtlasTexture" id=7]
+atlas = ExtResource( 2 )
+region = Rect2( 1440, 0, 360, 640 )
+
+[sub_resource type="SpriteFrames" id=13]
+animations = [ {
+"frames": [ SubResource( 9 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 10 ) ],
+"loop": true,
+"name": "oneError",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 11 ) ],
+"loop": true,
+"name": "threeError",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 12 ) ],
+"loop": true,
+"name": "twoError",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 6 ), SubResource( 7 ), SubResource( 6 ), SubResource( 7 ) ],
+"loop": true,
+"name": "win",
+"speed": 5.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 15, 14 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 19, 14 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 19, 14 )
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 14.5, 14 )
+
+[sub_resource type="RectangleShape2D" id=5]
+extents = Vector2( 14, 14 )
+
+[sub_resource type="RectangleShape2D" id=14]
+extents = Vector2( 18.5, 14 )
+
+[sub_resource type="RectangleShape2D" id=15]
+extents = Vector2( 13.5, 14.75 )
+
+[sub_resource type="RectangleShape2D" id=8]
+extents = Vector2( 18.5, 14 )
+
+[sub_resource type="RectangleShape2D" id=16]
+extents = Vector2( 19, 14 )
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 3 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( 180, 320 )
+frames = SubResource( 13 )
+
+[node name="Sprite" type="Sprite" parent="."]
+visible = false
+position = Vector2( 180, 320 )
+texture = ExtResource( 2 )
+hframes = 5
+
+[node name="Red_line" type="Line2D" parent="."]
+position = Vector2( 60, 342 )
+points = PoolVector2Array( -9, -8, -10, -9 )
+default_color = Color( 0.886275, 0.447059, 0.521569, 1 )
+
+[node name="Green" type="Node2D" parent="."]
+position = Vector2( 32, 183 )
+
+[node name="Green_line" type="Line2D" parent="."]
+position = Vector2( -71, 15 )
+points = PoolVector2Array( 117, 79, 125, 80 )
+default_color = Color( 0.380392, 0.647059, 0.247059, 1 )
+
+[node name="Red_selection" type="Area2D" parent="."]
+position = Vector2( 31, 47 )
+script = ExtResource( 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Red_selection"]
+position = Vector2( 14, 283 )
+shape = SubResource( 1 )
+
+[node name="Blue_line" type="Line2D" parent="."]
+position = Vector2( 34.1111, 150 )
+scale = Vector2( 0.962963, 1 )
+points = PoolVector2Array( 13, 21, 20, 23 )
+default_color = Color( 0.270588, 0.447059, 0.890196, 1 )
+
+[node name="Red_terminal" type="Area2D" parent="."]
+position = Vector2( -1, -1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Red_terminal"]
+position = Vector2( 311, 156 )
+shape = SubResource( 2 )
+
+[node name="Green_terminal" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Green_terminal"]
+position = Vector2( 310, 220 )
+shape = SubResource( 3 )
+
+[node name="Green_selection" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Green_selection"]
+position = Vector2( 45, 90 )
+shape = SubResource( 4 )
+
+[node name="Blue_selection" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Blue_selection"]
+position = Vector2( 45, 170 )
+shape = SubResource( 5 )
+
+[node name="Blue_terminal" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Blue_terminal"]
+position = Vector2( 309.5, 285 )
+shape = SubResource( 14 )
+
+[node name="Orange_selection" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Orange_selection"]
+position = Vector2( 44.5, 250.75 )
+shape = SubResource( 15 )
+
+[node name="Orange_terminal" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Orange_terminal"]
+position = Vector2( 309.5, 90 )
+shape = SubResource( 8 )
+
+[node name="Orange_line" type="Line2D" parent="."]
+position = Vector2( 45.1923, 250.391 )
+scale = Vector2( 0.884615, 0.956522 )
+points = PoolVector2Array( 3, -1, 9, -4 )
+default_color = Color( 0.945098, 0.392157, 0.121569, 1 )
+
+[node name="Sprite2" type="Sprite" parent="."]
+visible = false
+position = Vector2( 310, 89 )
+scale = Vector2( 0.121875, 0.132813 )
+texture = ExtResource( 4 )
+
+[node name="Gray_terminal" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Gray_terminal"]
+position = Vector2( 310, 345 )
+shape = SubResource( 16 )
+
+[connection signal="input_event" from="Red_selection" to="." method="_on_Red_selection_input_event"]
+[connection signal="input_event" from="Red_terminal" to="." method="_on_Red_terminal_input_event"]
+[connection signal="input_event" from="Green_terminal" to="." method="_on_Green_terminal_input_event"]
+[connection signal="input_event" from="Green_selection" to="." method="_on_Green_selection_input_event"]
+[connection signal="input_event" from="Blue_selection" to="." method="_on_Blue_selection_input_event"]
+[connection signal="input_event" from="Blue_terminal" to="." method="_on_Blue_terminal_input_event"]
+[connection signal="input_event" from="Orange_selection" to="." method="_on_Orange_selection_input_event"]
+[connection signal="input_event" from="Orange_terminal" to="." method="_on_Orange_terminal_input_event"]
+[connection signal="input_event" from="Gray_terminal" to="." method="_on_Gray_terminal_input_event"]

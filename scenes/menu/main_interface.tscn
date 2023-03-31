@@ -4,7 +4,7 @@
 [ext_resource path="res://scenes/scripts/menu/main_interface.gd" type="Script" id=2]
 [ext_resource path="res://sprites/sprite_mapa_1.png" type="Texture" id=3]
 [ext_resource path="res://sprites/sprite_mapa_2.png" type="Texture" id=4]
-[ext_resource path="res://sprites/retrun_button.png" type="Texture" id=5]
+[ext_resource path="res://sprites/botão voltar.png" type="Texture" id=5]
 [ext_resource path="res://sprites/Tela perguntas.png" type="Texture" id=6]
 [ext_resource path="res://sprites/corruption-button-Sheet_incompleto.png" type="Texture" id=7]
 [ext_resource path="res://sprites/assedio_buttonsheet.png" type="Texture" id=8]
@@ -89,11 +89,11 @@ texture_normal = ExtResource( 9 )
 
 [node name="Button4" type="Button" parent="."]
 anchor_right = 0.11
-margin_left = -68.0
-margin_top = 549.0
-margin_right = 371.0
-margin_bottom = 949.0
-rect_scale = Vector2( 0.184632, 0.182538 )
+margin_left = -49.0
+margin_top = 553.0
+margin_right = 143.0
+margin_bottom = 785.0
+rect_scale = Vector2( 0.316808, 0.284437 )
 rect_pivot_offset = Vector2( 100, 0 )
 custom_styles/normal = SubResource( 1 )
 icon = ExtResource( 5 )
