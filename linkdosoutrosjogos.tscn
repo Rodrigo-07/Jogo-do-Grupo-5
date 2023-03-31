@@ -7,8 +7,8 @@
 script = ExtResource( 1 )
 
 [node name="Wallpapermenuprincipal" type="Sprite" parent="."]
-position = Vector2( 146, 237 )
-scale = Vector2( 0.35, 0.39375 )
+position = Vector2( 146, 234.051 )
+scale = Vector2( 0.35, 0.400625 )
 texture = ExtResource( 2 )
 offset = Vector2( 94.2857, 210.794 )
 
@@ -19,22 +19,22 @@ margin_right = -142.0
 margin_bottom = -152.0
 
 [node name="Vitálicios" type="Button" parent="Wallpapermenuprincipal"]
-margin_left = -351.0
-margin_top = -48.0
-margin_right = -147.0
-margin_bottom = 43.0
+margin_left = -340.0
+margin_top = -45.0571
+margin_right = -136.0
+margin_bottom = 45.9429
 
 [node name="Mr Vtal" type="Button" parent="Wallpapermenuprincipal"]
-margin_left = -346.0
-margin_top = 175.0
-margin_right = -142.0
-margin_bottom = 256.0
+margin_left = -331.429
+margin_top = 149.639
+margin_right = -127.429
+margin_bottom = 230.639
 
 [node name="Moralética" type="Button" parent="Wallpapermenuprincipal"]
-margin_left = -369.0
-margin_top = 350.0
-margin_right = -172.0
-margin_bottom = 425.0
+margin_left = -334.286
+margin_top = 349.327
+margin_right = -137.286
+margin_bottom = 424.327
 
 [connection signal="pressed" from="Wallpapermenuprincipal/As aventuras de fibrinha" to="." method="_on_As_aventuras_de_fibrinha_pressed"]
 [connection signal="pressed" from="Wallpapermenuprincipal/Vitálicios" to="." method="_on_Vitlicios_pressed"]
