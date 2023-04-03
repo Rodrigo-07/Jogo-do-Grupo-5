@@ -35,15 +35,15 @@ func _physics_process(delta):
 		move.x = speed * delta
 		
 		$AnimationPlayer.play("andar para direita") 
-	elif Input.is_action_just_pressed("ui_left") or left: 
-		move.x = speed * delta
+	elif Input.is_action_pressed("ui_left") or left: 
+		move.x = -speed * delta
 		
 		$AnimationPlayer.play("andar para esquerda")
-	elif Input.is_action_just_pressed("ui_up") or up: 
-		move.y -= speed * delta
+	elif Input.is_action_pressed("ui_up") or up: 
+		move.y = -speed * delta
 		
 		$AnimationPlayer.play("andar para frente")
-	elif Input.is_action_just_pressed("ui_down") or down:
+	elif Input.is_action_pressed("ui_down") or down:
 		move.y = speed * delta
 		
 		$AnimationPlayer.play("andar para trás")
