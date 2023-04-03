@@ -23,3 +23,6 @@ func _physics_process(delta):
 	move_and_slide(move)
 
 	var collide = move_and_collide(move * delta)
+	
+	if collide:
+		Points.collision = 1

@@ -20,6 +20,10 @@ func _process(delta):
 	$FundoPause/Label.text = pontos
 	$FundoPause/Label2.text = "Seu código atual é:"+Points.currentCode
 	
+	if Points.collision == 1:
+		$KinematicBody2D.position = Vector2(55,570)
+		Points.collision = 0
+	
 func _on_Pausar2_pressed():
 	get_tree().paused = true
 	$FundoPause.show()

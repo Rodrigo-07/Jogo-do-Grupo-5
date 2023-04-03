@@ -79,8 +79,8 @@ script = ExtResource( 1 )
 dialogPath = "res://Dialogos/dialogo_inicial.json"
 
 [node name="PersonagemVtal" type="Sprite" parent="ColorRect"]
-position = Vector2( -136, 403 )
-scale = Vector2( 0.228667, 0.264917 )
+position = Vector2( -130, 432 )
+scale = Vector2( 0.684896, 0.425748 )
 z_index = -2
 texture = ExtResource( 2 )
 hframes = 3
