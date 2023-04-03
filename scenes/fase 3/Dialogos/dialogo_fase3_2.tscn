@@ -109,8 +109,8 @@ texture = ExtResource( 2 )
 anims/alex_falando = SubResource( 6 )
 
 [node name="PersonagemVtal" type="Sprite" parent="ColorRect"]
-position = Vector2( -147.906, 408 )
-scale = Vector2( 0.214681, 0.236553 )
+position = Vector2( -140.94, 427.237 )
+scale = Vector2( 0.570155, 0.381403 )
 texture = ExtResource( 4 )
 hframes = 3
 
@@ -119,7 +119,7 @@ anims/boneca_falando = SubResource( 8 )
 anims/trutinha_vtal_falando = SubResource( 1 )
 
 [node name="balaodefalaVtal" type="Sprite" parent="ColorRect"]
-position = Vector2( -62.291, 20.0053 )
+position = Vector2( -62.291, 12.0053 )
 rotation = 3.14159
 scale = Vector2( 1.35629, -1.25679 )
 z_index = -1

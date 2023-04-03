@@ -64,7 +64,6 @@ func _on_SaveCodeButton_pressed():
 		$Atual.text = "Para inserir um novo código, por favor, feche o jogo e abra novamente"
 	
 
-
 # Botão que volta para o menu
 func _on_Button_pressed():
 	get_tree().change_scene("res://scenes/menu/Menu.tscn")
