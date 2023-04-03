@@ -217,6 +217,7 @@ margin_right = 7143.0
 margin_bottom = 7016.0
 rect_scale = Vector2( 0.0126425, 0.0126425 )
 icon = ExtResource( 14 )
+expand_icon = true
 
 [node name="Button2" type="Button" parent="FundoPause"]
 margin_left = 78.0
@@ -226,6 +227,7 @@ margin_bottom = 7018.0
 rect_scale = Vector2( 0.0124347, 0.0124347 )
 text = "voltar"
 icon = ExtResource( 12 )
+expand_icon = true
 
 [node name="HSlider" type="HSlider" parent="FundoPause"]
 margin_left = 77.0
