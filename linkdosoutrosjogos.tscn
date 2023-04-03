@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://linkdosoutrosjogos.gd" type="Script" id=1]
 [ext_resource path="res://sprites/Ajustes_background.png" type="Texture" id=2]
+[ext_resource path="res://sprites/change_games_button-Sheet2.png" type="Texture" id=3]
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource( 1 )
@@ -12,31 +13,30 @@ scale = Vector2( 0.35, 0.400625 )
 texture = ExtResource( 2 )
 offset = Vector2( 94.2857, 210.794 )
 
-[node name="As aventuras de fibrinha" type="Button" parent="Wallpapermenuprincipal"]
-margin_left = -346.0
-margin_top = -236.0
-margin_right = -142.0
-margin_bottom = -152.0
+[node name="As aventuras de fibrinha" type="TextureButton" parent="."]
+margin_left = 24.9
+margin_top = 139.504
+margin_right = 64.9
+margin_bottom = 179.504
 
-[node name="Vitálicios" type="Button" parent="Wallpapermenuprincipal"]
-margin_left = -340.0
-margin_top = -45.0571
-margin_right = -136.0
-margin_bottom = 45.9429
+[node name="Mr Vtal" type="TextureButton" parent="."]
+margin_left = -667.1
+margin_top = -332.496
+margin_right = -627.1
+margin_bottom = -292.496
 
-[node name="Mr Vtal" type="Button" parent="Wallpapermenuprincipal"]
-margin_left = -331.429
-margin_top = 149.639
-margin_right = -127.429
-margin_bottom = 230.639
+[node name="Moralética" type="TextureButton" parent="."]
+margin_left = -321.1
+margin_top = -96.4964
+margin_right = -281.1
+margin_bottom = -56.4964
 
-[node name="Moralética" type="Button" parent="Wallpapermenuprincipal"]
-margin_left = -334.286
-margin_top = 349.327
-margin_right = -137.286
-margin_bottom = 424.327
+[node name="Vitálicios" type="TextureButton" parent="."]
+margin_left = 107.0
+margin_top = 221.0
+margin_right = 380.0
+margin_bottom = 372.0
+rect_scale = Vector2( 0.571835, 0.571835 )
+texture_normal = ExtResource( 3 )
 
-[connection signal="pressed" from="Wallpapermenuprincipal/As aventuras de fibrinha" to="." method="_on_As_aventuras_de_fibrinha_pressed"]
-[connection signal="pressed" from="Wallpapermenuprincipal/Vitálicios" to="." method="_on_Vitlicios_pressed"]
-[connection signal="pressed" from="Wallpapermenuprincipal/Mr Vtal" to="." method="_on_Mr_Vtal_pressed"]
-[connection signal="pressed" from="Wallpapermenuprincipal/Moralética" to="." method="_on_Moraltica_pressed"]
+[connection signal="pressed" from="As aventuras de fibrinha" to="." method="_on_As_aventuras_de_fibrinha_pressed"]
