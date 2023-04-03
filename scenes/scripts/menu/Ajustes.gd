@@ -27,6 +27,6 @@ func _on_HSlider_value_changed(value):
 	else:
 		AudioServer.set_bus_mute(audio,false)
 
-
-func _on_Button2_pressed():
+ # Mudar para cena link dos outros jogos
+func _on_TextureButton_pressed():
 	get_tree().change_scene("res://linkdosoutrosjogos.tscn")
