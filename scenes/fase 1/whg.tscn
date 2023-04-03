@@ -588,7 +588,6 @@ align = 1
 valign = 1
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
-visible = false
 
 [node name="Control" parent="CanvasLayer" instance=ExtResource( 17 )]
 
