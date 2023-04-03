@@ -1,6 +1,10 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Pontuação/checkPoints.gd" type="Script" id=1]
+[ext_resource path="res://Fonte/Concert_One/ConcertOne-Regular.ttf" type="DynamicFontData" id=2]
+
+[sub_resource type="DynamicFont" id=1]
+font_data = ExtResource( 2 )
 
 [node name="Node" type="Node"]
 script = ExtResource( 1 )
@@ -13,7 +17,7 @@ color = Color( 0.45098, 0.45098, 0.45098, 1 )
 [node name="Label2" type="Label" parent="."]
 margin_left = 115.0
 margin_top = 31.0
-margin_right = 226.0
+margin_right = 210.0
 margin_bottom = 78.0
 rect_pivot_offset = Vector2( 31, 11 )
 text = "Código de jogo"
@@ -49,6 +53,41 @@ margin_right = 95.0
 margin_bottom = 613.0
 text = "Voltar"
 
+[node name="Button2" type="Button" parent="."]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -330.0
+margin_top = 75.0
+margin_right = -310.0
+margin_bottom = 95.0
+text = "?"
+
+[node name="Popup" type="Popup" parent="Button2"]
+margin_left = -30.0
+margin_top = -75.0
+margin_right = 10.0
+margin_bottom = -35.0
+
+[node name="ColorRect" type="ColorRect" parent="Button2/Popup"]
+margin_left = 48.0
+margin_top = 95.0
+margin_right = 246.0
+margin_bottom = 240.0
+
+[node name="Label" type="Label" parent="Button2/Popup"]
+margin_left = 56.0
+margin_top = 104.0
+margin_right = 236.0
+margin_bottom = 230.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "Use seu código de jogo para continuar de onde parou da ultima vez que jogou. Sempre que quiser checar seu código atual, poderá conferi-lo aqui na aba prêmio ou pausando o jogo durante as fases."
+align = 1
+valign = 1
+autowrap = true
+
 [connection signal="focus_entered" from="LineEdit" to="." method="_on_LineEdit_focus_entered"]
 [connection signal="pressed" from="SaveCodeButton" to="." method="_on_SaveCodeButton_pressed"]
 [connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
+[connection signal="button_down" from="Button2" to="." method="_on_Button2_button_down"]
+[connection signal="button_up" from="Button2" to="." method="_on_Button2_button_up"]

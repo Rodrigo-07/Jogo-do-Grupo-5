@@ -63,7 +63,7 @@ func _on_SaveCodeButton_pressed():
 		$Atual.set_position(Vector2(45, 500))
 		$Atual.text = "Para inserir um novo código, por favor, feche o jogo e abra novamente"
 	
-	Points.check()
+
 
 # Botão que volta para o menu
 func _on_Button_pressed():
@@ -73,3 +73,11 @@ func _on_Button_pressed():
 func _on_LineEdit_focus_entered():
 	if OS.has_virtual_keyboard():
 		Input.set_os_keyboard_visible(true)
+
+
+func _on_Button2_button_down():
+	$Button2/Popup.show()
+
+
+func _on_Button2_button_up():
+	$Button2/Popup.hide()

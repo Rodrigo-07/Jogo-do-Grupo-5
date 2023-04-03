@@ -1,42 +1,102 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://linkdosoutrosjogos.gd" type="Script" id=1]
 [ext_resource path="res://sprites/Ajustes_background.png" type="Texture" id=2]
+[ext_resource path="res://sprites/change_games_button-Sheet2.png" type="Texture" id=3]
+[ext_resource path="res://sprites/change_games_button-Sheet3.png" type="Texture" id=4]
+[ext_resource path="res://sprites/botão voltar.png" type="Texture" id=5]
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource( 1 )
+__meta__ = {
+"_edit_horizontal_guides_": [ 305.0, -23.0, 150.0, 75.0, 200.0, 98.0, 224.0, 175.0, 279.0, 329.0, 52.0, 351.0, 413.0, 440.0, 461.0, 484.0 ],
+"_edit_vertical_guides_": [ 129.0, 228.0 ]
+}
 
 [node name="Wallpapermenuprincipal" type="Sprite" parent="."]
-position = Vector2( 146, 234.051 )
+position = Vector2( 149, 237 )
 scale = Vector2( 0.35, 0.400625 )
 texture = ExtResource( 2 )
 offset = Vector2( 94.2857, 210.794 )
 
-[node name="As aventuras de fibrinha" type="Button" parent="Wallpapermenuprincipal"]
-margin_left = -346.0
-margin_top = -236.0
-margin_right = -142.0
-margin_bottom = -152.0
+[node name="As aventuras de fibrinha" type="TextureButton" parent="."]
+margin_left = 131.0
+margin_top = 98.0
+margin_right = 404.0
+margin_bottom = 249.0
+rect_scale = Vector2( 0.35, 0.35 )
+texture_normal = ExtResource( 3 )
+texture_pressed = ExtResource( 4 )
+texture_hover = ExtResource( 4 )
 
-[node name="Vitálicios" type="Button" parent="Wallpapermenuprincipal"]
-margin_left = -340.0
-margin_top = -45.0571
-margin_right = -136.0
-margin_bottom = 45.9429
+[node name="Mr Vtal" type="TextureButton" parent="."]
+margin_left = 130.0
+margin_top = 224.0
+margin_right = 403.0
+margin_bottom = 375.0
+rect_scale = Vector2( 0.35, 0.35 )
+texture_normal = ExtResource( 3 )
+texture_pressed = ExtResource( 4 )
+texture_hover = ExtResource( 4 )
 
-[node name="Mr Vtal" type="Button" parent="Wallpapermenuprincipal"]
-margin_left = -331.429
-margin_top = 149.639
-margin_right = -127.429
-margin_bottom = 230.639
+[node name="Vitálicios" type="TextureButton" parent="."]
+margin_left = 130.0
+margin_top = 355.0
+margin_right = 403.0
+margin_bottom = 506.0
+rect_scale = Vector2( 0.35, 0.35 )
+texture_normal = ExtResource( 3 )
+texture_pressed = ExtResource( 4 )
+texture_hover = ExtResource( 4 )
 
-[node name="Moralética" type="Button" parent="Wallpapermenuprincipal"]
-margin_left = -334.286
-margin_top = 349.327
-margin_right = -137.286
-margin_bottom = 424.327
+[node name="Moralética" type="TextureButton" parent="."]
+margin_left = 129.0
+margin_top = 485.0
+margin_right = 402.0
+margin_bottom = 636.0
+rect_scale = Vector2( 0.35, 0.35 )
+texture_normal = ExtResource( 3 )
+texture_pressed = ExtResource( 4 )
+texture_hover = ExtResource( 4 )
 
-[connection signal="pressed" from="Wallpapermenuprincipal/As aventuras de fibrinha" to="." method="_on_As_aventuras_de_fibrinha_pressed"]
-[connection signal="pressed" from="Wallpapermenuprincipal/Vitálicios" to="." method="_on_Vitlicios_pressed"]
-[connection signal="pressed" from="Wallpapermenuprincipal/Mr Vtal" to="." method="_on_Mr_Vtal_pressed"]
-[connection signal="pressed" from="Wallpapermenuprincipal/Moralética" to="." method="_on_Moraltica_pressed"]
+[node name="Label" type="Label" parent="."]
+margin_left = 102.0
+margin_top = 60.0
+margin_right = 256.0
+margin_bottom = 74.0
+text = "As aventuras de fibrinha"
+
+[node name="Label2" type="Label" parent="."]
+margin_left = 150.0
+margin_top = 181.0
+margin_right = 304.0
+margin_bottom = 195.0
+text = "Mr V.tal "
+
+[node name="Label3" type="Label" parent="."]
+margin_left = 142.0
+margin_top = 311.0
+margin_right = 296.0
+margin_bottom = 325.0
+text = "Vitálicios"
+
+[node name="Label4" type="Label" parent="."]
+margin_left = 140.0
+margin_top = 443.0
+margin_right = 294.0
+margin_bottom = 457.0
+text = "Moralética"
+
+[node name="voltar" type="TextureButton" parent="."]
+margin_left = 282.0
+margin_top = 570.0
+margin_right = 474.0
+margin_bottom = 762.0
+rect_scale = Vector2( 0.215, 0.223 )
+texture_normal = ExtResource( 5 )
+
+[connection signal="pressed" from="As aventuras de fibrinha" to="." method="_on_As_aventuras_de_fibrinha_pressed"]
+[connection signal="pressed" from="Mr Vtal" to="." method="_on_Mr_Vtal_pressed"]
+[connection signal="pressed" from="Vitálicios" to="." method="_on_Vitlicios_pressed"]
+[connection signal="pressed" from="Moralética" to="." method="_on_Moraltica_pressed"]
+[connection signal="pressed" from="voltar" to="." method="_on_voltar_pressed"]
