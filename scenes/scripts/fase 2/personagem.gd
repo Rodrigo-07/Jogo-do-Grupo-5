@@ -7,6 +7,10 @@ var left = false
 # Funções e variáveis para fazer o movimento do player no celular
 func _on_buttonUp_pressed():
 	up = true
+func _on_buttonUp_released():
+	up = false
+	
+
 # Velocidade de movimento do personagem
 var speed = 4000
 # Define o movimento em 2 eixos
@@ -21,15 +25,12 @@ func _physics_process(delta):
 		$AnimationPlayer.play("andar para direita") 
 	elif Input.is_action_just_pressed("ui_left") or left: 
 		move.x = -speed * delta * 3.7
-		left = false
 		$AnimationPlayer.play("andar para esquerda")
 	elif Input.is_action_just_pressed("ui_up") or up: 
 		move.y = -speed  * delta * 3.7
-		up = false
 		$AnimationPlayer.play("andar para frente")
 	elif Input.is_action_just_pressed("ui_down") or down:
 		move.y = speed  * delta * 3.7
-		down = false
 		$AnimationPlayer.play("andar para trás")
 	else:
 		move.x = 0
