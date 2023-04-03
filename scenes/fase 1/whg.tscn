@@ -320,7 +320,7 @@ size = 95
 font_data = ExtResource( 6 )
 
 [sub_resource type="DynamicFont" id=45]
-size = 38
+size = 53
 font_data = ExtResource( 7 )
 
 [sub_resource type="RectangleShape2D" id=76]
@@ -581,6 +581,7 @@ margin_left = 18.0
 margin_top = 22.0
 margin_right = 338.0
 margin_bottom = 115.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_fonts/font = SubResource( 45 )
 text = "PRÓXIMO"
 align = 1
