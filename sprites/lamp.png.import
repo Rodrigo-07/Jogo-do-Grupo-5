@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/image-removebg-preview (1).png-90920f5b229a7c27278f263be80f37d4.stex"
+path="res://.import/lamp.png-e9618a1b36c31f2d31abeef7c1bef4ba.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/image-removebg-preview (1).png"
-dest_files=[ "res://.import/image-removebg-preview (1).png-90920f5b229a7c27278f263be80f37d4.stex" ]
+source_file="res://sprites/lamp.png"
+dest_files=[ "res://.import/lamp.png-e9618a1b36c31f2d31abeef7c1bef4ba.stex" ]
 
 [params]
 
