@@ -32,7 +32,7 @@ func _ready():
 		$finish/ColorRect.visible = true
 		$exit.visible = true
 		
-	$Container/score.text = str(Points.points) + " V Cois"
+	$Container/score.text = str(Points.points) + " V Coins"
 		
 # Mostra os pontos do jogador
 	

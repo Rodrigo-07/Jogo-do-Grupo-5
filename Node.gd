@@ -1,5 +1,7 @@
 extends Node
 
+var collision = 0
+
 #apenas para o addCode
 var next
 var permission = 0
