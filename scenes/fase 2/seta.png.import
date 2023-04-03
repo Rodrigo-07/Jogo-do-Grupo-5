@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/image-removebg-preview (1).png-90920f5b229a7c27278f263be80f37d4.stex"
+path="res://.import/seta.png-92180a1e863c3d04ede5f04072d9d275.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/image-removebg-preview (1).png"
-dest_files=[ "res://.import/image-removebg-preview (1).png-90920f5b229a7c27278f263be80f37d4.stex" ]
+source_file="res://scenes/fase 2/seta.png"
+dest_files=[ "res://.import/seta.png-92180a1e863c3d04ede5f04072d9d275.stex" ]
 
 [params]
 
