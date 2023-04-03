@@ -23,11 +23,3 @@ func _physics_process(delta):
 	move_and_slide(move)
 
 	var collide = move_and_collide(move * delta)
-	
-	# Colisão do obstáculo apenas com o player
-	if collide:
-		get_tree().change_scene("res://scenes/whg.tscn")
-		if collide:
-			var colisor = str(collide.collider.name)
-			if colisor == "KinematicBody2D":
-				get_tree().reload_current_scene()

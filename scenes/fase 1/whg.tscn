@@ -1,5 +1,6 @@
-[gd_scene load_steps=56 format=2]
+[gd_scene load_steps=61 format=2]
 
+[ext_resource path="res://Fonte/Concert_One/ConcertOne-Regular.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://scenes/scripts/Node2D.gd" type="Script" id=2]
 [ext_resource path="res://scenes/scripts/KinematicBody2D.gd" type="Script" id=3]
 [ext_resource path="res://sprites/papel.png" type="Texture" id=4]
@@ -322,6 +323,19 @@ font_data = ExtResource( 6 )
 size = 38
 font_data = ExtResource( 7 )
 
+[sub_resource type="RectangleShape2D" id=76]
+extents = Vector2( 43.5, 36.5 )
+
+[sub_resource type="DynamicFont" id=77]
+size = 22
+font_data = ExtResource( 1 )
+
+[sub_resource type="RectangleShape2D" id=78]
+extents = Vector2( 45, 32.25 )
+
+[sub_resource type="RectangleShape2D" id=79]
+extents = Vector2( 36.25, 35 )
+
 [node name="WHG" type="Node2D"]
 script = ExtResource( 2 )
 
@@ -344,7 +358,7 @@ __meta__ = {
 [node name="Node" type="Node" parent="ColorRect/Node"]
 
 [node name="KinematicBody2D" type="KinematicBody2D" parent="."]
-position = Vector2( 151, 616 )
+position = Vector2( 50, 525 )
 scale = Vector2( 1.42249, 1.42249 )
 collision_layer = 3
 collision_mask = 11
@@ -424,15 +438,6 @@ tile_data = PoolIntArray( 0, 0, 0 )
 position = Vector2( 73.5, 86.5 )
 shape = SubResource( 40 )
 
-[node name="Pausar2" type="Button" parent="."]
-margin_left = 307.0
-margin_top = 13.0
-margin_right = 7275.0
-margin_bottom = 6931.0
-rect_scale = Vector2( 0.00596626, 0.00596626 )
-text = "pausar"
-icon = ExtResource( 10 )
-
 [node name="FundoPause" type="Sprite" parent="."]
 pause_mode = 2
 visible = false
@@ -509,25 +514,25 @@ shape = SubResource( 43 )
 
 [node name="TouchScreenButton" type="TouchScreenButton" parent="."]
 pause_mode = 2
-position = Vector2( -32, -29 )
+position = Vector2( -32, -45 )
 scale = Vector2( 0.361667, 0.579167 )
 normal = ExtResource( 12 )
 
 [node name="Camera" type="Sprite" parent="."]
 modulate = Color( 0.278431, 0.278431, 0.278431, 1 )
-position = Vector2( 168.25, 15.9166 )
+position = Vector2( 118.25, 620.917 )
 scale = Vector2( 0.169271, 0.186632 )
 texture = ExtResource( 15 )
 
 [node name="Cell" type="Sprite" parent="."]
 modulate = Color( 0.145098, 0.145098, 0.145098, 1 )
-position = Vector2( 196.25, 14.9166 )
+position = Vector2( 146.25, 619.917 )
 scale = Vector2( 0.134115, 0.139797 )
 texture = ExtResource( 16 )
 
 [node name="Pasta" type="Sprite" parent="."]
 modulate = Color( 0.188235, 0.188235, 0.188235, 1 )
-position = Vector2( 224.25, 16.9166 )
+position = Vector2( 174.25, 621.917 )
 scale = Vector2( 0.132812, 0.160661 )
 texture = ExtResource( 14 )
 
@@ -582,14 +587,113 @@ align = 1
 valign = 1
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
+visible = false
 
 [node name="Control" parent="CanvasLayer" instance=ExtResource( 17 )]
+
+[node name="RHnotifier" type="Area2D" parent="."]
+position = Vector2( 0, 8 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RHnotifier"]
+position = Vector2( 191.5, 324 )
+shape = SubResource( 76 )
+
+[node name="RH" type="Popup" parent="RHnotifier"]
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="ColorRect" type="ColorRect" parent="RHnotifier/RH"]
+margin_left = 14.0
+margin_top = 277.0
+margin_right = 147.0
+margin_bottom = 366.0
+color = Color( 0.870588, 0.866667, 0.854902, 1 )
+
+[node name="Label" type="Label" parent="RHnotifier/RH/ColorRect"]
+margin_left = 1.0
+margin_right = 132.0
+margin_bottom = 88.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 77 )
+text = "RECURSOS
+HUMANOS"
+align = 1
+valign = 1
+
+[node name="Pausar2" type="Button" parent="."]
+margin_left = 307.0
+margin_top = 13.0
+margin_right = 7275.0
+margin_bottom = 6931.0
+rect_scale = Vector2( 0.00596626, 0.00596626 )
+text = "pausar"
+icon = ExtResource( 10 )
+
+[node name="SPnotifier" type="Area2D" parent="."]
+
+[node name="SP" type="Popup" parent="SPnotifier"]
+margin_left = 214.0
+margin_top = -237.0
+margin_right = 254.0
+margin_bottom = -197.0
+
+[node name="ColorRect" type="ColorRect" parent="SPnotifier/SP"]
+margin_left = 30.0
+margin_top = 270.0
+margin_right = 128.0
+margin_bottom = 361.0
+color = Color( 0.870588, 0.866667, 0.854902, 1 )
+
+[node name="Label" type="Label" parent="SPnotifier/SP/ColorRect"]
+margin_left = 1.0
+margin_top = -2.0
+margin_right = 101.0
+margin_bottom = 86.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 77 )
+text = "SALA
+PESSOAL"
+align = 1
+valign = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SPnotifier"]
+position = Vector2( 281, 243.75 )
+shape = SubResource( 78 )
+
+[node name="COMnotifier" type="Area2D" parent="."]
+
+[node name="COMPLIANCE" type="Popup" parent="COMnotifier"]
+margin_left = 40.0
+margin_top = -212.0
+margin_right = 80.0
+margin_bottom = -172.0
+
+[node name="ColorRect" type="ColorRect" parent="COMnotifier/COMPLIANCE"]
+margin_left = -25.0
+margin_top = 255.0
+margin_right = 105.0
+margin_bottom = 346.0
+color = Color( 0.870588, 0.866667, 0.854902, 1 )
+
+[node name="Label" type="Label" parent="COMnotifier/COMPLIANCE/ColorRect"]
+margin_left = 5.0
+margin_top = -2.0
+margin_right = 125.0
+margin_bottom = 86.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 77 )
+text = "COMPLIANCE"
+align = 1
+valign = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="COMnotifier"]
+position = Vector2( 193, 165 )
+shape = SubResource( 79 )
 
 [connection signal="body_entered" from="key/key" to="KinematicBody2D" method="_on_key_body_entered"]
 [connection signal="body_entered" from="key/key2" to="KinematicBody2D" method="_on_key2_body_entered"]
 [connection signal="body_entered" from="key/key3" to="KinematicBody2D" method="_on_key3_body_entered"]
 [connection signal="body_shape_entered" from="Compliance" to="KinematicBody2D" method="_on_Compliance_body_shape_entered"]
-[connection signal="pressed" from="Pausar2" to="." method="_on_Pausar2_pressed"]
 [connection signal="pressed" from="FundoPause/Button3" to="." method="_on_Button3_pressed"]
 [connection signal="pressed" from="FundoPause/Button2" to="." method="_on_Button2_pressed"]
 [connection signal="value_changed" from="FundoPause/HSlider" to="." method="_on_HSlider_value_changed"]
@@ -599,3 +703,10 @@ valign = 1
 [connection signal="pressed" from="TouchScreenButton" to="KinematicBody2D" method="_on_TouchScreenButton_pressed"]
 [connection signal="pressed" from="PopUp/Sprite2/Sprite/Button" to="." method="_on_Button_pressed"]
 [connection signal="pressed" from="PopUp/Sprite2/Sprite/Button" to="KinematicBody2D" method="_on_Button_pressed"]
+[connection signal="body_entered" from="RHnotifier" to="." method="_on_RHnotifier_body_entered"]
+[connection signal="body_exited" from="RHnotifier" to="." method="_on_RHnotifier_body_exited"]
+[connection signal="pressed" from="Pausar2" to="." method="_on_Pausar2_pressed"]
+[connection signal="body_entered" from="SPnotifier" to="." method="_on_SPnotifier_body_entered"]
+[connection signal="body_exited" from="SPnotifier" to="." method="_on_SPnotifier_body_exited"]
+[connection signal="body_entered" from="COMnotifier" to="." method="_on_COMnotifier_body_entered"]
+[connection signal="body_exited" from="COMnotifier" to="." method="_on_COMnotifier_body_exited"]

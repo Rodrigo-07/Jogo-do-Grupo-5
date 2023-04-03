@@ -42,3 +42,25 @@ func _on_Button3_pressed():
 
 func _on_Button_pressed():
 	get_tree().change_scene("res://scenes/fase 1/Peguntas/pergunta4.tscn")
+
+#Feedback visual areas do mapa
+func _on_RHnotifier_body_entered(body):
+	if body == $KinematicBody2D:
+		$RHnotifier/RH.show()
+func _on_RHnotifier_body_exited(body):
+	if body == $KinematicBody2D:
+		$RHnotifier/RH.hide()
+		
+func _on_SPnotifier_body_entered(body):
+	if body == $KinematicBody2D:
+		$SPnotifier/SP.show()
+func _on_SPnotifier_body_exited(body):
+	if body == $KinematicBody2D:
+		$SPnotifier/SP.hide()
+
+func _on_COMnotifier_body_entered(body):
+	if body == $KinematicBody2D:
+		$COMnotifier/COMPLIANCE.show()
+func _on_COMnotifier_body_exited(body):
+	if body == $KinematicBody2D:
+		$COMnotifier/COMPLIANCE.hide()
