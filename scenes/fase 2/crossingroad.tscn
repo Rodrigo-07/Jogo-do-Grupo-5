@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=2]
+[gd_scene load_steps=20 format=2]
 
 [ext_resource path="res://sprites/Cenario crossy road.png" type="Texture" id=1]
 [ext_resource path="res://scenes/fase 2/tutorial_crossy.tscn" type="PackedScene" id=2]
@@ -12,6 +12,8 @@
 [ext_resource path="res://scenes/fase 2/seta.png" type="Texture" id=15]
 
 [sub_resource type="RectangleShape2D" id=12]
+
+[sub_resource type="RectangleShape2D" id=13]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 8.5, 7 )
@@ -91,6 +93,7 @@ extents = Vector2( 61.875, 41.375 )
 extents = Vector2( 106.75, 10 )
 
 [node name="crossingroad" type="Node2D"]
+position = Vector2( 0, -1 )
 script = ExtResource( 6 )
 __meta__ = {
 "_edit_horizontal_guides_": [ 292.0, 662.0 ],
@@ -102,41 +105,51 @@ __meta__ = {
 [node name="Controles" type="Node" parent="mapa"]
 
 [node name="spriteUp" type="Sprite" parent="mapa/Controles"]
-position = Vector2( 271.397, 545.802 )
+position = Vector2( 265.397, 532.802 )
 rotation = -1.5708
 scale = Vector2( 1.5, 1.4 )
 z_index = 6
 texture = ExtResource( 15 )
 
 [node name="spriteDown" type="Sprite" parent="mapa/Controles"]
-position = Vector2( 280, 601 )
+position = Vector2( 274, 607 )
 rotation = 1.5708
 scale = Vector2( 1.5, 1.4 )
 texture = ExtResource( 15 )
 
 [node name="spriteLeft" type="Sprite" parent="mapa/Controles"]
-position = Vector2( 247, 578 )
+position = Vector2( 235, 578 )
 rotation = 3.14159
 scale = Vector2( 1.5, 1.4 )
 texture = ExtResource( 15 )
 
 [node name="spriteRight" type="Sprite" parent="mapa/Controles"]
-position = Vector2( 304, 569 )
+position = Vector2( 305, 569 )
 rotation = 6.28319
 scale = Vector2( 1.5, 1.4 )
 texture = ExtResource( 15 )
 
 [node name="buttonUp" type="TouchScreenButton" parent="mapa/Controles"]
-position = Vector2( 296, 512 )
+position = Vector2( 289, 502 )
 scale = Vector2( -1.95972, 2.87014 )
 z_index = 18
 shape = SubResource( 12 )
 
 [node name="buttonDown" type="TouchScreenButton" parent="mapa/Controles"]
-position = Vector2( 296, 576 )
+position = Vector2( 289, 582 )
 scale = Vector2( -1.95972, 2.87014 )
 z_index = 18
 shape = SubResource( 12 )
+
+[node name="buttonRight" type="TouchScreenButton" parent="mapa/Controles"]
+position = Vector2( 280, 560 )
+scale = Vector2( 2.72396, 1.21131 )
+shape = SubResource( 13 )
+
+[node name="buttonLeft" type="TouchScreenButton" parent="mapa/Controles"]
+position = Vector2( 205, 560 )
+scale = Vector2( 2.72396, 1.21131 )
+shape = SubResource( 13 )
 
 [node name="Personagem" type="KinematicBody2D" parent="mapa"]
 position = Vector2( 180, 610 )
@@ -267,6 +280,12 @@ visible = false
 
 [connection signal="pressed" from="mapa/Controles/buttonUp" to="mapa/Personagem" method="_on_buttonUp_pressed"]
 [connection signal="released" from="mapa/Controles/buttonUp" to="mapa/Personagem" method="_on_buttonUp_released"]
+[connection signal="pressed" from="mapa/Controles/buttonDown" to="mapa/Personagem" method="_on_buttonDown_pressed"]
+[connection signal="released" from="mapa/Controles/buttonDown" to="mapa/Personagem" method="_on_buttonDown_released"]
+[connection signal="pressed" from="mapa/Controles/buttonRight" to="mapa/Personagem" method="_on_buttonRight_pressed"]
+[connection signal="released" from="mapa/Controles/buttonRight" to="mapa/Personagem" method="_on_buttonRight_released"]
+[connection signal="pressed" from="mapa/Controles/buttonLeft" to="mapa/Personagem" method="_on_buttonLeft_pressed"]
+[connection signal="released" from="mapa/Controles/buttonLeft" to="mapa/Personagem" method="_on_buttonLeft_released"]
 [connection signal="body_entered" from="mapa/casa" to="mapa/Personagem" method="_on_casa_body_entered"]
 [connection signal="pressed" from="FundoPause/Button3" to="." method="_on_Button3_pressed"]
 [connection signal="pressed" from="FundoPause/Button2" to="." method="_on_Button2_pressed"]
