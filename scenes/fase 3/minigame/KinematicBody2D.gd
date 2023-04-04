@@ -8,8 +8,7 @@ func _ready():
 var andar = Vector2() #movimento
 var velocidade = 65 #velocidade
 # Variáveis utilizadas para controlar o player no celular
-var up = false
-var down = false
+
 var coletaveis = [0]
 var bateu
 
@@ -18,6 +17,9 @@ onready var Swipe = get_parent().get_node("controls/SwipeScreenButton")
 # Funções utilizadas para controlar o player no celular
 var left = false
 var right = false
+var up = false
+var down = false
+#no começo todas são setadas como false para o jogador não se mover
 func _input(event):
 	if event is InputEventScreenDrag:
 		if Swipe.get_swipe_direction(event.relative,4) == Vector2.DOWN:
@@ -28,9 +30,9 @@ func _input(event):
 			right = true
 		if Swipe.get_swipe_direction(event.relative,4) == Vector2.LEFT:
 			left = true
+#essa função verifica se o jogador está tocando a tela e se ele está arrastando o dedo para cima, baixo, direita ou esquerda e faz eles se mover para a direção que o jogador arrastou o dedo
 func _process(delta):
-	# Verifica se foi coletado todos os número bons
-#	
+	# Verifica se foi coletado todos os número bons	
 	if coletaveis[0] == 4:
 		get_node("../texto final").visible = true
 		yield(get_tree().create_timer(1.5), 'timeout')

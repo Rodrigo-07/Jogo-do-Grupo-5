@@ -447,8 +447,8 @@ script = ExtResource( 8 )
 [node name="ColorRect" type="ColorRect" parent="FundoPause"]
 margin_left = -1.0
 margin_top = -3.0
-margin_right = 387.0
-margin_bottom = 659.0
+margin_right = 366.0
+margin_bottom = 647.0
 color = Color( 0.611765, 0.67451, 0.705882, 1 )
 
 [node name="Button3" type="Button" parent="FundoPause"]
@@ -517,7 +517,7 @@ shape = SubResource( 43 )
 [node name="TouchScreenButton" type="TouchScreenButton" parent="."]
 pause_mode = 2
 position = Vector2( -32, -45 )
-scale = Vector2( 0.361667, 0.579167 )
+scale = Vector2( 0.335833, 0.579167 )
 normal = ExtResource( 12 )
 
 [node name="Camera" type="Sprite" parent="."]
@@ -592,7 +592,6 @@ valign = 1
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="Control" parent="CanvasLayer" instance=ExtResource( 17 )]
-visible = false
 
 [node name="RHnotifier" type="Area2D" parent="."]
 position = Vector2( 0, 8 )
