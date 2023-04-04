@@ -3,33 +3,49 @@ var down = false
 var up = false
 var right = false
 var left = false
-
 # Funções e variáveis para fazer o movimento do player no celular
 func _on_buttonUp_pressed():
 	up = true
+func _on_buttonUp_released():
+	up = false
+	move.y = 0
+func _on_buttonDown_pressed():
+	down = true
+func _on_buttonDown_released():
+	down = false
+	move.y = 0
+func _on_buttonRight_pressed():
+	right = true
+func _on_buttonRight_released():
+	right = false
+	move.x = 0
+func _on_buttonLeft_pressed():
+	left = true
+func _on_buttonLeft_released():
+	left = false
+	move.x = 0
 # Velocidade de movimento do personagem
 var speed = 4000
 # Define o movimento em 2 eixos
 var move = Vector2()
-
 # Inicia a fsica do jogo
 func _physics_process(delta):
-	
 	# Controles do personagem
 	if Input.is_action_pressed("ui_right") or right:
-		move.x += speed * delta * 3.7
+		move.x = speed * delta
+		
 		$AnimationPlayer.play("andar para direita") 
-	elif Input.is_action_just_pressed("ui_left") or left: 
-		move.x = -speed * delta * 3.7
-		left = false
+	elif Input.is_action_pressed("ui_left") or left: 
+		move.x = -speed * delta
+		
 		$AnimationPlayer.play("andar para esquerda")
-	elif Input.is_action_just_pressed("ui_up") or up: 
-		move.y = -speed  * delta * 3.7
-		up = false
+	elif Input.is_action_pressed("ui_up") or up: 
+		move.y = -speed * delta
+		
 		$AnimationPlayer.play("andar para frente")
-	elif Input.is_action_just_pressed("ui_down") or down:
-		move.y = speed  * delta * 3.7
-		down = false
+	elif Input.is_action_pressed("ui_down") or down:
+		move.y = speed * delta
+		
 		$AnimationPlayer.play("andar para trás")
 	else:
 		move.x = 0
@@ -58,3 +74,7 @@ func _on_casa_body_entered(body):
 
 
 
+
+
+
+	
