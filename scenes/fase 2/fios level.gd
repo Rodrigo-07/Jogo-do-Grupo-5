@@ -33,7 +33,6 @@ func _process(delta):
 		current_line.points[1] = Vector2(touch_position.x-current_line.position.x,touch_position.y-current_line.position.y)
 	
 	if red_connected and blue_connected and orange_connected and green_connected:
-		$AnimatedSprite.stop()
 		$AnimatedSprite.play("win")
 		yield(get_tree().create_timer(3), 'timeout')
 		if Points.fios == false:
@@ -208,3 +207,27 @@ func _on_Gray_terminal_mouse_entered():
 		selected = false
 		current_line.points[1] = current_line.points[0]
 		print(vidas)
+
+
+func _on_Pausar_pressed():
+	get_tree().paused = true
+	$FundoPause.show()
+
+func _on_Button2_pressed():
+	get_tree().paused = false
+	$FundoPause.hide()
+var audio = AudioServer.get_bus_index("Master")
+var pontos = "Você tem " + str(Points.points) + " pontos"
+
+func _on_HSlider_value_changed(value):
+	AudioServer.set_bus_volume_db(audio, value)
+	if value == -30:
+		AudioServer.set_bus_mute(audio,true)
+	else:
+		AudioServer.set_bus_mute(audio,false)
+#
+	pass
+
+func _on_Button3_pressed():
+	get_tree().paused = false
+	get_tree().change_scene("res://scenes/menu/main_interface.tscn")

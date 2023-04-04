@@ -631,6 +631,7 @@ margin_bottom = 6931.0
 rect_scale = Vector2( 0.00596626, 0.00596626 )
 text = "pausar"
 icon = ExtResource( 10 )
+expand_icon = true
 
 [node name="SPnotifier" type="Area2D" parent="."]
 
