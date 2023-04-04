@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Pontuação/checkPoints.gd" type="Script" id=1]
 [ext_resource path="res://Fonte/Concert_One/ConcertOne-Regular.ttf" type="DynamicFontData" id=2]
-[ext_resource path="res://sprites/trophy-menu.png" type="Texture" id=3]
+[ext_resource path="res://sprites/menu_cidade.png" type="Texture" id=3]
+[ext_resource path="res://sprites/botão voltar.png" type="Texture" id=4]
 
 [sub_resource type="DynamicFont" id=1]
 font_data = ExtResource( 2 )
@@ -10,10 +11,10 @@ font_data = ExtResource( 2 )
 [node name="Node" type="Node"]
 script = ExtResource( 1 )
 
-[node name="ColorRect" type="ColorRect" parent="."]
-margin_right = 360.0
-margin_bottom = 640.0
-color = Color( 0.45098, 0.45098, 0.45098, 1 )
+[node name="MenuCidade" type="Sprite" parent="."]
+position = Vector2( 179.889, 319.804 )
+scale = Vector2( 1.60099, 1.60098 )
+texture = ExtResource( 3 )
 
 [node name="Trophy-menu" type="Sprite" parent="."]
 position = Vector2( 176, 311.111 )
@@ -53,11 +54,13 @@ margin_bottom = 107.0
 text = "OK"
 
 [node name="Button" type="Button" parent="."]
-margin_left = 19.0
-margin_top = 569.0
-margin_right = 95.0
-margin_bottom = 613.0
-text = "Voltar"
+margin_left = 22.0
+margin_top = 560.0
+margin_right = 96.0
+margin_bottom = 624.0
+icon = ExtResource( 4 )
+flat = true
+expand_icon = true
 
 [node name="Button2" type="Button" parent="."]
 anchor_left = 1.0
