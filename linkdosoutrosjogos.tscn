@@ -1,10 +1,26 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://linkdosoutrosjogos.gd" type="Script" id=1]
 [ext_resource path="res://sprites/Ajustes_background.png" type="Texture" id=2]
-[ext_resource path="res://sprites/change_games_button-Sheet2.png" type="Texture" id=3]
-[ext_resource path="res://sprites/change_games_button-Sheet3.png" type="Texture" id=4]
+[ext_resource path="res://Fonte/Lato-Bold.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://sprites/Botao dourado.png" type="Texture" id=4]
 [ext_resource path="res://sprites/botão voltar.png" type="Texture" id=5]
+
+[sub_resource type="DynamicFont" id=1]
+size = 20
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 20
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 20
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 20
+font_data = ExtResource( 3 )
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource( 1 )
@@ -22,69 +38,65 @@ offset = Vector2( 94.2857, 210.794 )
 [node name="As aventuras de fibrinha" type="TextureButton" parent="."]
 margin_left = 131.0
 margin_top = 98.0
-margin_right = 404.0
-margin_bottom = 249.0
-rect_scale = Vector2( 0.35, 0.35 )
-texture_normal = ExtResource( 3 )
-texture_pressed = ExtResource( 4 )
-texture_hover = ExtResource( 4 )
+margin_right = 331.0
+margin_bottom = 169.0
+rect_scale = Vector2( 0.495006, 0.748872 )
+texture_normal = ExtResource( 4 )
 
 [node name="Mr Vtal" type="TextureButton" parent="."]
 margin_left = 130.0
 margin_top = 224.0
-margin_right = 403.0
-margin_bottom = 375.0
-rect_scale = Vector2( 0.35, 0.35 )
-texture_normal = ExtResource( 3 )
-texture_pressed = ExtResource( 4 )
-texture_hover = ExtResource( 4 )
+margin_right = 327.0
+margin_bottom = 301.0
+rect_scale = Vector2( 0.494321, 0.766571 )
+texture_normal = ExtResource( 4 )
 
 [node name="Vitálicios" type="TextureButton" parent="."]
 margin_left = 130.0
 margin_top = 355.0
-margin_right = 403.0
-margin_bottom = 506.0
-rect_scale = Vector2( 0.35, 0.35 )
-texture_normal = ExtResource( 3 )
-texture_pressed = ExtResource( 4 )
-texture_hover = ExtResource( 4 )
+margin_right = 327.0
+margin_bottom = 432.0
+rect_scale = Vector2( 0.495755, 0.829509 )
+texture_normal = ExtResource( 4 )
 
 [node name="Moralética" type="TextureButton" parent="."]
 margin_left = 129.0
 margin_top = 485.0
-margin_right = 402.0
-margin_bottom = 636.0
-rect_scale = Vector2( 0.35, 0.35 )
-texture_normal = ExtResource( 3 )
-texture_pressed = ExtResource( 4 )
-texture_hover = ExtResource( 4 )
+margin_right = 326.0
+margin_bottom = 556.0
+rect_scale = Vector2( 0.513262, 0.776679 )
+texture_normal = ExtResource( 4 )
 
 [node name="Label" type="Label" parent="."]
-margin_left = 102.0
-margin_top = 60.0
-margin_right = 256.0
-margin_bottom = 74.0
+margin_left = 74.0
+margin_top = 54.0
+margin_right = 288.0
+margin_bottom = 79.0
+custom_fonts/font = SubResource( 1 )
 text = "As aventuras de fibrinha"
 
 [node name="Label2" type="Label" parent="."]
-margin_left = 150.0
-margin_top = 181.0
-margin_right = 304.0
-margin_bottom = 195.0
+margin_left = 142.0
+margin_top = 177.0
+margin_right = 296.0
+margin_bottom = 202.0
+custom_fonts/font = SubResource( 2 )
 text = "Mr V.tal "
 
 [node name="Label3" type="Label" parent="."]
-margin_left = 142.0
-margin_top = 311.0
-margin_right = 296.0
-margin_bottom = 325.0
+margin_left = 140.0
+margin_top = 307.0
+margin_right = 294.0
+margin_bottom = 332.0
+custom_fonts/font = SubResource( 3 )
 text = "Vitálicios"
 
 [node name="Label4" type="Label" parent="."]
-margin_left = 140.0
-margin_top = 443.0
-margin_right = 294.0
-margin_bottom = 457.0
+margin_left = 131.0
+margin_top = 439.0
+margin_right = 285.0
+margin_bottom = 464.0
+custom_fonts/font = SubResource( 4 )
 text = "Moralética"
 
 [node name="voltar" type="TextureButton" parent="."]
