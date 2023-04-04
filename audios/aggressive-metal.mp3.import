@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/aggressive-metal.mp3-536ea2c2b1b3ccd19ef3d786b2153ca2.mp3str"
+
+[deps]
+
+source_file="res://audios/aggressive-metal.mp3"
+dest_files=[ "res://.import/aggressive-metal.mp3-536ea2c2b1b3ccd19ef3d786b2153ca2.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
