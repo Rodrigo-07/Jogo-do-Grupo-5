@@ -11,7 +11,6 @@ var audio = AudioServer.get_bus_index("Master")
 func _ready():
 	transition.material.set_shader_param("type", transition_type)
 	animation.playback_speed = duration
-	$AudioStreamPlayer2D.play(true)
 
 
 # Botão para voltar para o menu
