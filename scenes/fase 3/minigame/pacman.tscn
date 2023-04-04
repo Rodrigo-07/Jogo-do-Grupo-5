@@ -1,4 +1,4 @@
-[gd_scene load_steps=57 format=2]
+[gd_scene load_steps=58 format=2]
 
 [ext_resource path="res://scenes/fase 3/minigame/pacman.gd" type="Script" id=1]
 [ext_resource path="res://sprites/pacman.png" type="Texture" id=2]
@@ -8,6 +8,7 @@
 [ext_resource path="res://sprites/balinhaVTal.png" type="Texture" id=6]
 [ext_resource path="res://sprites/copo_agua.png" type="Texture" id=7]
 [ext_resource path="res://scenes/fase 3/minigame/SwipeControl.gd" type="Script" id=8]
+[ext_resource path="res://scenes/fase 3/tutorial/tutorial_pacman.tscn" type="PackedScene" id=9]
 [ext_resource path="res://scenes/fase 3/minigame/spriteCerveja.gd" type="Script" id=14]
 [ext_resource path="res://sprites/cerveja-transformed.png" type="Texture" id=15]
 [ext_resource path="res://sprites/hearts.png" type="Texture" id=17]
@@ -240,7 +241,7 @@ script = ExtResource( 3 )
 position = Vector2( -7.50002, -22.4999 )
 scale = Vector2( 0.84375, 0.84375 )
 frames = SubResource( 86 )
-frame = 3
+frame = 1
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Person"]
@@ -628,6 +629,11 @@ shape = SubResource( 80 )
 position = Vector2( 150, 328.172 )
 scale = Vector2( 0.999999, 0.999999 )
 shape = SubResource( 81 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Control" parent="CanvasLayer" instance=ExtResource( 9 )]
+pause_mode = 2
 
 [connection signal="body_shape_entered" from="good/Capacete" to="Person" method="_on_Capacete_body_shape_entered"]
 [connection signal="body_shape_entered" from="good/Capacete2" to="Person" method="_on_Capacete2_body_shape_entered"]

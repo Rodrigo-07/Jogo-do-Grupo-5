@@ -275,7 +275,6 @@ icon = ExtResource( 13 )
 expand_icon = true
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
-visible = false
 
 [node name="Control" parent="CanvasLayer" instance=ExtResource( 2 )]
 
