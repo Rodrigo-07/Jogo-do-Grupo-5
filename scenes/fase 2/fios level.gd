@@ -83,63 +83,126 @@ func _on_Orange_selection_input_event(viewport, event, shape_idx):
 
 # FUNÇÕES DOS TERMINAIS
 
-func _on_Green_terminal_input_event(viewport, event, shape_idx):
+#func _on_Green_terminal_input_event(viewport, event, shape_idx):
+#	if Input.is_mouse_button_pressed(BUTTON_LEFT) and green_wire == true:
+#		selected = false
+#		current_line.points[1] = Vector2(390, 208)
+#		$Green_selection/CollisionShape2D.set_deferred("disabled", true)
+#		green_connected = true
+#		print(vidas)
+#	elif Input.is_mouse_button_pressed(BUTTON_LEFT) and green_wire == false:
+#		vidas += 1
+#		selected = false
+#		current_line.points[1] = current_line.points[0]
+#		current_line.visible = false
+#		print(vidas)
+
+
+#func _on_Red_terminal_input_event(viewport, event, shape_idx):
+#	if Input.is_mouse_button_pressed(BUTTON_LEFT) and red_wire == true:
+#		selected = false
+#		current_line.points[1] = Vector2(265, -190)
+#		$Red_selection/CollisionShape2D.set_deferred("disabled", true)
+#		red_connected = true
+#	elif Input.is_mouse_button_pressed(BUTTON_LEFT) and red_wire == false:
+#		vidas += 1
+#		selected = false
+#		current_line.points[1] = current_line.points[0]
+#		current_line.visible = false
+#		print(vidas)
+
+#func _on_Blue_terminal_input_event(viewport, event, shape_idx):
+#	if Input.is_mouse_button_pressed(BUTTON_LEFT) and blue_wire == true:
+#		selected = false
+#		current_line.points[1] = Vector2(290, 137)
+#		$Blue_selection/CollisionShape2D.set_deferred("disabled", true)
+#		blue_connected = true
+#	elif Input.is_mouse_button_pressed(BUTTON_LEFT) and blue_wire == false:
+#		vidas += 1
+#		selected = false
+#		current_line.points[1] = current_line.points[0]
+#		current_line.visible = false
+#		print(vidas)
+
+#func _on_Orange_terminal_input_event(viewport, event, shape_idx):
+#	if Input.is_mouse_button_pressed(BUTTON_LEFT) and orange_wire == true:
+#		selected = false
+#		current_line.points[1] = Vector2(300, -165)
+#		$Orange_selection/CollisionShape2D.set_deferred("disabled", true)
+#		orange_connected = true
+#	elif Input.is_mouse_button_pressed(BUTTON_LEFT) and orange_wire == false:
+#		vidas += 1
+#		selected = false
+#		current_line.points[1] = Vector2(0,0)
+#		current_line.visible = false
+#		print(vidas)
+
+func _on_Orange_terminal_mouse_entered():
+	if orange_wire == true:
+		selected = false
+		current_line.points[1] = Vector2(300, -165)
+		$Orange_selection/CollisionShape2D.set_deferred("disabled", true)
+		orange_connected = true
+	elif orange_wire == false:
+		vidas += 1
+		selected = false
+		current_line.points[1] = current_line.points[0]
+		current_line.visible = false
+		print(vidas)
+
+#func _on_Gray_terminal_input_event(viewport, event, shape_idx):
+#	if Input.is_mouse_button_pressed(BUTTON_LEFT):
+#		vidas += 1
+#		selected = false
+#		current_line.points[1] = current_line.points[0]
+#		print(vidas)
+
+
+func _on_Blue_terminal_mouse_entered():
+	if Input.is_mouse_button_pressed(BUTTON_LEFT) and blue_wire == true:
+		selected = false
+		current_line.points[1] = Vector2(290, 137)
+		$Blue_selection/CollisionShape2D.set_deferred("disabled", true)
+		blue_connected = true
+	elif blue_wire == false:
+		vidas += 1
+		selected = false
+		current_line.points[1] = current_line.points[0]
+		current_line.visible = false
+		print(vidas)
+
+
+func _on_Green_terminal_mouse_entered():
 	if Input.is_mouse_button_pressed(BUTTON_LEFT) and green_wire == true:
 		selected = false
 		current_line.points[1] = Vector2(390, 208)
 		$Green_selection/CollisionShape2D.set_deferred("disabled", true)
 		green_connected = true
 		print(vidas)
-	elif Input.is_mouse_button_pressed(BUTTON_LEFT) and green_wire == false:
+	elif green_wire == false:
 		vidas += 1
 		selected = false
-		current_line.points[1] = Vector2(72,123)
+		current_line.points[1] = current_line.points[0]
 		current_line.visible = false
 		print(vidas)
 
 
-func _on_Red_terminal_input_event(viewport, event, shape_idx):
+func _on_Red_terminal_mouse_entered():
 	if Input.is_mouse_button_pressed(BUTTON_LEFT) and red_wire == true:
 		selected = false
 		current_line.points[1] = Vector2(265, -190)
 		$Red_selection/CollisionShape2D.set_deferred("disabled", true)
 		red_connected = true
-	elif Input.is_mouse_button_pressed(BUTTON_LEFT) and red_wire == false:
-		vidas += 1
-		selected = false
-		current_line.points[1] = Vector2(0,0)
-		current_line.visible = false
-		print(vidas)
-
-func _on_Blue_terminal_input_event(viewport, event, shape_idx):
-	if Input.is_mouse_button_pressed(BUTTON_LEFT) and blue_wire == true:
-		selected = false
-		current_line.points[1] = Vector2(290, 137)
-		$Blue_selection/CollisionShape2D.set_deferred("disabled", true)
-		blue_connected = true
-	elif Input.is_mouse_button_pressed(BUTTON_LEFT) and blue_wire == false:
-		vidas += 1
-		selected = false
-		current_line.visible = false
-		print(vidas)
-
-func _on_Orange_terminal_input_event(viewport, event, shape_idx):
-	if Input.is_mouse_button_pressed(BUTTON_LEFT) and orange_wire == true:
-		selected = false
-		current_line.points[1] = Vector2(300, -165)
-		$Orange_selection/CollisionShape2D.set_deferred("disabled", true)
-		orange_connected = true
-	elif Input.is_mouse_button_pressed(BUTTON_LEFT) and orange_wire == false:
-		vidas += 1
-		selected = false
-		current_line.points[1] = Vector2(0,0)
-		current_line.visible = false
-		print(vidas)
-
-
-func _on_Gray_terminal_input_event(viewport, event, shape_idx):
-	if Input.is_mouse_button_pressed(BUTTON_LEFT):
+	elif red_wire == false:
 		vidas += 1
 		selected = false
 		current_line.points[1] = current_line.points[0]
+		current_line.visible = false
 		print(vidas)
+
+
+func _on_Gray_terminal_mouse_entered():
+	vidas += 1
+	selected = false
+	current_line.points[1] = current_line.points[0]
+	print(vidas)

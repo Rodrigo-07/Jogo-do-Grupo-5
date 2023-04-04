@@ -117,8 +117,8 @@ anims/alex_falando = SubResource( 1 )
 anims/boneca_falando = SubResource( 6 )
 
 [node name="PersonagemVtal" type="Sprite" parent="ColorRect"]
-position = Vector2( -139, 409 )
-scale = Vector2( 0.230914, 0.255629 )
+position = Vector2( -151, 422 )
+scale = Vector2( 0.586481, 0.381279 )
 texture = ExtResource( 2 )
 hframes = 3
 

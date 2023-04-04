@@ -1,69 +1,51 @@
 extends KinematicBody2D
-onready var Swipe = get_parent().get_node("Controles/SwipeScreenButton")
 var down = false
 var up = false
 var right = false
 var left = false
-
-func _input(event):
-	if event is InputEventScreenDrag:
-		if Swipe.get_swipe_direction(event.relative,4) == Vector2.DOWN:
-			down = true
-		if Swipe.get_swipe_direction(event.relative,4) == Vector2.UP:
-			up = true
-		if Swipe.get_swipe_direction(event.relative,4) == Vector2.RIGHT:
-			right = true
-		if Swipe.get_swipe_direction(event.relative,4) == Vector2.LEFT:
-			left = true
 # Funções e variáveis para fazer o movimento do player no celular
-#var direita
-#func _on_direita_pressed():
-#	direita = true
-#func _on_direita_released():
-#	direita = false
-#
-#var esquerda
-#func _on_esquerda_pressed():
-#	esquerda = true
-#func _on_esquerda_released():
-#	esquerda = false
-#
-#var cima 
-#func _on_cima_pressed():
-#	cima = true
-#func _on_cima_released():
-#	cima = false
-#
-#var baixo
-#func _on_baixo_pressed():
-#	baixo = true
-#func _on_baixo_released():
-#	baixo = false
-
+func _on_buttonUp_pressed():
+	up = true
+func _on_buttonUp_released():
+	up = false
+	move.y = 0
+func _on_buttonDown_pressed():
+	down = true
+func _on_buttonDown_released():
+	down = false
+	move.y = 0
+func _on_buttonRight_pressed():
+	right = true
+func _on_buttonRight_released():
+	right = false
+	move.x = 0
+func _on_buttonLeft_pressed():
+	left = true
+func _on_buttonLeft_released():
+	left = false
+	move.x = 0
 # Velocidade de movimento do personagem
 var speed = 4000
 # Define o movimento em 2 eixos
 var move = Vector2()
-
 # Inicia a fsica do jogo
 func _physics_process(delta):
-	
 	# Controles do personagem
-	if Input.is_action_just_pressed("ui_right") or right:
-		move.x = speed * delta * 3.7
-		right = false
+	if Input.is_action_pressed("ui_right") or right:
+		move.x = speed * delta
+		
 		$AnimationPlayer.play("andar para direita") 
-	elif Input.is_action_just_pressed("ui_left") or left: 
-		move.x = -speed * delta * 3.7
-		left = false
+	elif Input.is_action_pressed("ui_left") or left: 
+		move.x = -speed * delta
+		
 		$AnimationPlayer.play("andar para esquerda")
-	elif Input.is_action_just_pressed("ui_up") or up: 
-		move.y = -speed  * delta * 3.7
-		up = false
+	elif Input.is_action_pressed("ui_up") or up: 
+		move.y = -speed * delta
+		
 		$AnimationPlayer.play("andar para frente")
-	elif Input.is_action_just_pressed("ui_down") or down:
-		move.y = speed  * delta * 3.7
-		down = false
+	elif Input.is_action_pressed("ui_down") or down:
+		move.y = speed * delta
+		
 		$AnimationPlayer.play("andar para trás")
 	else:
 		move.x = 0
@@ -89,3 +71,10 @@ func _on_casa_body_entered(body):
 		Points.addpoint()
 		Points.crossingroad = true
 	get_tree().change_scene("res://scenes/fase 2/Perguntas/pergunta4.tscn")
+
+
+
+
+
+
+	

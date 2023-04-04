@@ -63,7 +63,6 @@ func _on_SaveCodeButton_pressed():
 		$Atual.set_position(Vector2(45, 500))
 		$Atual.text = "Para inserir um novo código, por favor, feche o jogo e abra novamente"
 	
-	Points.check()
 
 # Botão que volta para o menu
 func _on_Button_pressed():

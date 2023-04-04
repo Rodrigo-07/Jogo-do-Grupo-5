@@ -10,8 +10,6 @@
 [ext_resource path="res://scenes/fase 1/Peguntas/FeedbackErro2.tscn" type="PackedScene" id=8]
 [ext_resource path="res://scenes/fase 1/Peguntas/FeedbackAcerto2.tscn" type="PackedScene" id=9]
 
-
-
 [sub_resource type="TileSet" id=1]
 0/name = "Tela perguntas.png 0"
 0/texture = ExtResource( 2 )

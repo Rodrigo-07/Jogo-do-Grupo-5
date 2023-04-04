@@ -240,7 +240,7 @@ script = ExtResource( 3 )
 position = Vector2( -7.50002, -22.4999 )
 scale = Vector2( 0.84375, 0.84375 )
 frames = SubResource( 86 )
-frame = 1
+frame = 2
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Person"]
@@ -449,6 +449,7 @@ margin_right = 7143.0
 margin_bottom = 7016.0
 rect_scale = Vector2( 0.0126425, 0.0126425 )
 icon = ExtResource( 22 )
+expand_icon = true
 
 [node name="Button2" type="Button" parent="FundoPause"]
 margin_left = 78.0
@@ -458,6 +459,7 @@ margin_bottom = 7018.0
 rect_scale = Vector2( 0.0124347, 0.0124347 )
 text = "voltar"
 icon = ExtResource( 21 )
+expand_icon = true
 
 [node name="HSlider" type="HSlider" parent="FundoPause"]
 margin_left = 77.0

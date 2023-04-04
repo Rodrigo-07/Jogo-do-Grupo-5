@@ -458,6 +458,7 @@ margin_right = 7143.0
 margin_bottom = 7016.0
 rect_scale = Vector2( 0.0126425, 0.0126425 )
 icon = ExtResource( 11 )
+expand_icon = true
 
 [node name="Button2" type="Button" parent="FundoPause"]
 margin_left = 78.0
@@ -467,6 +468,7 @@ margin_bottom = 7018.0
 rect_scale = Vector2( 0.0124347, 0.0124347 )
 text = "voltar"
 icon = ExtResource( 9 )
+expand_icon = true
 
 [node name="HSlider" type="HSlider" parent="FundoPause"]
 margin_left = 77.0
@@ -590,6 +592,7 @@ valign = 1
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="Control" parent="CanvasLayer" instance=ExtResource( 17 )]
+visible = false
 
 [node name="RHnotifier" type="Area2D" parent="."]
 position = Vector2( 0, 8 )

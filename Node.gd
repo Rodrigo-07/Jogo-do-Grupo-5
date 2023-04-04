@@ -37,6 +37,10 @@ var pacMan = false
 
 var points = 00
 
+func _process(delta):
+		yield(get_tree().create_timer(2), 'timeout')
+		currentSaveCode()
+
 #Função a ser chamada quando é necessario adcionar 1 ponto
 func addpoint():
 	points += 1

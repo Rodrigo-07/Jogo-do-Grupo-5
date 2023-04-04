@@ -31,6 +31,7 @@ func _ready():
 	if Points.stateLevel1 == 5 and Points.stateLevel2 == 6 and Points.stateLevel3 == 5:
 		$finish/ColorRect.visible = true
 		$exit.visible = true
+		$finished.visible = true
 		
 	$Container/score.text = str(Points.points) + " V Coins"
 		
@@ -56,3 +57,7 @@ func _on_Button3_pressed():
 func _on_exit_pressed():
 	get_node("finish").visible = false
 	get_node("exit").visible = false
+
+
+func _on_finished_pressed():
+	get_tree().reload_current_scene()
