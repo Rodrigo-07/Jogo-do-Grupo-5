@@ -77,9 +77,9 @@ autoplay = true
 
 [node name="TextureButton" type="TextureButton" parent="."]
 margin_left = 14.9328
-margin_top = 133.161
+margin_top = 132.197
 margin_right = 206.933
-margin_bottom = 204.161
+margin_bottom = 203.197
 rect_scale = Vector2( 0.181918, 0.512521 )
 texture_normal = ExtResource( 2 )
 
@@ -94,9 +94,9 @@ text = "Começar"
 
 [node name="TextureButton3" type="TextureButton" parent="."]
 margin_left = 14.9328
-margin_top = 180.161
+margin_top = 179.197
 margin_right = 206.933
-margin_bottom = 250.161
+margin_bottom = 249.197
 rect_scale = Vector2( 0.182, 0.513 )
 texture_normal = ExtResource( 2 )
 
@@ -112,9 +112,9 @@ text = "Ajuste
 
 [node name="TextureButton4" type="TextureButton" parent="."]
 margin_left = 14.9328
-margin_top = 228.161
+margin_top = 226.715
 margin_right = 206.933
-margin_bottom = 296.161
+margin_bottom = 294.715
 rect_scale = Vector2( 0.182, 0.513 )
 texture_normal = ExtResource( 2 )
 
