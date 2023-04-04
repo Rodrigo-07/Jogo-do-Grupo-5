@@ -1,5 +1,6 @@
 extends Node
 
+#usada apenas para a colisão da fase do whg
 var collision = 0
 
 #apenas para o addCode
@@ -44,7 +45,7 @@ func _process(delta):
 #Função a ser chamada quando é necessario adcionar 1 ponto
 func addpoint():
 	points += 1
-
+	var file = File.new()
 #Verifica e adiciona um novo save code ao jogo
 func addSaveCode():
 	
