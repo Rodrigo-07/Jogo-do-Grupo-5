@@ -23,6 +23,7 @@ outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 8 )
 
 [node name="finish" type="Node2D"]
+visible = false
 script = ExtResource( 4 )
 
 [node name="ColorRect" type="ColorRect" parent="."]
