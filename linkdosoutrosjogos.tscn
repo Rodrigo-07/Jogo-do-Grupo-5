@@ -37,8 +37,8 @@ __meta__ = {
 }
 
 [node name="Wallpapermenuprincipal" type="Sprite" parent="."]
-position = Vector2( 77.381, 94.4819 )
-scale = Vector2( 1.01944, 1.0525 )
+position = Vector2( 86.4762, 90.9599 )
+scale = Vector2( 0.997222, 1.03437 )
 texture = ExtResource( 2 )
 offset = Vector2( 94.2857, 210.794 )
 
@@ -109,10 +109,10 @@ custom_fonts/font = SubResource( 4 )
 text = "Moralética"
 
 [node name="voltar" type="TextureButton" parent="."]
-margin_left = 282.0
-margin_top = 570.0
-margin_right = 474.0
-margin_bottom = 762.0
+margin_left = 26.0
+margin_top = 573.0
+margin_right = 218.0
+margin_bottom = 765.0
 rect_scale = Vector2( 0.215, 0.223 )
 texture_normal = ExtResource( 5 )
 
