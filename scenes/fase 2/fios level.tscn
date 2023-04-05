@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=2]
+[gd_scene load_steps=34 format=2]
 
 [ext_resource path="res://scenes/fase 2/Area2D.gd" type="Script" id=1]
 [ext_resource path="res://sprites/fase_dos_fios-Sheet.png" type="Texture" id=2]
@@ -8,6 +8,8 @@
 [ext_resource path="res://sprites/button play.png" type="Texture" id=6]
 [ext_resource path="res://sprites/button casinha .png" type="Texture" id=7]
 [ext_resource path="res://Fonte/Lato-Bold.ttf" type="DynamicFontData" id=8]
+[ext_resource path="res://sprites/button ajuste audio (3).png" type="Texture" id=9]
+[ext_resource path="res://sprites/ajuste audio.png" type="Texture" id=10]
 
 [sub_resource type="AtlasTexture" id=9]
 atlas = ExtResource( 2 )
@@ -99,6 +101,14 @@ extents = Vector2( 18.5, 14 )
 
 [sub_resource type="RectangleShape2D" id=16]
 extents = Vector2( 19, 14 )
+
+[sub_resource type="StyleBoxTexture" id=21]
+texture = ExtResource( 10 )
+region_rect = Rect2( 0, 0, 200, 175 )
+
+[sub_resource type="StyleBoxTexture" id=22]
+
+[sub_resource type="StyleBoxTexture" id=23]
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource( 3 )
@@ -275,7 +285,6 @@ color = Color( 0.392157, 0.529412, 0.54902, 1 )
 
 [node name="FundoPause" type="Sprite" parent="."]
 pause_mode = 2
-visible = false
 z_index = 5
 
 [node name="ColorRect" type="ColorRect" parent="FundoPause"]
@@ -305,10 +314,20 @@ icon = ExtResource( 6 )
 expand_icon = true
 
 [node name="HSlider" type="HSlider" parent="FundoPause"]
-margin_left = 77.0
-margin_top = 241.0
-margin_right = 317.0
-margin_bottom = 270.0
+margin_left = 79.9965
+margin_top = 179.375
+margin_right = 321.996
+margin_bottom = 354.375
+rect_scale = Vector2( 1.07574, 0.945809 )
+rect_pivot_offset = Vector2( 158.484, 173 )
+input_pass_on_modal_close_click = false
+custom_icons/grabber_highlight = ExtResource( 9 )
+custom_icons/grabber = ExtResource( 9 )
+custom_styles/slider = SubResource( 21 )
+custom_styles/grabber_area_highlight = SubResource( 22 )
+custom_styles/grabber_area = SubResource( 23 )
+min_value = -30.0
+max_value = 0.0
 
 [node name="Label" type="Label" parent="FundoPause"]
 modulate = Color( 0, 0, 0, 1 )
@@ -353,5 +372,4 @@ expand_icon = true
 [connection signal="mouse_entered" from="Gray_terminal" to="." method="_on_Gray_terminal_mouse_entered"]
 [connection signal="pressed" from="FundoPause/Button3" to="." method="_on_Button3_pressed"]
 [connection signal="pressed" from="FundoPause/Button2" to="." method="_on_Button2_pressed"]
-[connection signal="value_changed" from="FundoPause/HSlider" to="." method="_on_HSlider_value_changed"]
 [connection signal="pressed" from="Pausar" to="." method="_on_Pausar_pressed"]
