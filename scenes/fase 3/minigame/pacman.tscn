@@ -1,4 +1,4 @@
-[gd_scene load_steps=63 format=2]
+[gd_scene load_steps=65 format=2]
 
 [ext_resource path="res://scenes/fase 3/minigame/pacman.gd" type="Script" id=1]
 [ext_resource path="res://sprites/pacman.png" type="Texture" id=2]
@@ -13,6 +13,9 @@
 [ext_resource path="res://sprites/papel.png" type="Texture" id=11]
 [ext_resource path="res://musics and sfx/pacman.mp3" type="AudioStream" id=12]
 [ext_resource path="res://musics and sfx/item.wav" type="AudioStream" id=13]
+[ext_resource path="res://sprites/button ajuste audio (3).png" type="Texture" id=10]
+[ext_resource path="res://sprites/ajuste audio.png" type="Texture" id=11]
+[ext_resource path="res://Fonte/Lato-Bold.ttf" type="DynamicFontData" id=12]
 [ext_resource path="res://scenes/fase 3/minigame/spriteCerveja.gd" type="Script" id=14]
 [ext_resource path="res://sprites/cerveja-transformed.png" type="Texture" id=15]
 [ext_resource path="res://musics and sfx/572936__bloodpixelhero__error (1).wav" type="AudioStream" id=16]
@@ -139,6 +142,20 @@ tracks/0/keys = {
 "update": 0,
 "values": [ 3 ]
 }
+
+[sub_resource type="StyleBoxTexture" id=89]
+texture = ExtResource( 11 )
+region_rect = Rect2( 0, 0, 200, 175 )
+
+[sub_resource type="StyleBoxTexture" id=90]
+
+[sub_resource type="StyleBoxTexture" id=91]
+
+[sub_resource type="DynamicFont" id=92]
+size = 29
+outline_size = 4
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 12 )
 
 [sub_resource type="RectangleShape2D" id=59]
 extents = Vector2( 8, 91.5 )
@@ -464,10 +481,20 @@ icon = ExtResource( 21 )
 expand_icon = true
 
 [node name="HSlider" type="HSlider" parent="FundoPause"]
-margin_left = 77.0
-margin_top = 241.0
-margin_right = 317.0
-margin_bottom = 270.0
+margin_left = 80.0
+margin_top = 206.0
+margin_right = 322.0
+margin_bottom = 381.0
+rect_scale = Vector2( 1.07574, 0.945809 )
+rect_pivot_offset = Vector2( 158.484, 173 )
+input_pass_on_modal_close_click = false
+custom_icons/grabber_highlight = ExtResource( 10 )
+custom_icons/grabber = ExtResource( 10 )
+custom_styles/slider = SubResource( 89 )
+custom_styles/grabber_area_highlight = SubResource( 90 )
+custom_styles/grabber_area = SubResource( 91 )
+min_value = -30.0
+max_value = 0.0
 
 [node name="Label" type="Label" parent="FundoPause"]
 modulate = Color( 0, 0, 0, 1 )
@@ -484,6 +511,15 @@ margin_left = 77.0
 margin_top = 360.0
 margin_right = 323.0
 margin_bottom = 397.0
+
+[node name="Label3" type="Label" parent="FundoPause"]
+margin_left = 150.0
+margin_top = 235.0
+margin_right = 251.0
+margin_bottom = 282.0
+rect_pivot_offset = Vector2( 56, 14 )
+custom_fonts/font = SubResource( 92 )
+text = "Volume"
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 position = Vector2( 198, 413 )
@@ -686,4 +722,3 @@ stream = ExtResource( 18 )
 [connection signal="pressed" from="Pausar" to="." method="_on_Pausar_pressed"]
 [connection signal="pressed" from="FundoPause/Button3" to="." method="_on_Button3_pressed"]
 [connection signal="pressed" from="FundoPause/Button2" to="." method="_on_Button2_pressed"]
-[connection signal="value_changed" from="FundoPause/HSlider" to="." method="_on_HSlider_value_changed"]

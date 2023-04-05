@@ -5,6 +5,7 @@
 [ext_resource path="res://sprites/menu_cidade.png" type="Texture" id=3]
 [ext_resource path="res://sprites/botão voltar.png" type="Texture" id=4]
 [ext_resource path="res://musics and sfx/menu.wav" type="AudioStream" id=5]
+[ext_resource path="res://sprites/trophy-menu.png" type="Texture" id=5]
 
 [sub_resource type="DynamicFont" id=1]
 font_data = ExtResource( 2 )
@@ -16,6 +17,11 @@ script = ExtResource( 1 )
 position = Vector2( 179.889, 319.804 )
 scale = Vector2( 1.60099, 1.60098 )
 texture = ExtResource( 3 )
+
+[node name="Trophy-menu" type="Sprite" parent="."]
+position = Vector2( 178, 314.111 )
+scale = Vector2( 1.02778, 1.02778 )
+texture = ExtResource( 5 )
 
 [node name="Label2" type="Label" parent="."]
 margin_left = 115.0

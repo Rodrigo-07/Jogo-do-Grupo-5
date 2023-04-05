@@ -1,7 +1,7 @@
 [gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://linkdosoutrosjogos.gd" type="Script" id=1]
-[ext_resource path="res://sprites/Ajustes_background.png" type="Texture" id=2]
+[ext_resource path="res://sprites/trophy-menu.png" type="Texture" id=2]
 [ext_resource path="res://Fonte/Lato-Bold.ttf" type="DynamicFontData" id=3]
 [ext_resource path="res://sprites/Botao dourado.png" type="Texture" id=4]
 [ext_resource path="res://sprites/botão voltar.png" type="Texture" id=5]
@@ -37,8 +37,8 @@ __meta__ = {
 }
 
 [node name="Wallpapermenuprincipal" type="Sprite" parent="."]
-position = Vector2( 149, 237 )
-scale = Vector2( 0.35, 0.400625 )
+position = Vector2( 77.381, 94.4819 )
+scale = Vector2( 1.01944, 1.0525 )
 texture = ExtResource( 2 )
 offset = Vector2( 94.2857, 210.794 )
 
