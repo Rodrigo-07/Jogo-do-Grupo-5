@@ -738,6 +738,7 @@ shape = SubResource( 79 )
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 24 )
+volume_db = -7.865
 autoplay = true
 
 [node name="perdeu" type="AudioStreamPlayer" parent="."]
@@ -748,6 +749,7 @@ stream = ExtResource( 22 )
 
 [node name="Item" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 21 )
+volume_db = -5.453
 
 [connection signal="body_entered" from="key/key" to="KinematicBody2D" method="_on_key_body_entered"]
 [connection signal="body_entered" from="key/key2" to="KinematicBody2D" method="_on_key2_body_entered"]

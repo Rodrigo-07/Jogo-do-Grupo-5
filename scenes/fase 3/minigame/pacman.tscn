@@ -1,4 +1,4 @@
-[gd_scene load_steps=66 format=2]
+[gd_scene load_steps=67 format=2]
 
 [ext_resource path="res://scenes/fase 3/minigame/pacman.gd" type="Script" id=1]
 [ext_resource path="res://sprites/pacman.png" type="Texture" id=2]
@@ -22,6 +22,7 @@
 [ext_resource path="res://sprites/pausar .png" type="Texture" id=20]
 [ext_resource path="res://sprites/button play.png" type="Texture" id=21]
 [ext_resource path="res://sprites/button casinha .png" type="Texture" id=22]
+[ext_resource path="res://musics and sfx/pacman.mp3" type="AudioStream" id=23]
 
 [sub_resource type="AtlasTexture" id=56]
 flags = 4
@@ -247,7 +248,7 @@ script = ExtResource( 3 )
 position = Vector2( -7.50002, -22.4999 )
 scale = Vector2( 0.84375, 0.84375 )
 frames = SubResource( 86 )
-frame = 3
+frame = 1
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Person"]
@@ -695,10 +696,12 @@ custom_colors/font_color = Color( 0.145098, 0.145098, 0.145098, 1 )
 text = "PARABÊNS!!"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 23 )
 autoplay = true
 
 [node name="Collect" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 13 )
+volume_db = -5.453
 
 [node name="Error" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 16 )
