@@ -4,7 +4,6 @@
 [ext_resource path="res://Fonte/Concert_One/ConcertOne-Regular.ttf" type="DynamicFontData" id=2]
 [ext_resource path="res://sprites/menu_cidade.png" type="Texture" id=3]
 [ext_resource path="res://sprites/botão voltar.png" type="Texture" id=4]
-[ext_resource path="res://musics and sfx/menu.wav" type="AudioStream" id=5]
 [ext_resource path="res://sprites/trophy-menu.png" type="Texture" id=5]
 
 [sub_resource type="DynamicFont" id=1]
@@ -98,7 +97,6 @@ valign = 1
 autowrap = true
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 5 )
 autoplay = true
 
 [connection signal="focus_entered" from="LineEdit" to="." method="_on_LineEdit_focus_entered"]
