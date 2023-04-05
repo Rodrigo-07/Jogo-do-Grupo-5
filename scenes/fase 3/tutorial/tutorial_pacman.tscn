@@ -2,7 +2,7 @@
 
 [ext_resource path="res://scenes/fase 3/tutorial/2.png" type="Texture" id=1]
 [ext_resource path="res://scenes/fase 3/tutorial/tutorial_pacman.gd" type="Script" id=2]
-[ext_resource path="res://sprites/Tutoriais fases/tutorial-pacman.png" type="Texture" id=3]
+[ext_resource path="res://sprites/Tutoriais fases (1)/tutorial_pacman.png" type="Texture" id=3]
 
 [node name="Control" type="Control"]
 anchor_right = 1.0

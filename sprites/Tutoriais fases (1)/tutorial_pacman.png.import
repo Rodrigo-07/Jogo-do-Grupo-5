@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/tutorial-pacman.png-5021260dcd9fb9c47fd7b565344ec4b3.stex"
+path="res://.import/tutorial_pacman.png-e5778b2f8eda22f536b03715d8647d7a.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/Tutoriais fases/tutorial-pacman.png"
-dest_files=[ "res://.import/tutorial-pacman.png-5021260dcd9fb9c47fd7b565344ec4b3.stex" ]
+source_file="res://sprites/Tutoriais fases (1)/tutorial_pacman.png"
+dest_files=[ "res://.import/tutorial_pacman.png-e5778b2f8eda22f536b03715d8647d7a.stex" ]
 
 [params]
 

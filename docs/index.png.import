@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/tutorial-whg.png-e96ea80fdf88b50fc12b74c82a10d343.stex"
+path="res://.import/index.png-0c78d14d192abe5f22f8c25928ca1ab8.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/Tutoriais fases/tutorial-whg.png"
-dest_files=[ "res://.import/tutorial-whg.png-e96ea80fdf88b50fc12b74c82a10d343.stex" ]
+source_file="res://docs/index.png"
+dest_files=[ "res://.import/index.png-0c78d14d192abe5f22f8c25928ca1ab8.stex" ]
 
 [params]
 
@@ -20,7 +20,7 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=false
+flags/filter=true
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
