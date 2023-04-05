@@ -28,4 +28,4 @@ func _on_HSlider_value_changed(value):
 
  # Mudar para cena link dos outros jogos
 func _on_TextureButton_pressed():
-	get_tree().change_scene("res://linkdosoutrosjogos.tscn")
+	get_tree().change_scene("res://scenes/menu/linkdosoutrosjogos.tscn")

@@ -29,7 +29,7 @@ func _ready():
 	points = get_node("/root/Points")
 	
 	if Points.stateLevel1 == 5 and Points.stateLevel2 == 6 and Points.stateLevel3 == 5:
-		$finish/ColorRect.visible = true
+		$finish.visible = true
 		$exit.visible = true
 		$finished.visible = true
 		

@@ -44,8 +44,11 @@ outline_size = 3
 outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 11 )
 
-[node name="Node2D" type="Node2D"]
+[node name="Node2D2" type="Node2D"]
 script = ExtResource( 2 )
+__meta__ = {
+"_edit_horizontal_guides_": [ 566.0 ]
+}
 
 [node name="Sprite2" type="Sprite" parent="."]
 position = Vector2( 180.5, 322 )
@@ -102,6 +105,7 @@ icon = ExtResource( 5 )
 flat = true
 
 [node name="finish" parent="." instance=ExtResource( 1 )]
+visible = false
 
 [node name="Container" type="Container" parent="."]
 margin_right = 361.0
@@ -123,9 +127,9 @@ text = "0 V Coins"
 
 [node name="exit" type="Button" parent="."]
 visible = false
-margin_left = 198.0
+margin_left = 195.0
 margin_top = 446.0
-margin_right = 610.0
+margin_right = 607.0
 margin_bottom = 852.0
 rect_scale = Vector2( 0.3, 0.3 )
 icon = ExtResource( 10 )
@@ -144,11 +148,11 @@ align = 1
 
 [node name="finished" type="Button" parent="."]
 visible = false
-margin_left = 267.0
-margin_top = 549.0
-margin_right = 744.0
-margin_bottom = 1091.0
-rect_scale = Vector2( 0.2, 0.17 )
+margin_left = 285.0
+margin_top = 557.0
+margin_right = 762.0
+margin_bottom = 1099.0
+rect_scale = Vector2( 0.153396, 0.128605 )
 icon = ExtResource( 12 )
 flat = true
 

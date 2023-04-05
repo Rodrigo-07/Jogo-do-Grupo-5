@@ -1,4 +1,4 @@
-[gd_scene load_steps=65 format=2]
+[gd_scene load_steps=66 format=2]
 
 [ext_resource path="res://scenes/fase 3/minigame/pacman.gd" type="Script" id=1]
 [ext_resource path="res://sprites/pacman.png" type="Texture" id=2]
@@ -6,18 +6,15 @@
 [ext_resource path="res://sprites/Untitled design.png" type="Texture" id=4]
 [ext_resource path="res://sprites/pac_man_level (1).png" type="Texture" id=5]
 [ext_resource path="res://sprites/balinhaVTal.png" type="Texture" id=6]
-[ext_resource path="res://sprites/copo_agua.png" type="Texture" id=7]
+[ext_resource path="res://sprites/copo_agua2.png" type="Texture" id=7]
 [ext_resource path="res://scenes/fase 3/minigame/SwipeControl.gd" type="Script" id=8]
 [ext_resource path="res://scenes/fase 3/tutorial/tutorial_pacman.tscn" type="PackedScene" id=9]
-[ext_resource path="res://Fonte/Concert_One/ConcertOne-Regular.ttf" type="DynamicFontData" id=10]
-[ext_resource path="res://sprites/papel.png" type="Texture" id=11]
-[ext_resource path="res://musics and sfx/pacman.mp3" type="AudioStream" id=12]
-[ext_resource path="res://musics and sfx/item.wav" type="AudioStream" id=13]
 [ext_resource path="res://sprites/button ajuste audio (3).png" type="Texture" id=10]
 [ext_resource path="res://sprites/ajuste audio.png" type="Texture" id=11]
 [ext_resource path="res://Fonte/Lato-Bold.ttf" type="DynamicFontData" id=12]
+[ext_resource path="res://musics and sfx/item.wav" type="AudioStream" id=13]
 [ext_resource path="res://scenes/fase 3/minigame/spriteCerveja.gd" type="Script" id=14]
-[ext_resource path="res://sprites/cerveja-transformed.png" type="Texture" id=15]
+[ext_resource path="res://sprites/cervejinha_picanha.png" type="Texture" id=15]
 [ext_resource path="res://musics and sfx/572936__bloodpixelhero__error (1).wav" type="AudioStream" id=16]
 [ext_resource path="res://sprites/hearts.png" type="Texture" id=17]
 [ext_resource path="res://musics and sfx/win.wav" type="AudioStream" id=18]
@@ -226,10 +223,6 @@ extents = Vector2( 30, 13.7635 )
 [sub_resource type="RectangleShape2D" id=81]
 extents = Vector2( 10, 51.183 )
 
-[sub_resource type="DynamicFont" id=89]
-size = 300
-font_data = ExtResource( 10 )
-
 [node name="Node2D" type="Node2D"]
 script = ExtResource( 1 )
 
@@ -280,7 +273,7 @@ __meta__ = {
 
 [node name="Sprite" type="Sprite" parent="enemies/spriteCerveja"]
 position = Vector2( -6.5, -6.5 )
-scale = Vector2( 1.92857, 1.92857 )
+scale = Vector2( 0.100909, 0.100909 )
 z_index = 1
 texture = ExtResource( 15 )
 __meta__ = {
@@ -304,7 +297,7 @@ __meta__ = {
 
 [node name="Sprite" type="Sprite" parent="enemies/spriteCerveja2"]
 position = Vector2( -6.5, -6.5 )
-scale = Vector2( 1.92857, 1.92857 )
+scale = Vector2( 0.100581, 0.100581 )
 z_index = 1
 texture = ExtResource( 15 )
 __meta__ = {
@@ -328,7 +321,7 @@ __meta__ = {
 
 [node name="Sprite" type="Sprite" parent="enemies/spriteCerveja3"]
 position = Vector2( -6.5, -6.5 )
-scale = Vector2( 1.92857, 1.92857 )
+scale = Vector2( 0.100411, 0.104242 )
 z_index = 1
 texture = ExtResource( 15 )
 __meta__ = {
@@ -352,7 +345,7 @@ __meta__ = {
 
 [node name="Sprite" type="Sprite" parent="enemies/spriteCerveja4"]
 position = Vector2( -6.5, -6.5 )
-scale = Vector2( 1.92857, 1.92857 )
+scale = Vector2( 0.102714, 0.102714 )
 z_index = 1
 texture = ExtResource( 15 )
 __meta__ = {
@@ -451,7 +444,7 @@ expand_icon = true
 [node name="FundoPause" type="Sprite" parent="."]
 pause_mode = 2
 visible = false
-z_index = 1
+z_index = 2
 script = ExtResource( 19 )
 
 [node name="ColorRect" type="ColorRect" parent="FundoPause"]
@@ -499,10 +492,10 @@ max_value = 0.0
 [node name="Label" type="Label" parent="FundoPause"]
 modulate = Color( 0, 0, 0, 1 )
 self_modulate = Color( 0, 0, 0, 1 )
-margin_left = 136.0
-margin_top = 295.0
-margin_right = 222.0
-margin_bottom = 309.0
+margin_left = 151.0
+margin_top = 314.0
+margin_right = 237.0
+margin_bottom = 328.0
 
 [node name="Label2" type="Label" parent="FundoPause"]
 modulate = Color( 0, 0, 0, 1 )
@@ -699,11 +692,9 @@ margin_top = -68.5713
 margin_right = 797.144
 margin_bottom = 348.429
 custom_colors/font_color = Color( 0.145098, 0.145098, 0.145098, 1 )
-custom_fonts/font = SubResource( 89 )
 text = "PARABÊNS!!"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 12 )
 autoplay = true
 
 [node name="Collect" type="AudioStreamPlayer" parent="."]
