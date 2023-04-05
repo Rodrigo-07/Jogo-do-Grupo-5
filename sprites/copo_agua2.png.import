@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/the_games_button-Sheet.png-09acd9ed65f5d704a94a810aedab8440.stex"
+path="res://.import/copo_agua2.png-1ee1bca27f01b8d7d940289ea5775967.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://the_games_button-Sheet.png"
-dest_files=[ "res://.import/the_games_button-Sheet.png-09acd9ed65f5d704a94a810aedab8440.stex" ]
+source_file="res://sprites/copo_agua2.png"
+dest_files=[ "res://.import/copo_agua2.png-1ee1bca27f01b8d7d940289ea5775967.stex" ]
 
 [params]
 
@@ -20,7 +20,7 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
