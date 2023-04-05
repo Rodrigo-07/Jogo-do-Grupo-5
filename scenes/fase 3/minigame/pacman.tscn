@@ -1,4 +1,4 @@
-[gd_scene load_steps=63 format=2]
+[gd_scene load_steps=65 format=2]
 
 [ext_resource path="res://scenes/fase 3/minigame/pacman.gd" type="Script" id=1]
 [ext_resource path="res://sprites/pacman.png" type="Texture" id=2]
@@ -11,6 +11,7 @@
 [ext_resource path="res://scenes/fase 3/tutorial/tutorial_pacman.tscn" type="PackedScene" id=9]
 [ext_resource path="res://sprites/button ajuste audio (3).png" type="Texture" id=10]
 [ext_resource path="res://sprites/ajuste audio.png" type="Texture" id=11]
+[ext_resource path="res://Fonte/Lato-Bold.ttf" type="DynamicFontData" id=12]
 [ext_resource path="res://scenes/fase 3/minigame/spriteCerveja.gd" type="Script" id=14]
 [ext_resource path="res://sprites/cerveja-transformed.png" type="Texture" id=15]
 [ext_resource path="res://sprites/hearts.png" type="Texture" id=17]
@@ -149,6 +150,12 @@ region_rect = Rect2( 0, 0, 200, 175 )
 
 [sub_resource type="StyleBoxTexture" id=91]
 
+[sub_resource type="DynamicFont" id=92]
+size = 29
+outline_size = 4
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 12 )
+
 [sub_resource type="RectangleShape2D" id=59]
 extents = Vector2( 8, 91.5 )
 
@@ -251,7 +258,7 @@ script = ExtResource( 3 )
 position = Vector2( -7.50002, -22.4999 )
 scale = Vector2( 0.84375, 0.84375 )
 frames = SubResource( 86 )
-frame = 2
+frame = 3
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Person"]
@@ -475,9 +482,9 @@ expand_icon = true
 
 [node name="HSlider" type="HSlider" parent="FundoPause"]
 margin_left = 80.0
-margin_top = 184.0
+margin_top = 206.0
 margin_right = 322.0
-margin_bottom = 359.0
+margin_bottom = 381.0
 rect_scale = Vector2( 1.07574, 0.945809 )
 rect_pivot_offset = Vector2( 158.484, 173 )
 input_pass_on_modal_close_click = false
@@ -504,6 +511,15 @@ margin_left = 77.0
 margin_top = 360.0
 margin_right = 323.0
 margin_bottom = 397.0
+
+[node name="Label3" type="Label" parent="FundoPause"]
+margin_left = 150.0
+margin_top = 235.0
+margin_right = 251.0
+margin_bottom = 282.0
+rect_pivot_offset = Vector2( 56, 14 )
+custom_fonts/font = SubResource( 92 )
+text = "Volume"
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 position = Vector2( 198, 413 )
@@ -651,6 +667,7 @@ scale = Vector2( 0.999999, 0.999999 )
 shape = SubResource( 81 )
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
+visible = false
 
 [node name="Control" parent="CanvasLayer" instance=ExtResource( 9 )]
 pause_mode = 2
