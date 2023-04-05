@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Pontuação/checkPoints.gd" type="Script" id=1]
 [ext_resource path="res://Fonte/Concert_One/ConcertOne-Regular.ttf" type="DynamicFontData" id=2]
 [ext_resource path="res://sprites/menu_cidade.png" type="Texture" id=3]
 [ext_resource path="res://sprites/botão voltar.png" type="Texture" id=4]
+[ext_resource path="res://sprites/trophy-menu.png" type="Texture" id=5]
 
 [sub_resource type="DynamicFont" id=1]
 font_data = ExtResource( 2 )
@@ -17,9 +18,9 @@ scale = Vector2( 1.60099, 1.60098 )
 texture = ExtResource( 3 )
 
 [node name="Trophy-menu" type="Sprite" parent="."]
-position = Vector2( 176, 311.111 )
+position = Vector2( 178, 314.111 )
 scale = Vector2( 1.02778, 1.02778 )
-texture = ExtResource( 3 )
+texture = ExtResource( 5 )
 
 [node name="Label2" type="Label" parent="."]
 margin_left = 115.0
