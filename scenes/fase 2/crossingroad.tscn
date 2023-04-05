@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=2]
+[gd_scene load_steps=29 format=2]
 
 [ext_resource path="res://sprites/Cenario crossy road.png" type="Texture" id=1]
 [ext_resource path="res://scenes/fase 2/tutorial_crossy.tscn" type="PackedScene" id=2]
@@ -9,6 +9,8 @@
 [ext_resource path="res://scenes/scripts/fase 2/personagem.gd" type="Script" id=7]
 [ext_resource path="res://sprites/ajuste audio.png" type="Texture" id=8]
 [ext_resource path="res://Fonte/Lato-Bold.ttf" type="DynamicFontData" id=9]
+[ext_resource path="res://musics and sfx/crossyroad.mp3" type="AudioStream" id=10]
+[ext_resource path="res://musics and sfx/item.wav" type="AudioStream" id=11]
 [ext_resource path="res://sprites/button play.png" type="Texture" id=12]
 [ext_resource path="res://sprites/pausar .png" type="Texture" id=13]
 [ext_resource path="res://sprites/button casinha .png" type="Texture" id=14]
@@ -314,6 +316,13 @@ expand_icon = true
 visible = false
 
 [node name="Control" parent="CanvasLayer" instance=ExtResource( 2 )]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 10 )
+autoplay = true
+
+[node name="win" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 11 )
 
 [connection signal="pressed" from="mapa/Controles/buttonUp" to="mapa/Personagem" method="_on_buttonUp_pressed"]
 [connection signal="released" from="mapa/Controles/buttonUp" to="mapa/Personagem" method="_on_buttonUp_released"]

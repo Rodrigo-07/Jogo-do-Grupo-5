@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=2]
+[gd_scene load_steps=40 format=2]
 
 [ext_resource path="res://scenes/fase 2/Area2D.gd" type="Script" id=1]
 [ext_resource path="res://sprites/fase_dos_fios-Sheet.png" type="Texture" id=2]
@@ -11,6 +11,10 @@
 [ext_resource path="res://sprites/button ajuste audio (3).png" type="Texture" id=9]
 [ext_resource path="res://sprites/ajuste audio.png" type="Texture" id=10]
 [ext_resource path="res://scenes/fase 2/tutorial-fios.tscn" type="PackedScene" id=11]
+[ext_resource path="res://musics and sfx/572936__bloodpixelhero__error (1).wav" type="AudioStream" id=12]
+[ext_resource path="res://musics and sfx/item.wav" type="AudioStream" id=13]
+[ext_resource path="res://musics and sfx/win.wav" type="AudioStream" id=14]
+[ext_resource path="res://musics and sfx/fios.wav" type="AudioStream" id=15]
 
 [sub_resource type="AtlasTexture" id=9]
 atlas = ExtResource( 2 )
@@ -377,6 +381,19 @@ expand_icon = true
 
 [node name="Control" parent="CanvasLayer" instance=ExtResource( 11 )]
 pause_mode = 2
+
+[node name="Erro" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 12 )
+
+[node name="Certo" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 13 )
+
+[node name="Background" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 15 )
+autoplay = true
+
+[node name="Win" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 14 )
 
 [connection signal="input_event" from="Red_selection" to="." method="_on_Red_selection_input_event"]
 [connection signal="input_event" from="Red_terminal" to="." method="_on_Red_terminal_input_event"]

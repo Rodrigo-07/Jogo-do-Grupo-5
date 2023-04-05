@@ -46,8 +46,6 @@ func _on_Cima_released():
 func item():
 	keyCard += 1
 	get_node("../Item").play()
-	if keyCard == 3:
-		get_node("../Win").play()
 
 func _physics_process(delta):
 	
@@ -70,7 +68,7 @@ func _on_Compliance_body_shape_entered(body_rid, body, body_shape_index, local_s
 		ganhou = true
 		get_node("../PopUp").show()
 		get_node("../AudioStreamPlayer").stop()
-		item()
+		get_node("../Win").play()
 		# Jogador vence o jogo quando coletar as 3 chaves e recebe mais um ponto na variável global
 		if Points.whg == false:
 			# Adiciona ponto e seta o estado da fase como true
@@ -90,14 +88,6 @@ func _on_Agua_body_shape_entered(body_rid, body, body_shape_index, local_shape_i
 	get_node("../PopUp").show()
 	get_tree().paused = true
 	get_node("../PopUp/Sprite2/Label").text = "Lugar errado"
-	
-#func _on_Planta_body_shape_entered(body_rid, body, body_shape_index, local_shape_index):
-#	entrou = true
-#	get_node("../PopUp").show()
-#	get_tree().paused = true
-#	get_node("../PopUp/Sprite2/Label").text = "Lugar errado!"
-
-#Cuida do touchscreen quando o personagem ganha e vai para a area certa e quando vai para a area errada
 
 #Pegando as provas pelo mapa
 func _on_key_body_entered(body):

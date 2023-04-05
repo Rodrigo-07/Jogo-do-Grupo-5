@@ -1,4 +1,4 @@
-[gd_scene load_steps=69 format=2]
+[gd_scene load_steps=71 format=2]
 
 [ext_resource path="res://Fonte/Concert_One/ConcertOne-Regular.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://scenes/scripts/Node2D.gd" type="Script" id=2]
@@ -22,6 +22,8 @@
 [ext_resource path="res://sprites/ajuste audio.png" type="Texture" id=20]
 [ext_resource path="res://musics and sfx/item.wav" type="AudioStream" id=21]
 [ext_resource path="res://musics and sfx/win.wav" type="AudioStream" id=22]
+[ext_resource path="res://musics and sfx/damage.wav" type="AudioStream" id=23]
+[ext_resource path="res://musics and sfx/whg.wav" type="AudioStream" id=24]
 
 [sub_resource type="RectangleShape2D" id=9]
 extents = Vector2( 8.78741, 8.08443 )
@@ -735,9 +737,11 @@ position = Vector2( 193, 165 )
 shape = SubResource( 79 )
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 24 )
 autoplay = true
 
 [node name="perdeu" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 23 )
 
 [node name="Win" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 22 )

@@ -42,7 +42,10 @@ func _process(delta):
 	# Detecta quando todos os fios estão conectados corretamente o usuário vence o jogo 
 	if red_connected and blue_connected and orange_connected and green_connected:
 		$AnimatedSprite.play("win")
-		yield(get_tree().create_timer(3), 'timeout')
+		$Background.stop()
+		if $Win.playing == false:
+			$Win.play()
+		yield(get_tree().create_timer(1.72), 'timeout')
 		
 		# Adciona ponto ao jogador
 		if Points.fios == false:
@@ -105,6 +108,7 @@ func _on_Orange_selection_input_event(viewport, event, shape_idx):
 func _on_Orange_terminal_mouse_entered():
 	# Quando existe algum fio slecionado e é o fio da cor correspondente ao teminal, o fio é conectado
 	if selected == true and orange_wire == true:
+		$Certo.play()
 		selected = false
 		current_line.points[1] = Vector2(300, -165)
 		
@@ -114,6 +118,7 @@ func _on_Orange_terminal_mouse_entered():
 		
 	# Quando existe algum fio slecionado e é o fio errado, o jogador perde uma vida
 	elif selected == true and orange_wire == false:
+		$Erro.play()
 		erros += 1
 		selected = false
 		current_line.points[1] = current_line.points[0]
@@ -125,6 +130,7 @@ func _on_Blue_terminal_mouse_entered():
 	# Quando existe algum fio slecionado e é o fio da cor correspondente ao teminal, o fio é conectado
 	if selected == true and blue_wire == true:
 		selected = false
+		$Certo.play()
 		current_line.points[1] = Vector2(290, 137)
 		
 		# Colisão do terminal é desativada para não ser mais selecionada
@@ -133,6 +139,7 @@ func _on_Blue_terminal_mouse_entered():
 		
 	# Quando existe algum fio slecionado e é o fio errado, o jogador perde uma vida
 	elif selected == true and blue_wire == false:
+		$Erro.play()
 		erros += 1
 		selected = false
 		current_line.points[1] = current_line.points[0]
@@ -144,6 +151,7 @@ func _on_Green_terminal_mouse_entered():
 	# Quando existe algum fio slecionado e é o fio da cor correspondente ao teminal, o fio é conectado
 	if selected == true and green_wire == true:
 		selected = false
+		$Certo.play()
 		current_line.points[1] = Vector2(390, 208)
 		
 		# Colisão do terminal é desativada para não ser mais selecionada
@@ -153,6 +161,7 @@ func _on_Green_terminal_mouse_entered():
 		
 	# Quando existe algum fio slecionado e é o fio errado, o jogador perde uma vida
 	elif selected == true and green_wire == false:
+		$Erro.play()
 		erros += 1
 		current_line.points[1] = current_line.points[0]
 		selected = false
@@ -164,6 +173,7 @@ func _on_Red_terminal_mouse_entered():
 	# Quando existe algum fio slecionado e é o fio da cor correspondente ao teminal, o fio é conectado
 	if selected == true and red_wire == true:
 		selected = false
+		$Certo.play()
 		current_line.points[1] = Vector2(265, -190)
 		
 		# Colisão do terminal é desativada para não ser mais selecionada
@@ -172,6 +182,7 @@ func _on_Red_terminal_mouse_entered():
 		
 	# Quando existe algum fio slecionado e é o fio errado, o jogador perde uma vida
 	elif selected == true and red_wire == false:
+		$Erro.play()
 		erros += 1
 		selected = false
 		current_line.points[1] = current_line.points[0]
@@ -181,6 +192,7 @@ func _on_Red_terminal_mouse_entered():
 # Terminal errado independente de qual for o fio selecionado
 func _on_Gray_terminal_mouse_entered():
 	if selected == true:
+		$Erro.play()
 		erros += 1
 		selected = false
 		current_line.points[1] = current_line.points[0]

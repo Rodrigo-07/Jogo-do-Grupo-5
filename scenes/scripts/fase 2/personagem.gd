@@ -73,15 +73,8 @@ func _on_casa_body_entered(body):
 		Points.addpoint()
 		Points.crossingroad = true
 	
-	# TODO: Arrumar o som do crossyroad
-#	get_node("../../AudioStreamPlayer").stop()
-#	get_node("../../win").play()
+
+	get_node("../../AudioStreamPlayer").stop()
+	get_node("../../win").play()
 	yield(get_tree().create_timer(1.5), 'timeout')
 	get_tree().change_scene("res://scenes/fase 2/Perguntas/pergunta4.tscn")
-
-
-
-
-
-
-	
