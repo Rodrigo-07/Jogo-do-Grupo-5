@@ -3,6 +3,9 @@ var down = false
 var up = false
 var right = false
 var left = false
+
+onready var initialPos = position
+
 # Funções e variáveis para fazer o movimento do player no celular
 func _on_buttonUp_pressed():
 	up = true
@@ -24,6 +27,8 @@ func _on_buttonLeft_pressed():
 func _on_buttonLeft_released():
 	left = false
 	move.x = 0
+	
+
 # Velocidade de movimento do personagem
 var speed = 4000
 # Define o movimento em 2 eixos
@@ -51,17 +56,14 @@ func _physics_process(delta):
 		move.x = 0
 		move.y = 0
 		$AnimationPlayer.stop()
-		
-	
 	
 	# Detecta colisões do personagem
-#	move_and_slide(move)
 	var collision = move_and_collide(move  * delta)
 	
 	# Se houver uma colisão a cena reinicia
 	if collision:
 		if collision.collider.name != "Barreira":
-			get_tree().reload_current_scene()
+			position = initialPos
 			print(collision.collider.name)
 
 # Se o objeto toca a casa ele vence a fase 
@@ -70,6 +72,10 @@ func _on_casa_body_entered(body):
 	if Points.crossingroad == false:
 		Points.addpoint()
 		Points.crossingroad = true
+		
+	get_node("../../AudioStreamPlayer").stop()
+	get_node("../../win").play()
+	yield(get_tree().create_timer(1.5), 'timeout')
 	get_tree().change_scene("res://scenes/fase 2/Perguntas/pergunta4.tscn")
 
 
