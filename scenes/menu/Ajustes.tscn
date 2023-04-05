@@ -3,7 +3,7 @@
 [ext_resource path="res://scenes/scripts/menu/Ajustes.gd" type="Script" id=1]
 [ext_resource path="res://sprites/trophy-menu.png" type="Texture" id=2]
 [ext_resource path="res://sprites/botão voltar.png" type="Texture" id=3]
-[ext_resource path="res://audios/metal-groove.mp3" type="AudioStream" id=4]
+[ext_resource path="res://musics and sfx/menu.wav" type="AudioStream" id=4]
 [ext_resource path="res://cenas de transicao/Transicao.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Fonte/Lato-Bold.ttf" type="DynamicFontData" id=6]
 [ext_resource path="res://sprites/button ajuste audio (3).png" type="Texture" id=7]
@@ -42,11 +42,11 @@ __meta__ = {
 }
 
 [node name="Button" type="Button" parent="."]
-margin_left = 23.0
-margin_top = 563.0
-margin_right = 227.0
-margin_bottom = 761.0
-rect_scale = Vector2( 0.272431, 0.26166 )
+margin_left = 278.0
+margin_top = 538.0
+margin_right = 690.0
+margin_bottom = 944.0
+rect_scale = Vector2( 0.25, 0.25 )
 icon = ExtResource( 3 )
 flat = true
 
