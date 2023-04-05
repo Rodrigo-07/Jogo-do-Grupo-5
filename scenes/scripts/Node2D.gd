@@ -17,6 +17,12 @@ func _ready():
 	obstacle()
 
 func _process(delta):
+	
+	
+	if Points.collision == 1:
+		$perdeu.play()
+		
+	
 	$FundoPause/Label.text = pontos
 	$FundoPause/Label2.text = "Seu código atual é:"+Points.currentCode
 	
