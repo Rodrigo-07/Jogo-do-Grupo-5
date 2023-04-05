@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/tutorial-crossing_road.png-2768cbe0f6eb4a1fe1735f8842473622.stex"
+path="res://.import/tutorial_fios.png-694e8b5bc54050f851d7034da51d82fa.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/Tutoriais fases/tutorial-crossing_road.png"
-dest_files=[ "res://.import/tutorial-crossing_road.png-2768cbe0f6eb4a1fe1735f8842473622.stex" ]
+source_file="res://sprites/Tutoriais fases (1)/tutorial_fios.png"
+dest_files=[ "res://.import/tutorial_fios.png-694e8b5bc54050f851d7034da51d82fa.stex" ]
 
 [params]
 

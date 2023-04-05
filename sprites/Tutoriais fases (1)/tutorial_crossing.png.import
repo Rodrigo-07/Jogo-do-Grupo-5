@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/tutorial-whg.png-e96ea80fdf88b50fc12b74c82a10d343.stex"
+path="res://.import/tutorial_crossing.png-14b44900dfa9b7b6e01a601c94ea7e48.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/Tutoriais fases/tutorial-whg.png"
-dest_files=[ "res://.import/tutorial-whg.png-e96ea80fdf88b50fc12b74c82a10d343.stex" ]
+source_file="res://sprites/Tutoriais fases (1)/tutorial_crossing.png"
+dest_files=[ "res://.import/tutorial_crossing.png-14b44900dfa9b7b6e01a601c94ea7e48.stex" ]
 
 [params]
 
