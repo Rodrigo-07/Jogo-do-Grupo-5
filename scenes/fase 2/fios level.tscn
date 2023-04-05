@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=2]
+[gd_scene load_steps=29 format=2]
 
 [ext_resource path="res://scenes/fase 2/Area2D.gd" type="Script" id=1]
 [ext_resource path="res://sprites/fase_dos_fios-Sheet.png" type="Texture" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://sprites/pausar .png" type="Texture" id=5]
 [ext_resource path="res://sprites/button play.png" type="Texture" id=6]
 [ext_resource path="res://sprites/button casinha .png" type="Texture" id=7]
+[ext_resource path="res://Fonte/Lato-Bold.ttf" type="DynamicFontData" id=8]
 
 [sub_resource type="AtlasTexture" id=9]
 atlas = ExtResource( 2 )
@@ -60,6 +61,18 @@ animations = [ {
 "speed": 5.0
 } ]
 
+[sub_resource type="DynamicFont" id=17]
+font_data = ExtResource( 8 )
+
+[sub_resource type="DynamicFont" id=18]
+font_data = ExtResource( 8 )
+
+[sub_resource type="DynamicFont" id=19]
+font_data = ExtResource( 8 )
+
+[sub_resource type="DynamicFont" id=20]
+font_data = ExtResource( 8 )
+
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 15, 14 )
 
@@ -94,36 +107,40 @@ script = ExtResource( 3 )
 position = Vector2( 180, 320 )
 frames = SubResource( 13 )
 
-[node name="Label" type="Label" parent="AnimatedSprite"]
+[node name="500mb" type="Label" parent="AnimatedSprite"]
 margin_left = 57.0
-margin_top = 159.0
-margin_right = 106.0
-margin_bottom = 173.0
+margin_top = 154.0
+margin_right = 109.0
+margin_bottom = 174.0
 rect_pivot_offset = Vector2( 25, 23 )
+custom_fonts/font = SubResource( 17 )
 text = "500 mb"
 
-[node name="Label2" type="Label" parent="AnimatedSprite"]
+[node name="1gb" type="Label" parent="AnimatedSprite"]
 margin_left = 55.0
-margin_top = 249.0
+margin_top = 244.0
 margin_right = 104.0
-margin_bottom = 263.0
+margin_bottom = 264.0
 rect_pivot_offset = Vector2( 25, 23 )
+custom_fonts/font = SubResource( 18 )
 text = "1GB"
 
-[node name="Label3" type="Label" parent="AnimatedSprite"]
+[node name="200mb" type="Label" parent="AnimatedSprite"]
 margin_left = 56.0
-margin_top = 219.0
-margin_right = 105.0
-margin_bottom = 233.0
+margin_top = 215.0
+margin_right = 108.0
+margin_bottom = 235.0
 rect_pivot_offset = Vector2( 25, 23 )
+custom_fonts/font = SubResource( 19 )
 text = "200 mb"
 
-[node name="Label4" type="Label" parent="AnimatedSprite"]
+[node name="400mb" type="Label" parent="AnimatedSprite"]
 margin_left = 55.0
-margin_top = 188.0
-margin_right = 104.0
-margin_bottom = 202.0
+margin_top = 185.0
+margin_right = 107.0
+margin_bottom = 205.0
 rect_pivot_offset = Vector2( 25, 23 )
+custom_fonts/font = SubResource( 20 )
 text = "400 mb"
 
 [node name="Sprite" type="Sprite" parent="."]
