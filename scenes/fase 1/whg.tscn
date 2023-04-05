@@ -338,6 +338,9 @@ extents = Vector2( 36.25, 35 )
 
 [node name="WHG" type="Node2D"]
 script = ExtResource( 2 )
+__meta__ = {
+"_edit_horizontal_guides_": [ 10.0 ]
+}
 
 [node name="Whg-newOffice" type="Sprite" parent="."]
 visible = false
@@ -522,20 +525,20 @@ normal = ExtResource( 12 )
 
 [node name="Camera" type="Sprite" parent="."]
 modulate = Color( 0.278431, 0.278431, 0.278431, 1 )
-position = Vector2( 118.25, 620.917 )
-scale = Vector2( 0.169271, 0.186632 )
+position = Vector2( 26, 29 )
+scale = Vector2( 0.270833, 0.298611 )
 texture = ExtResource( 15 )
 
 [node name="Cell" type="Sprite" parent="."]
 modulate = Color( 0.145098, 0.145098, 0.145098, 1 )
-position = Vector2( 146.25, 619.917 )
-scale = Vector2( 0.134115, 0.139797 )
+position = Vector2( 68.6875, 31.754 )
+scale = Vector2( 0.232422, 0.242269 )
 texture = ExtResource( 16 )
 
 [node name="Pasta" type="Sprite" parent="."]
 modulate = Color( 0.188235, 0.188235, 0.188235, 1 )
-position = Vector2( 174.25, 621.917 )
-scale = Vector2( 0.132812, 0.160661 )
+position = Vector2( 107.75, 30.199 )
+scale = Vector2( 0.221354, 0.267769 )
 texture = ExtResource( 14 )
 
 [node name="PopUp" type="Popup" parent="."]
@@ -624,9 +627,9 @@ valign = 1
 
 [node name="Pausar2" type="Button" parent="."]
 margin_left = 307.0
-margin_top = 13.0
+margin_top = 10.0
 margin_right = 7275.0
-margin_bottom = 6931.0
+margin_bottom = 6928.0
 rect_scale = Vector2( 0.00596626, 0.00596626 )
 text = "pausar"
 icon = ExtResource( 10 )
