@@ -313,13 +313,12 @@ icon = ExtResource( 13 )
 expand_icon = true
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
-visible = false
 
 [node name="Control" parent="CanvasLayer" instance=ExtResource( 2 )]
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 10 )
-volume_db = -6.992
+volume_db = -10.488
 autoplay = true
 
 [node name="win" type="AudioStreamPlayer" parent="."]
