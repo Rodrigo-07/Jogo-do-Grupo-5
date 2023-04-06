@@ -78,4 +78,4 @@ func _on_Button2_button_up():
 
 func _on_LineEdit_focus_entered():
 	if OS.has_virtual_keyboard():
-		OS.set_keyboard_visible(true)
+		OS.show_virtual_keyboard()
