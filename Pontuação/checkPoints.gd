@@ -75,6 +75,7 @@ func _on_Button2_button_down():
 
 func _on_Button2_button_up():
 	$Button2/Popup.hide()
-
+	
 func _on_LineEdit_focus_entered():
-	OS.show_virtual_keyboard()
+	if OS.has_virtual_keyboard():
+		OS.show_virtual_keyboard()
